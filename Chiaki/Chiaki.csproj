@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Steven P</Authors>
+    <PackageProjectUrl>https://github.com/stevu236/chiaki</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/stevu236/chiaki</RepositoryUrl>
+    <Description>千瑛, "thousand, crystal ball" - a set of utility libraries for .NET</Description>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
 </Project>
