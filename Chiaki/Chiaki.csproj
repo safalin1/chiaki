@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>Steven P</Authors>
     <PackageProjectUrl>https://github.com/stevu236/chiaki</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stevu236/chiaki</RepositoryUrl>
@@ -10,13 +11,4 @@
     <Version>0.0.1</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/stevu236/chiaki/master/logo.png</PackageIconUrl>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>R:\sourcecode\chiaki\Chiaki\Chiaki.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>R:\sourcecode\chiaki\Chiaki\Chiaki.xml</DocumentationFile>
-  </PropertyGroup>
-
 </Project>
