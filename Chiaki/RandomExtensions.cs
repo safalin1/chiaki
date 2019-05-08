@@ -4,7 +4,7 @@
 namespace Chiaki
 {
     /// <summary>
-    /// Provides extension methods for the System.Random type.
+    /// Provides extensions for <see cref="Random"/>.
     /// </summary>
     public static class RandomExtensions
     {

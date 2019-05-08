@@ -3,7 +3,7 @@
 namespace Chiaki
 {
     /// <summary>
-    /// Provides extensions for System.DateTime
+    /// Provides extensions for <see cref="DateTime"/>
     /// </summary>
     public static class DateTimeExtensions
     {

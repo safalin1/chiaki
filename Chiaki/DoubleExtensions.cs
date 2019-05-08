@@ -3,7 +3,7 @@
 namespace Chiaki
 {
     /// <summary>
-    /// Provides extensions for System.Double
+    /// Provides extensions for <see cref="double"/>
     /// </summary>
     public static class DoubleExtensions
     {
