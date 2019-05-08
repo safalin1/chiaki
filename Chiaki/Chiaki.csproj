@@ -7,7 +7,7 @@
     <Authors>Steven P</Authors>
     <PackageProjectUrl>https://github.com/stevu236/chiaki</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stevu236/chiaki</RepositoryUrl>
-    <Description>千瑛, "thousand, crystal ball" - a set of utility libraries for .NET</Description>
+    <Description>千瑛, "thousand, crystal ball" - a set of utility libraries for .NET. A work in progress.</Description>
     <Version>0.0.1</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/stevu236/chiaki/master/logo.png</PackageIconUrl>
   </PropertyGroup>

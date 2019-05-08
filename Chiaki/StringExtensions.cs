@@ -5,7 +5,7 @@ using System.Globalization;
 namespace Chiaki
 {
     /// <summary>
-    /// Provides extensions for String
+    /// Provides extensions for System.String
     /// </summary>
     public static class StringExtensions
     {
