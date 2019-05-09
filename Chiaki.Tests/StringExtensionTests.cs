@@ -86,5 +86,87 @@ namespace Chiaki.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void AppendIfNeeded_IfNullReturnsNullString()
+        {
+            // Arrange
+            string input = null;
+
+            // Act
+            string actual = input.AppendIfNeeded("...");
+
+            // Assert
+            Assert.IsNull(actual);
+        }
+
+        [TestMethod]
+        public void AppendIfNeeded_NoAppendIfInputEndsWithSpecifiedString()
+        {
+            // Arrange
+            string input = "test...";
+            string expected = "test...";
+
+            // Act
+            string actual = input.AppendIfNeeded("...");
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void AppendIfNeeded_AppendsIfInputDoesNotEndWithSpecifiedString()
+        {
+            // Arrange
+            string input = "test";
+            string expected = "test...";
+
+            // Act
+            string actual = input.AppendIfNeeded("...");
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void AppendIfNeeded_IfNullReturnsNullChar()
+        {
+            // Arrange
+            string input = null;
+
+            // Act
+            string actual = input.AppendIfNeeded('.');
+
+            // Assert
+            Assert.IsNull(actual);
+        }
+
+        [TestMethod]
+        public void AppendIfNeeded_NoAppendIfInputEndsWithSpecifiedChar()
+        {
+            // Arrange
+            string input = "test#";
+            string expected = "test#";
+
+            // Act
+            string actual = input.AppendIfNeeded('#');
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void AppendIfNeeded_AppendsIfInputDoesNotEndWithSpecifiedChar()
+        {
+            // Arrange
+            string input = "test";
+            string expected = "test#";
+
+            // Act
+            string actual = input.AppendIfNeeded('#');
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
