@@ -10,105 +10,105 @@ namespace Chiaki
     public static class StringExtensions
     {
         /// <summary>
-        /// Prepends <paramref name="prepend"/> to the string if it does not start with <paramref name="prepend"/>
+        /// Prepends <paramref name="value"/> to the string if it does not start with <paramref name="value"/>
         /// </summary>
-        public static string PrependIfNeeded(this string input, string prepend)
+        public static string PrependIfNeeded(this string input, string value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            if (input.StartsWith(prepend))
+            if (input.StartsWith(value))
             {
                 return input;
             }
 
-            return prepend + input.TrimStart(prepend);
+            return value + input.TrimStart(value);
         }
 
         /// <summary>
-        /// Prepends <paramref name="prepend"/> if the string does not start with <paramref name="prepend"/>
+        /// Prepends <paramref name="value"/> if the string does not start with <paramref name="value"/>
         /// </summary>
-        public static string PrependIfNeeded(this string input, char prepend)
+        public static string PrependIfNeeded(this string input, char value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            return input.StartsWith(prepend.ToString(CultureInfo.InvariantCulture))
+            return input.StartsWith(value.ToString(CultureInfo.InvariantCulture))
                 ? input
-                : prepend + input;
+                : value + input;
         }
 
         /// <summary>
-        /// Appends <paramref name="append"/> to the string if it does not end with <paramref name="append"/>
+        /// Appends <paramref name="value"/> to the string if it does not end with <paramref name="value"/>
         /// </summary>
-        public static string AppendIfNeeded(this string input, char append)
+        public static string AppendIfNeeded(this string input, char value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            return input.EndsWith(append.ToString(CultureInfo.InvariantCulture)) ? input : input + append;
+            return input.EndsWith(value.ToString(CultureInfo.InvariantCulture)) ? input : input + value;
         }
 
         /// <summary>
-        /// Appends <paramref name="append"/> to the string if it does not end with <paramref name="append"/>
+        /// Appends <paramref name="value"/> to the string if it does not end with <paramref name="value"/>
         /// </summary>
-        public static string AppendIfNeeded(this string input, string append)
+        public static string AppendIfNeeded(this string input, string value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            return input.EndsWith(append.ToString(CultureInfo.InvariantCulture)) ? input : input + append;
+            return input.EndsWith(value.ToString(CultureInfo.InvariantCulture)) ? input : input + value;
         }
 
         /// <summary>
-        /// Trims <paramref name="remove"/> from the end of the string.
+        /// Trims <paramref name="value"/> from the end of the string.
         /// </summary>
-        public static string TrimEnd(this string input, string remove)
+        public static string TrimEnd(this string input, string value)
         {
             if (string.IsNullOrEmpty(input))
             {
                 return input;
             }
 
-            if (string.IsNullOrEmpty(remove))
+            if (string.IsNullOrEmpty(value))
             {
                 return input;
             }
 
-            while (input.EndsWith(remove, StringComparison.InvariantCultureIgnoreCase))
+            while (input.EndsWith(value, StringComparison.InvariantCultureIgnoreCase))
             {
-                input = input.Remove(input.LastIndexOf(remove, StringComparison.InvariantCultureIgnoreCase));
+                input = input.Remove(input.LastIndexOf(value, StringComparison.InvariantCultureIgnoreCase));
             }
 
             return input;
         }
 
         /// <summary>
-        /// Trims <paramref name="remove"/> from the start of the string.
+        /// Trims <paramref name="value"/> from the start of the string.
         /// </summary>
-        public static string TrimStart(this string input, string remove)
+        public static string TrimStart(this string input, string value)
         {
             if (string.IsNullOrEmpty(input))
             {
                 return input;
             }
 
-            if (string.IsNullOrEmpty(remove))
+            if (string.IsNullOrEmpty(value))
             {
                 return input;
             }
 
-            while (input.StartsWith(remove, StringComparison.InvariantCultureIgnoreCase))
+            while (input.StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
             {
-                input = input.Substring(remove.Length);
+                input = input.Substring(value.Length);
             }
 
             return input;

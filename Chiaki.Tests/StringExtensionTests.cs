@@ -168,5 +168,109 @@ namespace Chiaki.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void TrimEnd_IfInputNullThenReturnsNull()
+        {
+            // Arrange
+            string input = null;
+
+            // Act
+            string actual = input.TrimEnd("#");
+
+            // Assert
+            Assert.IsNull(actual);
+        }
+
+        [TestMethod]
+        public void TrimEnd_IfValueNullThenReturnsNoChange()
+        {
+            // Arrange
+            string input = "test";
+
+            // Act
+            string actual = input.TrimEnd((string)null);
+
+            // Assert
+            Assert.AreEqual(input, actual);
+        }
+
+        [TestMethod]
+        public void TrimEnd_IfInputDoesNotEndWithValueReturnsNoChange()
+        {
+            // Arrange
+            string input = "test_keep";
+
+            // Act
+            string actual = input.TrimEnd("remove");
+
+            // Assert
+            Assert.AreEqual(input, actual);
+        }
+
+        [TestMethod]
+        public void TrimEnd_IfInputEndsWithValueReturnsChange()
+        {
+            // Arrange
+            string input = "test_remove";
+
+            // Act
+            string actual = input.TrimEnd("remove");
+
+            // Assert
+            Assert.AreEqual("test_", actual);
+        }
+
+        [TestMethod]
+        public void TrimStart_IfInputNullThenReturnsNull()
+        {
+            // Arrange
+            string input = null;
+
+            // Act
+            string actual = input.TrimStart("#");
+
+            // Assert
+            Assert.IsNull(actual);
+        }
+
+        [TestMethod]
+        public void TrimStart_IfValueNullThenReturnsNull()
+        {
+            // Arrange
+            string input = "test";
+
+            // Act
+            string actual = input.TrimStart((string)null);
+
+            // Assert
+            Assert.AreEqual(input, actual);
+        }
+
+        [TestMethod]
+        public void TrimStart_IfInputDoesNotStartWithValueReturnsNoChange()
+        {
+            // Arrange
+            string input = "keep_test";
+
+            // Act
+            string actual = input.TrimStart("remove");
+
+            // Assert
+            Assert.AreEqual(input, actual);
+        }
+
+        [TestMethod]
+        public void TrimStart_IfInputStartsWithValueReturnsChange()
+        {
+            // Arrange
+            string input = "remove_test";
+
+            // Act
+            string actual = input.TrimStart("remove");
+
+            // Assert
+            Assert.AreEqual("_test", actual);
+        }
     }
 }
