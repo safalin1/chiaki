@@ -74,20 +74,13 @@ namespace Chiaki
                 list.Remove(match);
             }
         }
-        
+
         /// <summary>
-        /// If the <see cref="IEnumerable{T}"/> is null, an empty <see cref="IEnumerable{T}"/> will be returned. Otherwise, the existing <see cref="IEnumerable{T}"/> will be returned.
+        /// If the IEnumerable is null, an empty instance of the IEnumerable will be returned. Otherwise, the existing instance will be returned.
         /// </summary>
         public static IEnumerable<T> IfNullThenEmpty<T>(this IEnumerable<T> input)
         {
-            if (input == null)
-            {
-                return Enumerable.Empty<T>();
-            }
-            else
-            {
-                return input;
-            }
+            return input ?? Enumerable.Empty<T>();
         }
     }
 }
