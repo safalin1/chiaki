@@ -5,7 +5,7 @@ using System.Linq;
 namespace Chiaki
 {
     /// <summary>
-    /// Provides common extensions for IEnumerables.
+    /// Provides extensions for <see cref="IEnumerable{T}"/>.
     /// </summary>
     public static class EnumerableExtensions
     {
@@ -47,6 +47,47 @@ namespace Chiaki
         public static IEnumerable<T> OrderByRandom<T>(this IEnumerable<T> query)
         {
             return query.OrderBy(q => Guid.NewGuid());
+        }
+
+        /// <summary>
+        /// Removes all matching items from an <see cref="IList{T}"/>.
+        /// </summary>
+        public static void RemoveAll<T>(this IList<T> list, Func<T, bool> predicate)
+        {
+            for (var i = 0; i < list.Count; i++)
+            {
+                if (predicate(list[i]))
+                {
+                    list.RemoveAt(i--);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Removes all matching items from an <see cref="ICollection{T}"/>.
+        /// </summary>
+        public static void RemoveAll<T>(this ICollection<T> list, Func<T, bool> predicate)
+        {
+            var matches = list.Where(predicate).ToArray();
+            foreach (var match in matches)
+            {
+                list.Remove(match);
+            }
+        }
+        
+        /// <summary>
+        /// If the <see cref="IEnumerable{T}"/> is null, an empty <see cref="IEnumerable{T}"/> will be returned. Otherwise, the existing <see cref="IEnumerable{T}"/> will be returned.
+        /// </summary>
+        public static IEnumerable<T> IfNullThenEmpty<T>(this IEnumerable<T> input)
+        {
+            if (input == null)
+            {
+                return Enumerable.Empty<T>();
+            }
+            else
+            {
+                return input;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@
 namespace Chiaki
 {
     /// <summary>
-    /// Provides extension methods for the System.IO.Stream type.
+    /// Provides extensions for <see cref="Stream"/>
     /// </summary>
     public static class StreamExtensions
     {
