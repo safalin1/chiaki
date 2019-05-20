@@ -183,5 +183,27 @@ namespace Chiaki
 
             return builder.ToString();
         }
+        
+        /// <summary>
+        /// Truncates a string to the specified max length.
+        /// </summary>
+        public static string TruncateTo(this string input, int maxLength, string suffix = "...")
+        {
+            string text = input;
+            
+            if (maxLength <= 0)
+            {
+                return text;
+            }
+            
+            int length = maxLength - suffix.Length;
+            
+            if (length <= 0 || input == null || input.Length <= maxLength)
+            {
+                return text;
+            }
+            
+            return text.Substring(0, length).TrimEnd() + suffix;
+        }
     }
 }
