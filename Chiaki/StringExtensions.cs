@@ -118,20 +118,20 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Strips whitespace, tabs, carriage returns, new line, vertical tab and form feed characters from a string.
+        /// Removes whitespace, tabs, carriage returns, new lines, vertical tabs and form feed characters from a string.
         /// </summary>
         /// <remarks>
         /// This method uses Regex \s to match.
         /// </remarks>
-        internal static string StripWhitespace(this string input)
+        public static string RemoveWhitespace(this string input)
         {
             return Regex.Replace(input, @"\s", string.Empty);
         }
 
         /// <summary>
-        /// Strips all HTML tags from a string.
+        /// Removes all HTML tags from a string.
         /// </summary>
-        public static string StripHtml(this string input)
+        public static string RemoveHtmlTags(this string input)
         {
             const string pattern = @"<(.|\n)*?>";
 
@@ -139,9 +139,9 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Strips all carriage returns from a string.
+        /// Removes all carriage returns and newlines from a string.
         /// </summary>
-        public static string StripNewLines(this string input)
+        public static string RemoveNewLines(this string input)
         {
             return input
                 .Replace("\r", string.Empty)
