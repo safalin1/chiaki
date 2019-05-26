@@ -13,105 +13,105 @@ namespace Chiaki
     public static class StringExtensions
     {
         /// <summary>
-        /// Prepends <paramref name="prepend"/> to the string if it does not start with <paramref name="prepend"/>
+        /// Prepends <paramref name="value"/> to the string if it does not start with <paramref name="value"/>
         /// </summary>
-        public static string PrependIfNeeded(this string input, string prepend)
+        public static string PrependIfNeeded(this string input, string value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            if (input.StartsWith(prepend))
+            if (input.StartsWith(value))
             {
                 return input;
             }
 
-            return prepend + input.TrimStart(prepend);
+            return value + input.TrimStart(value);
         }
 
         /// <summary>
-        /// Prepends <paramref name="prepend"/> if the string does not start with <paramref name="prepend"/>
+        /// Prepends <paramref name="value"/> if the string does not start with <paramref name="value"/>
         /// </summary>
-        public static string PrependIfNeeded(this string input, char prepend)
+        public static string PrependIfNeeded(this string input, char value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            return input.StartsWith(prepend.ToString(CultureInfo.InvariantCulture))
+            return input.StartsWith(value.ToString(CultureInfo.InvariantCulture))
                 ? input
-                : prepend + input;
+                : value + input;
         }
 
         /// <summary>
-        /// Appends <paramref name="append"/> to the string if it does not end with <paramref name="append"/>
+        /// Appends <paramref name="value"/> to the string if it does not end with <paramref name="value"/>
         /// </summary>
-        public static string AppendIfNeeded(this string input, char append)
+        public static string AppendIfNeeded(this string input, char value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            return input.EndsWith(append.ToString(CultureInfo.InvariantCulture)) ? input : input + append;
+            return input.EndsWith(value.ToString(CultureInfo.InvariantCulture)) ? input : input + value;
         }
 
         /// <summary>
-        /// Appends <paramref name="append"/> to the string if it does not end with <paramref name="append"/>
+        /// Appends <paramref name="value"/> to the string if it does not end with <paramref name="value"/>
         /// </summary>
-        public static string AppendIfNeeded(this string input, string append)
+        public static string AppendIfNeeded(this string input, string value)
         {
             if (input == null)
             {
                 return input;
             }
 
-            return input.EndsWith(append.ToString(CultureInfo.InvariantCulture)) ? input : input + append;
+            return input.EndsWith(value.ToString(CultureInfo.InvariantCulture)) ? input : input + value;
         }
 
         /// <summary>
-        /// Trims <paramref name="remove"/> from the end of the string.
+        /// Trims <paramref name="value"/> from the end of the string.
         /// </summary>
-        public static string TrimEnd(this string input, string remove)
+        public static string TrimEnd(this string input, string value)
         {
             if (string.IsNullOrEmpty(input))
             {
                 return input;
             }
 
-            if (string.IsNullOrEmpty(remove))
+            if (string.IsNullOrEmpty(value))
             {
                 return input;
             }
 
-            while (input.EndsWith(remove, StringComparison.InvariantCultureIgnoreCase))
+            while (input.EndsWith(value, StringComparison.InvariantCultureIgnoreCase))
             {
-                input = input.Remove(input.LastIndexOf(remove, StringComparison.InvariantCultureIgnoreCase));
+                input = input.Remove(input.LastIndexOf(value, StringComparison.InvariantCultureIgnoreCase));
             }
 
             return input;
         }
 
         /// <summary>
-        /// Trims <paramref name="remove"/> from the start of the string.
+        /// Trims <paramref name="value"/> from the start of the string.
         /// </summary>
-        public static string TrimStart(this string input, string remove)
+        public static string TrimStart(this string input, string value)
         {
             if (string.IsNullOrEmpty(input))
             {
                 return input;
             }
 
-            if (string.IsNullOrEmpty(remove))
+            if (string.IsNullOrEmpty(value))
             {
                 return input;
             }
 
-            while (input.StartsWith(remove, StringComparison.InvariantCultureIgnoreCase))
+            while (input.StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
             {
-                input = input.Substring(remove.Length);
+                input = input.Substring(value.Length);
             }
 
             return input;
@@ -183,27 +183,205 @@ namespace Chiaki
 
             return builder.ToString();
         }
-        
+
         /// <summary>
         /// Truncates a string to the specified max length.
         /// </summary>
         public static string TruncateTo(this string input, int maxLength, string suffix = "...")
         {
             string text = input;
-            
+
             if (maxLength <= 0)
             {
                 return text;
             }
-            
+
             int length = maxLength - suffix.Length;
-            
+
             if (length <= 0 || input == null || input.Length <= maxLength)
             {
                 return text;
             }
-            
+
             return text.Substring(0, length).TrimEnd() + suffix;
+        }
+
+        /// <summary>
+        /// Replaces one or more format items in a specified string with the string representation of a specified object.
+        /// </summary>
+        public static string Format(this string input, object arg0)
+        {
+            return string.Format(input, arg0);
+        }
+
+        /// <summary>
+        /// Replaces one or more format items in a specified string with the string representation of a specified object.
+        /// </summary>
+        public static string Format(this string input, params object[] args)
+        {
+            return string.Format(input, args);
+        }
+
+        /// <summary>
+        /// Checks whether or not the string is numeric.
+        /// </summary>
+        public static bool IsNumeric(this string input)
+        {
+            return long.TryParse(input, NumberStyles.Integer, NumberFormatInfo.InvariantInfo, out _);
+        }
+
+        /// <summary>
+        /// Returns true if the string is non-null and at least the specified number of characters.
+        /// </summary>
+        /// <param name="input">The string to check.</param>
+        /// <param name="length">The minimum length.</param>
+        /// <returns>True if string is non-null and at least the length specified.</returns>
+        /// <exception>throws ArgumentOutOfRangeException if length is not a non-negative number.</exception>
+        public static bool IsLengthAtLeast(this string input, int length)
+        {
+            if (length < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(length), length, "The length must be a non-negative number.");
+            }
+
+            return input != null && input.Length >= length;
+        }
+
+        /// <summary>
+        /// Mask the source string with the mask char except for the last exposed digits.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <param name="maskChar">The character to use to mask the source.</param>
+        /// <param name="numExposed">Number of characters exposed in masked value.</param>
+        /// <param name="style">The masking style to use (all characters or just alpha numerical characters).</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue, char maskChar, int numExposed, StringMaskStyle style)
+        {
+            var maskedString = sourceValue;
+
+            if (sourceValue.IsLengthAtLeast(numExposed))
+            {
+                var builder = new StringBuilder(sourceValue.Length);
+                int index = maskedString.Length - numExposed;
+
+                if (style == StringMaskStyle.AlphaNumericOnly)
+                {
+                    CreateAlphaNumMask(builder, sourceValue, maskChar, index);
+                }
+                else
+                {
+                    builder.Append(maskChar, index);
+                }
+
+                builder.Append(sourceValue.Substring(index));
+                maskedString = builder.ToString();
+            }
+
+            return maskedString;
+        }
+
+        /// <summary>
+        /// Mask the source string with the mask char except for the last exposed digits.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <param name="maskChar">The character to use to mask the source.</param>
+        /// <param name="numExposed">Number of characters exposed in masked value.</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue, char maskChar, int numExposed)
+        {
+            return Mask(sourceValue, maskChar, numExposed, StringMaskStyle.All);
+        }
+
+        /// <summary>
+        /// Mask the source string with the mask char.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <param name="maskChar">The character to use to mask the source.</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue, char maskChar)
+        {
+            return Mask(sourceValue, maskChar, 0, StringMaskStyle.All);
+        }
+
+        /// <summary>
+        /// Mask the source string with the default mask char except for the last exposed digits.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <param name="numExposed">Number of characters exposed in masked value.</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue, int numExposed)
+        {
+            return Mask(sourceValue, '*', numExposed, StringMaskStyle.All);
+        }
+
+        /// <summary>
+        /// Mask the source string with the default mask char.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue)
+        {
+            return Mask(sourceValue, '*', 0, StringMaskStyle.All);
+        }
+
+        /// <summary>
+        /// Mask the source string with the mask char.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <param name="maskChar">The character to use to mask the source.</param>
+        /// <param name="style">The masking style to use (all characters or just alpha-nums).</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue, char maskChar, StringMaskStyle style)
+        {
+            return Mask(sourceValue, maskChar, 0, style);
+        }
+
+        /// <summary>
+        /// Mask the source string with the default mask char except for the last exposed digits.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <param name="numExposed">Number of characters exposed in masked value.</param>
+        /// <param name="style">The masking style to use (all characters or just alpha-nums).</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue, int numExposed, StringMaskStyle style)
+        {
+            return Mask(sourceValue, '*', numExposed, style);
+        }
+
+        /// <summary>
+        /// Mask the source string with the default mask char.
+        /// </summary>
+        /// <param name="sourceValue">Original string to mask.</param>
+        /// <param name="style">The masking style to use (all characters or just alpha-nums).</param>
+        /// <returns>The masked account number.</returns>
+        public static string Mask(this string sourceValue, StringMaskStyle style)
+        {
+            return Mask(sourceValue, '*', 0, style);
+        }
+
+        /// <summary>
+        /// Masks all characters for the specified length.
+        /// </summary>
+        /// <param name="buffer">String builder to store result in.</param>
+        /// <param name="source">The source string to pull non-alpha numeric characters.</param>
+        /// <param name="mask">Masking character to use.</param>
+        /// <param name="length">Length of the mask.</param>
+        private static void CreateAlphaNumMask(StringBuilder buffer, string source, char mask, int length)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                buffer.Append(char.IsLetterOrDigit(source[i])
+                                ? mask
+                                : source[i]);
+            }
+        }
+
+        /// <summary>
+        /// Gets all characters of the string and encodes them into a byte array.
+        /// </summary>
+        public static byte[] GetBytes(this string input)
+        {
+            return Encoding.UTF8.GetBytes(input);
         }
     }
 }

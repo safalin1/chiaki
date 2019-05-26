@@ -74,20 +74,33 @@ namespace Chiaki
                 list.Remove(match);
             }
         }
-        
+
         /// <summary>
-        /// If the <see cref="IEnumerable{T}"/> is null, an empty <see cref="IEnumerable{T}"/> will be returned. Otherwise, the existing <see cref="IEnumerable{T}"/> will be returned.
+        /// If the IEnumerable is null, an empty instance of the IEnumerable will be returned. Otherwise, the existing instance will be returned.
         /// </summary>
         public static IEnumerable<T> IfNullThenEmpty<T>(this IEnumerable<T> input)
         {
-            if (input == null)
-            {
-                return Enumerable.Empty<T>();
-            }
-            else
-            {
-                return input;
-            }
+            return input ?? Enumerable.Empty<T>();
+        }
+
+        /// <summary>
+        /// Applies a filter on the sequence only if <paramref name="condition"/> is met.
+        /// </summary>
+        public static IEnumerable<TSource> WhereIf<TSource>(this IEnumerable<TSource> source, bool condition, Func<TSource, bool> predicate)
+        {
+            return condition
+                ? source.Where(predicate)
+                : source;
+        }
+
+        /// <summary>
+        /// Applies a filter on the sequence only if <paramref name="condition"/> is met.
+        /// </summary>
+        public static IEnumerable<TSource> WhereIf<TSource>(this IEnumerable<TSource> source, bool condition, Func<TSource, int, bool> predicate)
+        {
+            return condition
+                ? source.Where(predicate)
+                : source;
         }
     }
 }
