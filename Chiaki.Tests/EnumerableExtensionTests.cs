@@ -37,5 +37,45 @@ namespace Chiaki.Tests
             Assert.IsNotNull(actual);
             Assert.IsTrue(actual.Count() == 2);
         }
+
+        [TestMethod]
+        public void WhereIf_ConditionFalseReturnsAsIs()
+        {
+            // Arrange
+            string[] input =
+            {
+                "test",
+                "test2",
+                ""
+            };
+
+            // Act
+            var actual = input.WhereIf(condition: false, x => x.Length == 0);
+
+            // Assert
+            Assert.IsNotNull(actual);
+            Assert.IsTrue(actual.Count() == 3);
+        }
+
+
+        [TestMethod]
+        public void WhereIf_ConditionTrueReturnsWithFilter()
+        {
+            // Arrange
+            string[] input =
+            {
+                "test",
+                "test2",
+                ""
+            };
+
+            // Act
+            var actual = input.WhereIf(condition: true, x => x.Length == 0);
+
+            // Assert
+            Assert.IsNotNull(actual);
+            Assert.IsTrue(actual.Count() == 1);
+            Assert.IsTrue(actual.First() == string.Empty);
+        }
     }
 }

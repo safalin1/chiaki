@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTimeExtensionTests.cs" />
+    <Compile Include="DoubleExtensionTests.cs" />
     <Compile Include="EnumerableExtensionTests.cs" />
     <Compile Include="StringExtensionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
