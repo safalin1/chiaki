@@ -50,7 +50,7 @@ namespace Chiaki.Tests
             };
 
             // Act
-            var actual = input.WhereIf(condition: false, x => x.Length == 0);
+            var actual = input.WhereIf(condition: false, predicate: x => x.Length == 0);
 
             // Assert
             Assert.IsNotNull(actual);
@@ -70,7 +70,7 @@ namespace Chiaki.Tests
             };
 
             // Act
-            var actual = input.WhereIf(condition: true, x => x.Length == 0);
+            var actual = input.WhereIf(condition: true, predicate: x => x.Length == 0);
 
             // Assert
             Assert.IsNotNull(actual);
