@@ -6,7 +6,7 @@ namespace Chiaki
     /// Represents a singleton instance of a class
     /// </summary>
     /// <typeparam name="T">Type of the singleton</typeparam>
-    public class Singleton<T> where T : new()
+    public abstract class Singleton<T> where T : new()
     {
         private static readonly Lazy<T> _instance = new Lazy<T>(() => new T());
 
