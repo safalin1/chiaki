@@ -102,5 +102,24 @@ namespace Chiaki
                 ? source.Where(predicate)
                 : source;
         }
+
+        /// <summary>
+        /// Returns true if all items in the other enumerable exist in the source enumerable.
+        /// </summary>
+        public static bool ContainsAll<TSource>(this IEnumerable<TSource> source, IEnumerable<TSource> other)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (other == null) throw new ArgumentNullException(nameof(other));
+
+            return !other.Except(source).Any();
+        }
+
+        /// <summary>
+        /// Returns true if the source enumerable contains any of the items in the other enumerable.
+        /// </summary>
+        public static bool ContainsAny<TSource>(this IEnumerable<TSource> source, IEnumerable<TSource> other)
+        {
+            return other.Any(source.Contains);
+        }
     }
 }

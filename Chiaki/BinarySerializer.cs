@@ -5,6 +5,9 @@ using System.Xml;
 
 namespace Chiaki
 {
+    /// <summary>
+    /// Provides a serializer which can write an instance of an object to binary.
+    /// </summary>
     public static class BinarySerializer
     {
         /// <summary>

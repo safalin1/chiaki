@@ -149,6 +149,16 @@ namespace Chiaki
         }
 
         /// <summary>
+        /// Converts all new lines characters "\n" to html break tags.
+        /// </summary>
+        public static string ConvertNewLinesToHtmlTags(this string input)
+        {
+            return input
+                .Replace("\r", string.Empty)
+                .Replace("\n", "<br />");
+        }
+
+        /// <summary>
         /// Converts a string to hexadecimal format.
         /// </summary>
         public static string ToHexadecimal(this string input)
@@ -209,7 +219,7 @@ namespace Chiaki
         /// <summary>
         /// Replaces one or more format items in a specified string with the string representation of a specified object.
         /// </summary>
-        public static string Format(this string input, object arg0)
+        public static string Formatted(this string input, object arg0)
         {
             return string.Format(input, arg0);
         }
@@ -217,7 +227,7 @@ namespace Chiaki
         /// <summary>
         /// Replaces one or more format items in a specified string with the string representation of a specified object.
         /// </summary>
-        public static string Format(this string input, params object[] args)
+        public static string Formatted(this string input, params object[] args)
         {
             return string.Format(input, args);
         }
