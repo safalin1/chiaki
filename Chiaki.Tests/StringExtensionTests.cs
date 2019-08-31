@@ -272,5 +272,65 @@ namespace Chiaki.Tests
             // Assert
             Assert.AreEqual("_test", actual);
         }
+
+        [TestMethod]
+        public void Mask_CompleteMask()
+        {
+            // Arrange
+            const string expected = "*********";
+            string input = "test12345";
+            char mask = '*';
+
+            // Act
+            string actual = input.Mask(mask);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Mask_ExposedMask()
+        {
+            // Arrange
+            const string expected = "*****2345";
+            string input = "test12345";
+            char mask = '*';
+
+            // Act
+            string actual = input.Mask(mask, 4);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Mask_ExposedMaskWithCustomMaskChar()
+        {
+            // Arrange
+            const string expected = "???????21";
+            string input = "test54321";
+            char mask = '?';
+
+            // Act
+            string actual = input.Mask(mask, 2);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Mask_ExposedMaskWithCustomMaskCharAlphaNumericOnly()
+        {
+            // Arrange
+            const string expected = "?????????$@#";
+            string input = "test54321$@#";
+            char mask = '?';
+
+            // Act
+            string actual = input.Mask(mask, 2, StringMaskStyle.AlphaNumericOnly);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
