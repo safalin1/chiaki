@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.BinarySerializer.html",
-          "hash": "p3VV8mIZIssxfj/p419c/w=="
+          "hash": "ElQ1Ioh9zsyD/1HI3joafQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.DateTimeExtensions.html",
-          "hash": "9nmIUkvq3eUOwKiDYCk26Q=="
+          "hash": "pl1abnco6x022JCugVAevQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.DictionaryExtensions.html",
-          "hash": "aF0tiAMVeU79snpHahIPig=="
+          "hash": "SmSh9wF6/JeOaCD73ZNQJw=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.DoubleExtensions.html",
-          "hash": "yc/esi+18o5wusTVnWsjAA=="
+          "hash": "RIOCjUwRrMuF0IIRCS5uvA=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.Enum-1.html",
-          "hash": "OSr/7Zg78O9iisgdQU73dw=="
+          "hash": "VaFH7AYG6sT64xDJJgLMpA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.EnumerableExtensions.html",
-          "hash": "E9S8hFXCfsvjhBuQfH5h+g=="
+          "hash": "i0JVlGyMxoVuWFdbzmVBPQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.ObjectExtensions.html",
-          "hash": "oOwebOIT3VzMzR3w5VynqQ=="
+          "hash": "tJXe2hioO8SUGKB3OXeoDA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.PerformanceTimer.html",
-          "hash": "kpKx8YCFFxBiW4OHznrfaw=="
+          "hash": "5wNgSZ+UZ1ogHeE1uhvLIQ=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.RandomExtensions.html",
-          "hash": "IxAWN9+vV+oAB+IyAYLpsQ=="
+          "hash": "AUztLavStrNjk41SwfiBxA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.Singleton-1.html",
-          "hash": "SI9Kxr70HZaibZ8LvFCcag=="
+          "hash": "IQgSHvZM/TB61Mn12PV7wA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.StreamExtensions.html",
-          "hash": "4nCLAUjC0sjQsfrvNUBIUA=="
+          "hash": "XcGf6iI9XPmYtZFQvq5N6w=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.StringExtensions.html",
-          "hash": "+Y/CEZgLR88cLK9xCC8P2A=="
+          "hash": "rOI2Hy8iK5fXhunhsPoZdw=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.StringMaskStyle.html",
-          "hash": "isRRcMJWunihzeXw99PHuA=="
+          "hash": "odmlaXPiSupvsfFAQrS3Ag=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.XmlSerializer.html",
-          "hash": "Ovg3Zv2f0NdlL1ajzev5VA=="
+          "hash": "YkaQ80DSh6YZZD5H8iJmUw=="
         }
       },
       "is_incremental": false,
@@ -177,19 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.html",
-          "hash": "T8qA9S7X405RNKhOPeaLTg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "api/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/index.html",
-          "hash": "1IfU/WbDX+gZm1aOO3OVMA=="
+          "hash": "BkbIpfbrvMukZo74Roy1jw=="
         }
       },
       "is_incremental": false,
@@ -208,24 +196,11 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
       "output": {
-        ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "y3yQLUnsZlO6xfS4LSDiFQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/toc.html",
-          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        "resource": {
+          "relative_path": "images/logo.png"
         }
       },
       "is_incremental": false,
@@ -237,19 +212,22 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "1fWfxpE6XHeh+YC6DE0Hqw=="
+          "hash": "YtxhvSh+G+RDcfHq5Xh0zA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+          "hash": "r+5RmIQz1GnMLHoTjak2iw=="
         }
       },
       "is_incremental": false,
@@ -274,16 +252,23 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 15,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 15,
           "skipped_file_count": 0
         }
       }
