@@ -52,11 +52,7 @@
     "dest": "../docs",
     "globalMetadata": {
       "_appTitle": "Chiaki",
-      "_appLogoPath": "images/logo.png",
-      "_gitContribute": {
-        "repo": "https://github.com/stevu236/chiaki",
-        "branch": "master"
-      }
+      "_appLogoPath": "images/logo.png"
     },
     "fileMetadataFiles": [],
     "template": [
