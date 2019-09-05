@@ -1,0 +1,308 @@
+{
+  "homepages": [],
+  "source_base_path": "R:/sourcecode/chiaki/Chiaki",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.BinarySerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.BinarySerializer.html",
+          "hash": "p3VV8mIZIssxfj/p419c/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.DateTimeExtensions.html",
+          "hash": "9nmIUkvq3eUOwKiDYCk26Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.DictionaryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.DictionaryExtensions.html",
+          "hash": "aF0tiAMVeU79snpHahIPig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.DoubleExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.DoubleExtensions.html",
+          "hash": "yc/esi+18o5wusTVnWsjAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.Enum-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.Enum-1.html",
+          "hash": "OSr/7Zg78O9iisgdQU73dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.EnumerableExtensions.html",
+          "hash": "E9S8hFXCfsvjhBuQfH5h+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.ObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.ObjectExtensions.html",
+          "hash": "oOwebOIT3VzMzR3w5VynqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.PerformanceTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.PerformanceTimer.html",
+          "hash": "kpKx8YCFFxBiW4OHznrfaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.RandomExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.RandomExtensions.html",
+          "hash": "IxAWN9+vV+oAB+IyAYLpsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.Singleton-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.Singleton-1.html",
+          "hash": "SI9Kxr70HZaibZ8LvFCcag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.StreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.StreamExtensions.html",
+          "hash": "4nCLAUjC0sjQsfrvNUBIUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.StringExtensions.html",
+          "hash": "+Y/CEZgLR88cLK9xCC8P2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.StringMaskStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.StringMaskStyle.html",
+          "hash": "isRRcMJWunihzeXw99PHuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.XmlSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.XmlSerializer.html",
+          "hash": "Ovg3Zv2f0NdlL1ajzev5VA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.html",
+          "hash": "T8qA9S7X405RNKhOPeaLTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "1IfU/WbDX+gZm1aOO3OVMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "65vPZW6fkIB4ANirroCVBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "y3yQLUnsZlO6xfS4LSDiFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "1fWfxpE6XHeh+YC6DE0Hqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 15,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
