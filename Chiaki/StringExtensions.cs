@@ -127,6 +127,11 @@ namespace Chiaki
         /// </remarks>
         public static string RemoveWhitespace(this string input)
         {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
             return Regex.Replace(input, @"\s", string.Empty);
         }
 

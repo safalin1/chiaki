@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chiaki.Tests
 {
@@ -373,6 +374,90 @@ namespace Chiaki.Tests
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReplaceFirst_OnNullThrowsException()
+        {
+            // Arrange
+            string input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.ReplaceFirst("replacement", "unchanged"));
+        }
+
+        [TestMethod]
+        public void RemoveWhitespace_SpacesAreRemoved()
+        {
+            // Arrange
+            const string expected = "thisisateststring";
+            string input = "this is a test string";
+
+            // Act
+            string actual = input.RemoveWhitespace();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveWhitespace_OnNullThrowsException()
+        {
+            // Arrange
+            string input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.RemoveWhitespace());
+        }
+
+        [TestMethod]
+        public void RemoveHtmlTags_RemovesParagraphTags()
+        {
+            // Arrange
+            const string expected = "this is my content";
+            string input = "<p>this is my content</p>";
+
+            // Act
+            string actual = input.RemoveHtmlTags();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveHtmlTags_OnNullThrowsException()
+        {
+            // Arrange
+            string input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.RemoveHtmlTags());
+        }
+
+        [TestMethod]
+        public void IsNumeric_WithNumberReturnsTrue()
+        {
+            // Arrange
+            string input = "12345";
+
+            // Act
+            bool actual = input.IsNumeric();
+
+            // Assert
+            Assert.IsTrue(actual);
+        }
+
+        [TestMethod]
+        public void IsNumeric_WithStringReturnsFalse()
+        {
+            // Arrange
+            string input = "test";
+
+            // Act
+            bool actual = input.IsNumeric();
+
+            // Assert
+            Assert.IsFalse(actual);
         }
     }
 }
