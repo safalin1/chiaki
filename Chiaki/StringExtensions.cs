@@ -12,6 +12,8 @@ namespace Chiaki
     /// </summary>
     public static class StringExtensions
     {
+        private static Random _random = new Random();
+
         /// <summary>
         /// Prepends <paramref name="value"/> to the string if it does not start with <paramref name="value"/>
         /// </summary>
@@ -387,11 +389,67 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Gets all characters of the string and encodes them into a byte array.
+        /// Gets all characters of the string using UTF8 encoding and encodes them into a byte array.
         /// </summary>
         public static byte[] GetBytes(this string input)
         {
             return Encoding.UTF8.GetBytes(input);
+        }
+
+        /// <summary>
+        /// Replaces the first occurence of a string within a string, and replaces it with another string.
+        /// </summary>
+        /// <param name="text">The string to perform the replacements on.</param>
+        /// <param name="search">The string to match.</param>
+        /// <param name="replace">The string that will be inserted if the first match is found.</param>
+        /// <returns></returns>
+        public static string ReplaceFirst(this string text, string search, string replace)
+        {
+            if (text == null)
+            {
+                throw new ArgumentNullException(nameof(text));
+            }
+
+            int position = text.IndexOf(search, StringComparison.Ordinal);
+
+            if (position < 0)
+            {
+                return text;
+            }
+
+            return text.Substring(0, position) + replace + text.Substring(position + search.Length);
+        }
+
+        /// <summary>
+        /// Generates a string with random characters. 
+        /// </summary>
+        /// <remarks>Use of this method for anything security related is not recommended.</remarks>
+        /// <param name="characters">Characters that can be chosen as part of the randomisation process.</param>
+        /// <param name="length">The length of the randomised string to generate.</param>
+        public static string GenerateRandomString(string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", int length = 8) => GenerateRandomString(_random, characters, length);
+
+        /// <summary>
+        /// Generates a string with random characters. 
+        /// </summary>
+        /// <remarks>Use of this method for anything security related is not recommended.</remarks>
+        /// <param name="random">An existing random instance to use for generating the string.</param>
+        /// <param name="characters">Characters that can be chosen as part of the randomisation process.</param>
+        /// <param name="length">The length of the randomised string to generate.</param>
+        public static string GenerateRandomString(Random random, string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", int length = 8)
+        {
+            if (length < 1)
+            {
+                throw new ArgumentException("Length must be greater than one.", nameof(length));
+            }
+
+            var stringChars = new char[length];
+
+            for (int i = 0; i < stringChars.Length; i++)
+            {
+                stringChars[i] = characters[random.Next(characters.Length)];
+            }
+
+            return new string(stringChars);
         }
     }
 }
