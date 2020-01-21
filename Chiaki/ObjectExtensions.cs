@@ -11,7 +11,7 @@ namespace Chiaki
     public static class ObjectExtensions
     {
         /// <summary>
-        /// Returns a deep clone of an object.
+        /// Performs a deep clone of a instance of an object.
         /// </summary>
         public static T DeepClone<T>(this T input)
             where T : ISerializable
