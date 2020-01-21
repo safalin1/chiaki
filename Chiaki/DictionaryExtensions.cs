@@ -11,16 +11,16 @@ namespace Chiaki
         /// <summary>
         /// Converts a dictionary instance to a NameValueCollection.
         /// </summary>
-        public static NameValueCollection ToNameValueCollection(this IDictionary<string, string> d)
+        public static NameValueCollection ToNameValueCollection(this IDictionary<string, string> input)
         {
-            var n = new NameValueCollection();
+            var collection = new NameValueCollection();
 
-            foreach (var i in d)
+            foreach (var item in input)
             {
-                n.Add(i.Key, i.Value);
+                collection.Add(item.Key, item.Value);
             }
 
-            return n;
+            return collection;
         }
     }
 }
