@@ -155,5 +155,28 @@ namespace Chiaki.Tests
             Assert.IsTrue(actual.Count() == 1);
             Assert.IsTrue(actual.First() == string.Empty);
         }
+
+        [TestMethod]
+        public void RemoveAll_RemovesOnlyItemsMatchingPredicate()
+        {
+            // Arrange
+            int[] input =
+            {
+                1,
+                3,
+                6,
+                12,
+                15,
+                20
+            };
+
+            // Act
+            input.RemoveAll(x => x > 10);
+
+            // Assert
+            Assert.IsTrue(input.Length == 3);
+            CollectionAssert.AllItemsAreNotNull(input);
+            CollectionAssert.AreEqual(new[] { 1, 3, 6 }, input);
+        }
     }
 }

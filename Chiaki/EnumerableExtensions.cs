@@ -54,6 +54,11 @@ namespace Chiaki
         /// </summary>
         public static void RemoveAll<T>(this IList<T> list, Func<T, bool> predicate)
         {
+            if (list == null)
+            {
+                throw new ArgumentNullException(nameof(list));
+            }
+
             for (var i = 0; i < list.Count; i++)
             {
                 if (predicate(list[i]))
@@ -68,6 +73,11 @@ namespace Chiaki
         /// </summary>
         public static void RemoveAll<T>(this ICollection<T> list, Func<T, bool> predicate)
         {
+            if (list == null)
+            {
+                throw new ArgumentNullException(nameof(list));
+            }
+
             var matches = list.Where(predicate).ToArray();
             foreach (var match in matches)
             {
@@ -88,6 +98,11 @@ namespace Chiaki
         /// </summary>
         public static IEnumerable<TSource> WhereIf<TSource>(this IEnumerable<TSource> source, bool condition, Func<TSource, bool> predicate)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
             return condition
                 ? source.Where(predicate)
                 : source;
@@ -98,6 +113,11 @@ namespace Chiaki
         /// </summary>
         public static IEnumerable<TSource> WhereIf<TSource>(this IEnumerable<TSource> source, bool condition, Func<TSource, int, bool> predicate)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
             return condition
                 ? source.Where(predicate)
                 : source;
@@ -108,8 +128,15 @@ namespace Chiaki
         /// </summary>
         public static bool ContainsAll<TSource>(this IEnumerable<TSource> source, IEnumerable<TSource> other)
         {
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (other == null) throw new ArgumentNullException(nameof(other));
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            if (other == null)
+            {
+                throw new ArgumentNullException(nameof(other));
+            }
 
             return !other.Except(source).Any();
         }
@@ -119,6 +146,16 @@ namespace Chiaki
         /// </summary>
         public static bool ContainsAny<TSource>(this IEnumerable<TSource> source, IEnumerable<TSource> other)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            if (other == null)
+            {
+                throw new ArgumentNullException(nameof(other));
+            }
+
             return other.Any(source.Contains);
         }
     }
