@@ -12,7 +12,7 @@ namespace Chiaki
     /// </summary>
     public static class StringExtensions
     {
-        private static Random _random = new Random();
+        private static readonly Random _random = new Random();
 
         /// <summary>
         /// Prepends <paramref name="value"/> to the string if it does not start with <paramref name="value"/>

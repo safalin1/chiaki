@@ -332,5 +332,47 @@ namespace Chiaki.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ReplaceFirst_MatchesFirstInStringAndReplaces()
+        {
+            // Arrange
+            const string expected = "this_is_replacement_test";
+            string input = "this_is_unchanged_test";
+
+            // Act
+            string actual = input.ReplaceFirst("unchanged", "replacement");
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReplaceFirst_MatchesOnlyFirstInStringAndReplaces()
+        {
+            // Arrange
+            const string expected = "this_is_replacement_test_unchanged";
+            string input = "this_is_unchanged_test_unchanged";
+
+            // Act
+            string actual = input.ReplaceFirst("unchanged", "replacement");
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReplaceFirst_MatchesNoneAndStaysUnchanged()
+        {
+            // Arrange
+            const string expected = "this_is_unchanged_test_unchanged";
+            string input = "this_is_unchanged_test_unchanged";
+
+            // Act
+            string actual = input.ReplaceFirst("replacement", "unchanged");
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
