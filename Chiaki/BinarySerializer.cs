@@ -11,7 +11,7 @@ namespace Chiaki
     public static class BinarySerializer
     {
         /// <summary>
-        /// Serializes an instance of an object to binary - useful for writing to the filesystem or over the network.
+        /// Serializes an instance of an object to a byte array.
         /// </summary>
         /// <returns>Byte array containing serialized <typeparamref name="T"/></returns>
         public static byte[] Serialize<T>(T obj)

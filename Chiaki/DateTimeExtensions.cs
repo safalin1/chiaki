@@ -8,7 +8,7 @@ namespace Chiaki
     public static class DateTimeExtensions
     {
         /// <summary>
-        /// Converts the DateTime into UNIX Timestamp format
+        /// Converts a DateTime into UNIX Timestamp format
         /// </summary>
         public static double ToUnixTimestamp(this DateTime input)
         {
