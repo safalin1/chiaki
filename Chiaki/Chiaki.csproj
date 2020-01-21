@@ -1,25 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>Steven P</Authors>
     <PackageProjectUrl>https://github.com/stevu236/chiaki</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stevu236/chiaki</RepositoryUrl>
-    <Description>千瑛, "thousand, crystal ball" - a set of utility libraries for .NET. A work in progress.</Description>
+    <Description>Adds extension methods and other useful things to make things easier.</Description>
     <Version>0.0.1</Version>
+    <Copyright>Copyright 2020 (C) Steven P.</Copyright>
+    <PackageTags>chiaki utility extension methods string double datetime ienumerable</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/stevu236/chiaki/master/logo.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.45.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
+    <Folder Include="api\" />
     <Folder Include="images\" />
   </ItemGroup>
 </Project>
