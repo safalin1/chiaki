@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chiaki.Tests
@@ -157,10 +159,20 @@ namespace Chiaki.Tests
         }
 
         [TestMethod]
+        public void RemoveAll_ThrowExceptionWhenNull()
+        {
+            // Arrange
+            IList<int> input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.RemoveAll(x => x > 0));
+        }
+
+        [TestMethod]
         public void RemoveAll_RemovesOnlyItemsMatchingPredicate()
         {
             // Arrange
-            int[] input =
+            IList<int> input = new List<int>
             {
                 1,
                 3,
@@ -174,9 +186,57 @@ namespace Chiaki.Tests
             input.RemoveAll(x => x > 10);
 
             // Assert
-            Assert.IsTrue(input.Length == 3);
-            CollectionAssert.AllItemsAreNotNull(input);
-            CollectionAssert.AreEqual(new[] { 1, 3, 6 }, input);
+            Assert.IsTrue(input.Count == 3);
+            CollectionAssert.AllItemsAreNotNull(input.ToList());
+            CollectionAssert.AreEqual(new[] { 1, 3, 6 }, input.ToList());
+        }
+
+        [TestMethod]
+        public void ContainsAny_ReturnsTrueIfEnumerableContainsMatchingItem()
+        {
+            // Arrange
+            var a = new[] { 1, 2, 3 };
+            var b = new[] { 5, 4, 3 };
+
+            // Act
+            var result = a.ContainsAny(b);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void ContainsAny_ReturnsFalseIfEnumerableContainsNoMatchingItem()
+        {
+            // Arrange
+            var a = new[] { 1, 2, 3 };
+            var b = new[] { 6, 5, 4 };
+
+            // Act
+            var result = a.ContainsAny(b);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void RemoveAll_ThrowExceptionWhenSourceNull()
+        {
+            // Arrange
+            IList<int> input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.ContainsAny(new[] { 1 }));
+        }
+
+        [TestMethod]
+        public void RemoveAll_ThrowExceptionWhenOtherNull()
+        {
+            // Arrange
+            IEnumerable<int> input = new[] { 1 };
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.ContainsAny(null));
         }
     }
 }
