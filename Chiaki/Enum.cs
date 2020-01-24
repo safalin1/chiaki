@@ -5,8 +5,11 @@ using System.Linq;
 
 namespace Chiaki
 {
+    /// <summary>
+    /// Provides strongly typed methods for working with <see cref="Enum"/>.
+    /// </summary>
     /// <remarks>
-    /// Taken from http://damieng.com/blog/2010/10/17/enums-better-syntax-improved-performance-and-tryparse-in-net-3-5
+    /// Credit from http://damieng.com/blog/2010/10/17/enums-better-syntax-improved-performance-and-tryparse-in-net-3-5
     /// </remarks>
     public static class Enum<T> where T : struct
     {

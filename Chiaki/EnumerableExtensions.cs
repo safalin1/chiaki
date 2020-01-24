@@ -94,7 +94,7 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Applies a filter on the sequence only if <paramref name="condition"/> is met.
+        /// Applies a filter on a sequence only if <paramref name="condition"/> is met.
         /// </summary>
         public static IEnumerable<TSource> WhereIf<TSource>(this IEnumerable<TSource> source, bool condition, Func<TSource, bool> predicate)
         {
@@ -109,7 +109,7 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Applies a filter on the sequence only if <paramref name="condition"/> is met.
+        /// Applies a filter on a sequence only if <paramref name="condition"/> is met.
         /// </summary>
         public static IEnumerable<TSource> WhereIf<TSource>(this IEnumerable<TSource> source, bool condition, Func<TSource, int, bool> predicate)
         {

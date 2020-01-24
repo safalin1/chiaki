@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -433,5 +434,65 @@ namespace Chiaki
         /// <param name="length">The length of the randomised string to generate.</param>
         [Obsolete("Use Random.GenerateString instead. This method will be removed in a future version.")]
         public static string GenerateRandomString(string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", int length = 8) => _random.GenerateString(characters, length);
+
+        /// <summary>
+        /// Creates a string with the specified length with the input string centered.
+        /// </summary>
+        /// <param name="input">String to center</param>
+        /// <param name="totalLength">Total length of the output string</param>
+        /// <returns></returns>
+        public static string CenterString(this string input, int totalLength)
+        {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
+            int length = input.Length;
+            int left = (totalLength - length) / 2 + length;
+
+            if (left < 0)
+            {
+                return input;
+            }
+
+            return input
+                .PadLeft(left)
+                .PadRight(totalLength);
+        }
+
+        /// <summary>
+        /// Splits a string by any camel case.
+        /// </summary>
+        public static IEnumerable<string> SplitByCamelCase(this string source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            const string pattern = @"[A-Z][a-z]*|[a-z]+|\d+";
+            var matches = Regex.Matches(source, pattern);
+            foreach (Match match in matches)
+            {
+                yield return match.Value;
+            }
+        }
+
+        /// <summary>
+        /// Converts a string into a <see cref="System.Security.SecureString"/>.
+        /// </summary>
+        public static System.Security.SecureString ToSecureString(this string input)
+        {
+            var result = new System.Security.SecureString();
+
+            for (var i = 0; i < input.Length; i++)
+            {
+                char c = input[i];
+                result.AppendChar(c);
+            }
+
+            return result;
+        }
     }
 }
