@@ -158,5 +158,35 @@ namespace Chiaki
 
             return other.Any(source.Contains);
         }
+
+        /// <summary>
+        /// Splits the source enumerable into a series of partitions.
+        /// </summary>
+        /// <param name="source">IEnumerable instance to split</param>
+        /// <param name="size">Size of each partition.</param>
+        public static IEnumerable<IEnumerable<T>> Partition<T>(this IEnumerable<T> source, int size)
+        {
+            if (size <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(size), "Size must be greater than 0.");
+            }
+
+            using (var enumerator = source.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    int i = 0;
+
+                    IEnumerable<T> Batch()
+                    {
+                        do yield return enumerator.Current;
+                        while (++i < size && enumerator.MoveNext());
+                    }
+
+                    yield return Batch();
+                    while (++i < size && enumerator.MoveNext()) ;
+                }
+            }
+        }
     }
 }
