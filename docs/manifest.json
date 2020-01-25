@@ -1,0 +1,324 @@
+{
+  "homepages": [],
+  "source_base_path": "R:/sourcecode/chiaki/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.BinarySerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.BinarySerializer.html",
+          "hash": "+gA/HJhQa2GHsXfg/gRKEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.DateTimeExtensions.html",
+          "hash": "gooLkZ+auhYSYxHgqKQcXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.DictionaryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.DictionaryExtensions.html",
+          "hash": "8Ol8qxgySgxbjRMvUUdbkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.DoubleExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.DoubleExtensions.html",
+          "hash": "SFN8mNTrJJSu4N6zW4A01A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.Enum-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.Enum-1.html",
+          "hash": "SpYd2daPWqdcPeLFqbsprA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.EnumerableExtensions.html",
+          "hash": "sE0aqS0oEwyMB+ivYwZujQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.IOnComplete-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.IOnComplete-1.html",
+          "hash": "Ila704DP9TsD8iey/i4HJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.ObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.ObjectExtensions.html",
+          "hash": "S1bNfT4dFnqLwpSXrOVQqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.PerformanceTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.PerformanceTimer.html",
+          "hash": "ddqZPHQYckI6TjQCGTkmGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.RandomExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.RandomExtensions.html",
+          "hash": "9TpirgGzypM/z/gG6j3Y+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.Singleton-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.Singleton-1.html",
+          "hash": "zAQEOYQ6/uvfXjwE2ahwXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.StreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.StreamExtensions.html",
+          "hash": "A2HPBKqlAMl4E8rZWs5A+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.StringBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.StringBuilderExtensions.html",
+          "hash": "saRJBUiEcOXaPy0lt+OVdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.StringExtensions.html",
+          "hash": "peMe27DdYlaShL1BGUScwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.StringMaskStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.StringMaskStyle.html",
+          "hash": "pfNDK3OtO5b6RhS24In3dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.XmlSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.XmlSerializer.html",
+          "hash": "Suf9ssIVotCnD3FJU63OJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.html",
+          "hash": "28lVIAbWojhmoxZRZ4q+QQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "X7maEotZ7kWEUx52awNSnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "lZKubwAu1GETXosEW4W++A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "o6fJQPZKEAS9NjKN8b5zLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "bW1a1uMh8vMR2ffROAiacQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 17,
+          "skipped_file_count": 11
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 2
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
