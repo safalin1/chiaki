@@ -143,6 +143,11 @@ namespace Chiaki
         {
             const string pattern = @"<(.|\n)*?>";
 
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return input;
+            }
+
             return Regex.Replace(input, pattern, string.Empty, RegexOptions.Compiled);
         }
 
@@ -151,6 +156,11 @@ namespace Chiaki
         /// </summary>
         public static string RemoveNewLines(this string input)
         {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return input;
+            }
+
             return input
                 .Replace("\r", string.Empty)
                 .Replace("\n", string.Empty);
@@ -191,6 +201,11 @@ namespace Chiaki
         /// </summary>
         public static string FromHexadecimal(this string hexadecimal)
         {
+            if (hexadecimal == null)
+            {
+                throw new ArgumentNullException(nameof(hexadecimal));
+            }
+
             var builder = new StringBuilder();
 
             while (hexadecimal.Length > 0)
