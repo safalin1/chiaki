@@ -22,7 +22,7 @@ namespace Chiaki
         {
             if (input == null)
             {
-                return input;
+                return null;
             }
 
             if (input.StartsWith(value))
@@ -40,7 +40,7 @@ namespace Chiaki
         {
             if (input == null)
             {
-                return input;
+                return null;
             }
 
             return input.StartsWith(value.ToString(CultureInfo.InvariantCulture))
@@ -188,7 +188,7 @@ namespace Chiaki
 
             var builder = new StringBuilder(input.Length);
 
-            foreach (var c in input)
+            foreach (char c in input)
             {
                 builder.AppendFormat("{0:x2}", Convert.ToUInt32(c));
             }
@@ -501,13 +501,37 @@ namespace Chiaki
         {
             var result = new System.Security.SecureString();
 
-            for (var i = 0; i < input.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
                 char c = input[i];
                 result.AppendChar(c);
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// An extension method that returns a new string in which all occurrences of a 
+        /// specified string in the current instance are replaced with another specified string.
+        /// StringComparison specifies the type of search to use for the specified string.
+        /// </summary>
+        /// <param name="source">Current instance of the string</param>
+        /// <param name="oldString">Specified string to replace</param>
+        /// <param name="newString">Specified string to inject</param>
+        /// <param name="stringComparison">String Comparison object to specify search type</param>
+        /// <returns>Updated string</returns>
+        public static string Replace(this string source, string oldString, string newString, StringComparison stringComparison)
+        {
+            int index = -1 * newString.Length;
+
+            while ((index = source.IndexOf(oldString, index + newString.Length, stringComparison)) >= 0)
+            {
+                source = source.Remove(index, oldString.Length);
+
+                source = source.Insert(index, newString);
+            }
+
+            return source;
         }
     }
 }

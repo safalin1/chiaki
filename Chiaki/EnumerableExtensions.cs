@@ -124,6 +124,21 @@ namespace Chiaki
         }
 
         /// <summary>
+        /// Bypasses a specified number of items in a sequence only if <paramref name="condition"/> is met.
+        /// </summary>
+        public static IEnumerable<TSource> SkipIf<TSource>(this IEnumerable<TSource> source, bool condition, int count)
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            return condition
+                ? source.Skip(count)
+                : source;
+        }
+
+        /// <summary>
         /// Returns true if all items in the other enumerable exist in the source enumerable.
         /// </summary>
         public static bool ContainsAll<TSource>(this IEnumerable<TSource> source, IEnumerable<TSource> other)
@@ -187,6 +202,21 @@ namespace Chiaki
                     while (++i < size && enumerator.MoveNext()) ;
                 }
             }
+        }
+
+        /// <summary>
+        /// Filters a sequence to ignore items which are null.
+        /// </summary>
+        /// <returns>A filtered sequence, where all items are not null.</returns>
+        public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T> source)
+            where T : class
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            return source.Where(x => x != null);
         }
     }
 }
