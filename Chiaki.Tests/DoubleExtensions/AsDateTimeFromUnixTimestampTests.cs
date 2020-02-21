@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Chiaki.Tests
+namespace Chiaki.Tests.DoubleExtensions
 {
     [TestClass]
-    public class DoubleExtensionTests
+    public class AsDateTimeFromUnixTimestampTests
     {
         [TestMethod]
-        public void AsDateTimeFromUnixTimestamp_Scenario1()
+        public void Scenario1()
         {
             // Arrange
             double unixTimestamp = 1290643200;
@@ -22,7 +22,7 @@ namespace Chiaki.Tests
         }
 
         [TestMethod]
-        public void AsDateTimeFromUnixTimestamp_Scenario2()
+        public void Scenario2()
         {
             // Arrange
             double unixTimestamp = 801878400;

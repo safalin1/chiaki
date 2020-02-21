@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Chiaki.Tests
+namespace Chiaki.Tests.Singleton
 {
     [TestClass]
-    public class SingletonTests
+    public class Tests
     {
         [TestMethod]
-        public void Singleton_InstanceIsNotNull()
+        public void InstanceIsNotNull()
         {
             // Arrange
 
@@ -18,7 +18,7 @@ namespace Chiaki.Tests
         }
 
         [TestMethod]
-        public void Singleton_InstanceIsSameOnEachGet()
+        public void InstanceIsSameOnEachGet()
         {
             // Arrange
             var expected = TestingClass.Instance;

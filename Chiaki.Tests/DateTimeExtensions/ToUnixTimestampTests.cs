@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Chiaki.Tests
+namespace Chiaki.Tests.DateTimeExtensions
 {
     [TestClass]
-    public class DateTimeExtensionTests
+    public class ToUnixTimestampTests
     {
         [TestMethod]
-        public void ToUnixTimestamp_Scenario1()
+        public void Scenario1()
         {
             // Arrange
             var date = new DateTime(2010, 11, 25);
@@ -22,7 +22,7 @@ namespace Chiaki.Tests
         }
 
         [TestMethod]
-        public void ToUnixTimestamp_Scenario2()
+        public void Scenario2()
         {
             // Arrange
             var date = new DateTime(1995, 05, 31);
