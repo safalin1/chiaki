@@ -57,7 +57,9 @@
     <Compile Include="EnumerableExtensions\AsArrayTests.cs" />
     <Compile Include="EnumerableExtensions\IfNullThenEmptyTests.cs" />
     <Compile Include="EnumerableExtensions\RemoveAllTests.cs" />
+    <Compile Include="EnumerableExtensions\SkipIfTests.cs" />
     <Compile Include="EnumerableExtensions\WhereIfTests.cs" />
+    <Compile Include="EnumerableExtensions\WhereNotNullTests.cs" />
     <Compile Include="Singleton\Tests.cs" />
     <Compile Include="StringExtensions\AppendIfNeededTests.cs" />
     <Compile Include="StringExtensions\FormattedTests.cs" />
