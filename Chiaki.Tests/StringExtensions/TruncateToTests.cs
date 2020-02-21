@@ -6,6 +6,20 @@ namespace Chiaki.Tests.StringExtensions
     public class TruncateToTests
     {
         [TestMethod]
+        public void MaxLength0ReturnsAsIs()
+        {
+            // Arrange
+            string input = "This is a string";
+            string expected = "This is a string";
+
+            // Act
+            string actual = input.TruncateTo(maxLength: 0);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void MaxLength20NoSuffixChange()
         {
             // Arrange
