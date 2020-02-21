@@ -13,8 +13,6 @@ namespace Chiaki
     /// </summary>
     public static class StringExtensions
     {
-        private static readonly Random _random = new Random();
-
         /// <summary>
         /// Prepends <paramref name="value"/> to the string if it does not start with <paramref name="value"/>
         /// </summary>
@@ -440,15 +438,6 @@ namespace Chiaki
 
             return text.Substring(0, position) + replace + text.Substring(position + search.Length);
         }
-
-        /// <summary>
-        /// Generates a string with random characters. 
-        /// </summary>
-        /// <remarks>Use of this method for anything security related is not recommended.</remarks>
-        /// <param name="characters">Characters that can be chosen as part of the randomisation process.</param>
-        /// <param name="length">The length of the randomised string to generate.</param>
-        [Obsolete("Use Random.GenerateString instead. This method will be removed in a future version.")]
-        public static string GenerateRandomString(string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", int length = 8) => _random.GenerateString(characters, length);
 
         /// <summary>
         /// Creates a string with the specified length with the input string centered.
