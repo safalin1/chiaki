@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chiaki.Tests.EnumerableExtensions
@@ -56,6 +57,16 @@ namespace Chiaki.Tests.EnumerableExtensions
             // Assert
             Assert.IsNotNull(actual);
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ThrowsExceptionWhenNull()
+        {
+            // Arrange
+            string[] input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.SkipIf(true, 1));
         }
     }
 }

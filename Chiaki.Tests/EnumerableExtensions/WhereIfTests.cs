@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chiaki.Tests.EnumerableExtensions
@@ -63,6 +64,26 @@ namespace Chiaki.Tests.EnumerableExtensions
             Assert.IsNotNull(actual);
             Assert.IsTrue(actual.Count() == 1);
             Assert.IsTrue(actual.First() == string.Empty);
+        }
+
+        [TestMethod]
+        public void ThrowsExceptionWhenNull_NoElementIndex()
+        {
+            // Arrange
+            string[] input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.WhereIf(true, x => x.Any()));
+        }
+
+        [TestMethod]
+        public void ThrowsExceptionWhenNull_WithElementIndex()
+        {
+            // Arrange
+            string[] input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.WhereIf(true, (x, idx) => x.Any()));
         }
     }
 }
