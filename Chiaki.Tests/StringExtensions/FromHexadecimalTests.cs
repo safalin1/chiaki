@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chiaki.Tests.StringExtensions
 {
@@ -45,6 +46,16 @@ namespace Chiaki.Tests.StringExtensions
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ThrowsExceptionWhenNull()
+        {
+            // Arrange
+            string input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.FromHexadecimal());
         }
     }
 }
