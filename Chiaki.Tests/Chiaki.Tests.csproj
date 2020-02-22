@@ -61,6 +61,7 @@
     <Compile Include="EnumerableExtensions\WhereIfTests.cs" />
     <Compile Include="EnumerableExtensions\WhereNotNullTests.cs" />
     <Compile Include="Singleton\Tests.cs" />
+    <Compile Include="StringBuilderExtensions\AppendIfTests.cs" />
     <Compile Include="StringExtensions\AppendIfNeededTests.cs" />
     <Compile Include="StringExtensions\FormattedTests.cs" />
     <Compile Include="StringExtensions\FromHexadecimalTests.cs" />
