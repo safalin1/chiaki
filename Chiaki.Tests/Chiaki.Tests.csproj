@@ -64,6 +64,7 @@
     <Compile Include="StringBuilderExtensions\AppendFormatIf.cs" />
     <Compile Include="StringBuilderExtensions\AppendIfTests.cs" />
     <Compile Include="StringExtensions\AppendIfNeededTests.cs" />
+    <Compile Include="StringExtensions\ConvertNewLinesToHtmlTagsTests.cs" />
     <Compile Include="StringExtensions\FormattedTests.cs" />
     <Compile Include="StringExtensions\FromHexadecimalTests.cs" />
     <Compile Include="StringExtensions\IsLengthAtLeastTests.cs" />

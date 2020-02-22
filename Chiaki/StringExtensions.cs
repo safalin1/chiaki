@@ -169,6 +169,11 @@ namespace Chiaki
         /// </summary>
         public static string ConvertNewLinesToHtmlTags(this string input)
         {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return input;
+            }
+
             return input
                 .Replace("\r", string.Empty)
                 .Replace("\n", "<br />");
@@ -181,7 +186,7 @@ namespace Chiaki
         {
             if (string.IsNullOrEmpty(input))
             {
-                return string.Empty;
+                return input;
             }
 
             var builder = new StringBuilder(input.Length);
