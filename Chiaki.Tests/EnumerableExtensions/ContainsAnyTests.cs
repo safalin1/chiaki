@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chiaki.Tests.EnumerableExtensions
@@ -55,6 +56,26 @@ namespace Chiaki.Tests.EnumerableExtensions
 
             // Assert
             Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAny(b));
+        }
+
+        [TestMethod]
+        public void ThrowExceptionWhenSourceNull()
+        {
+            // Arrange
+            IList<int> input = null;
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.ContainsAny(new[] { 1 }));
+        }
+
+        [TestMethod]
+        public void ThrowExceptionWhenOtherNull()
+        {
+            // Arrange
+            IEnumerable<int> input = new[] { 1 };
+
+            // Assert
+            Assert.ThrowsException<ArgumentNullException>(() => input.ContainsAny(null));
         }
     }
 }
