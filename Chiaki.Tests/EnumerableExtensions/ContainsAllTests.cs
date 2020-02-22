@@ -4,17 +4,17 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Chiaki.Tests.EnumerableExtensions
 {
     [TestClass]
-    public class ContainsAnyTests
+    public class ContainsAllTests
     {
         [TestMethod]
         public void ReturnsTrueIfEnumerableContainsMatchingItem()
         {
             // Arrange
             var a = new[] { 1, 2, 3 };
-            var b = new[] { 5, 4, 3 };
+            var b = new[] { 3, 2, 1 };
 
             // Act
-            var result = a.ContainsAny(b);
+            var result = a.ContainsAll(b);
 
             // Assert
             Assert.IsTrue(result);
@@ -28,12 +28,11 @@ namespace Chiaki.Tests.EnumerableExtensions
             var b = new[] { 6, 5, 4 };
 
             // Act
-            var result = a.ContainsAny(b);
+            var result = a.ContainsAll(b);
 
             // Assert
             Assert.IsFalse(result);
         }
-
 
         [TestMethod]
         public void ThrowsExceptionWhenSourceIsNull()
@@ -43,7 +42,7 @@ namespace Chiaki.Tests.EnumerableExtensions
             var b = new[] { 6, 5, 4 };
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAny(b));
+            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAll(b));
         }
 
         [TestMethod]
@@ -54,7 +53,7 @@ namespace Chiaki.Tests.EnumerableExtensions
             int[] b = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAny(b));
+            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAll(b));
         }
     }
 }

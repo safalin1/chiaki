@@ -52,6 +52,7 @@
     <Compile Include="DateTimeExtensions\ToUnixTimestampTests.cs" />
     <Compile Include="DoubleExtensions\AsDateTimeFromUnixTimestampTests.cs" />
     <Compile Include="EnumerableExtensions\AsListTests.cs" />
+    <Compile Include="EnumerableExtensions\ContainsAllTests.cs" />
     <Compile Include="EnumerableExtensions\ContainsAnyTests.cs" />
     <Compile Include="EnumerableExtensions\DistinctByTests.cs" />
     <Compile Include="EnumerableExtensions\AsArrayTests.cs" />
