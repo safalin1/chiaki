@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Chiaki
 {
     /// <summary>
-    /// Provides miscellaneous extensions for <see cref="object"/>
+    /// Provides extensions for <see cref="object"/>
     /// </summary>
     public static class ObjectExtensions
     {
@@ -28,6 +28,47 @@ namespace Chiaki
                 stream.Position = 0;
                 return (T)formatter.Deserialize(stream);
             }
+        }
+
+        /// <summary>
+        /// Casts an object to <typeparamref name="T"/>. This method will throw an exception if the object cannot be cast to <typeparamref name="T"/>.
+        /// </summary>
+        /// <typeparam name="T">Type which the <paramref name="input"/> should be cast to.</typeparam>
+        /// <returns></returns>
+        public static T As<T>(this object input)
+        {
+            return (T)input;
+        }
+
+        /// <summary>
+        /// Tries to cast an object to <typeparamref name="T"/>. This method will return null if it cannot be cast.
+        /// </summary>
+        /// <typeparam name="T">Type which the <paramref name="input"/> should be cast to.</typeparam>
+        /// <returns></returns>
+        public static T AsOrDefault<T>(this object input)
+            where T : class
+        {
+            return input as T;
+        }
+
+        /// <summary>
+        /// Tries to cast an object to <typeparamref name="T"/>. This method will return a value from the <paramref name="defaultValueFactory"/> if the object cannot be cast.
+        /// </summary>
+        /// <param name="input">The object to try cast.</param>
+        /// <param name="defaultValueFactory">A factory method which will return a default value.</param>
+        /// <typeparam name="T">Type which the <paramref name="input"/> should be cast to.</typeparam>
+        /// <returns>The original <paramref name="input"/> casted to <typeparamref name="T"/>, or a value returned by the <paramref name="defaultValueFactory"/></returns>
+        public static T AsOrDefault<T>(this object input, Func<T> defaultValueFactory)
+            where T : class
+        {
+            var result = input as T;
+
+            if (result == null)
+            {
+                return defaultValueFactory();
+            }
+
+            return result;
         }
     }
 }

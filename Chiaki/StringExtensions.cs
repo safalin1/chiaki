@@ -527,5 +527,24 @@ namespace Chiaki
 
             return source;
         }
+
+        /// <summary>
+        /// Converts a string to Title Case, using the en-US culture.
+        /// </summary>
+        /// <returns>
+        /// The input string modified to use title casing.
+        /// </returns>
+        public static string ToTitleCase(this string input) => input.ToTitleCase(new CultureInfo("en-US"));
+
+        /// <summary>
+        /// Converts a string to Title Case, using the specified <paramref name="cultureInfo"/>.
+        /// </summary>
+        /// <returns>
+        /// The input string modified to use title casing.
+        /// </returns>
+        public static string ToTitleCase(this string @this, CultureInfo cultureInfo)
+        {
+            return cultureInfo.TextInfo.ToTitleCase(@this);
+        }
     }
 }

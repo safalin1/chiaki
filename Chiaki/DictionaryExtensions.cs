@@ -22,5 +22,18 @@ namespace Chiaki
 
             return collection;
         }
+
+        /// <summary>
+        /// Adds items from a <see cref="IEnumerable{T}"/> 
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="TValue"></typeparam>
+        public static void AddMany<TKey, TValue>(this Dictionary<TKey, TValue> input, IEnumerable<KeyValuePair<TKey, TValue>> items)
+        {
+            foreach (KeyValuePair<TKey, TValue> item in items)
+            {
+                input.Add(item.Key, item.Value);
+            }
+        }
     }
 }
