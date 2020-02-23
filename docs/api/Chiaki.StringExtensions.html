@@ -443,60 +443,6 @@
   </table>
   
   
-  <a id="Chiaki_StringExtensions_GenerateRandomString_" data-uid="Chiaki.StringExtensions.GenerateRandomString*"></a>
-  <h4 id="Chiaki_StringExtensions_GenerateRandomString_System_String_System_Int32_" data-uid="Chiaki.StringExtensions.GenerateRandomString(System.String,System.Int32)">GenerateRandomString(String, Int32)</h4>
-  <div class="markdown level1 summary"><p>Generates a string with random characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Random.GenerateString instead. This method will be removed in a future version.&quot;)]
-public static string GenerateRandomString(string characters = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&quot;, int length = 8)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">characters</span></td>
-        <td><p>Characters that can be chosen as part of the randomisation process.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">length</span></td>
-        <td><p>The length of the randomised string to generate.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Chiaki_StringExtensions_GenerateRandomString_System_String_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Use of this method for anything security related is not recommended.</p>
-</div>
-  
-  
   <a id="Chiaki_StringExtensions_GetBytes_" data-uid="Chiaki.StringExtensions.GetBytes*"></a>
   <h4 id="Chiaki_StringExtensions_GetBytes_System_String_" data-uid="Chiaki.StringExtensions.GetBytes(System.String)">GetBytes(String)</h4>
   <div class="markdown level1 summary"><p>Gets all characters of the string using UTF8 encoding and encodes them into a byte array.</p>
@@ -1294,6 +1240,71 @@ public static string GenerateRandomString(string characters = &quot;ABCDEFGHIJKL
 </div>
   
   
+  <a id="Chiaki_StringExtensions_Replace_" data-uid="Chiaki.StringExtensions.Replace*"></a>
+  <h4 id="Chiaki_StringExtensions_Replace_System_String_System_String_System_String_System_StringComparison_" data-uid="Chiaki.StringExtensions.Replace(System.String,System.String,System.String,System.StringComparison)">Replace(String, String, String, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>An extension method that returns a new string in which all occurrences of a
+specified string in the current instance are replaced with another specified string.
+StringComparison specifies the type of search to use for the specified string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Replace(this string source, string oldString, string newString, StringComparison stringComparison)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Current instance of the string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldString</span></td>
+        <td><p>Specified string to replace</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newString</span></td>
+        <td><p>Specified string to inject</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.StringComparison</span></td>
+        <td><span class="parametername">stringComparison</span></td>
+        <td><p>String Comparison object to specify search type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Updated string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Chiaki_StringExtensions_ReplaceFirst_" data-uid="Chiaki.StringExtensions.ReplaceFirst*"></a>
   <h4 id="Chiaki_StringExtensions_ReplaceFirst_System_String_System_String_System_String_" data-uid="Chiaki.StringExtensions.ReplaceFirst(System.String,System.String,System.String)">ReplaceFirst(String, String, String)</h4>
   <div class="markdown level1 summary"><p>Replaces the first occurence of a string within a string, and replaces it with another string.</p>
@@ -1479,6 +1490,99 @@ public static string GenerateRandomString(string characters = &quot;ABCDEFGHIJKL
   </table>
   
   
+  <a id="Chiaki_StringExtensions_ToTitleCase_" data-uid="Chiaki.StringExtensions.ToTitleCase*"></a>
+  <h4 id="Chiaki_StringExtensions_ToTitleCase_System_String_" data-uid="Chiaki.StringExtensions.ToTitleCase(System.String)">ToTitleCase(String)</h4>
+  <div class="markdown level1 summary"><p>Converts a string to Title Case, using the en-US culture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToTitleCase(this string input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The input string modified to use title casing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Chiaki_StringExtensions_ToTitleCase_" data-uid="Chiaki.StringExtensions.ToTitleCase*"></a>
+  <h4 id="Chiaki_StringExtensions_ToTitleCase_System_String_System_Globalization_CultureInfo_" data-uid="Chiaki.StringExtensions.ToTitleCase(System.String,System.Globalization.CultureInfo)">ToTitleCase(String, CultureInfo)</h4>
+  <div class="markdown level1 summary"><p>Converts a string to Title Case, using the specified <code data-dev-comment-type="paramref" class="paramref">cultureInfo</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToTitleCase(this string this, CultureInfo cultureInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Globalization.CultureInfo</span></td>
+        <td><span class="parametername">cultureInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The input string modified to use title casing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Chiaki_StringExtensions_TrimEnd_" data-uid="Chiaki.StringExtensions.TrimEnd*"></a>
   <h4 id="Chiaki_StringExtensions_TrimEnd_System_String_System_String_" data-uid="Chiaki.StringExtensions.TrimEnd(System.String,System.String)">TrimEnd(String, String)</h4>
   <div class="markdown level1 summary"><p>Trims <code data-dev-comment-type="paramref" class="paramref">value</code> from the end of the string.</p>
@@ -1650,7 +1754,7 @@ public static string GenerateRandomString(string characters = &quot;ABCDEFGHIJKL
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2020 Steven P.
+            Brought to you by Steven P.
             
           </div>
         </div>

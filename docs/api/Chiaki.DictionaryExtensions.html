@@ -73,7 +73,7 @@
   
   <h1 id="Chiaki_DictionaryExtensions" data-uid="Chiaki.DictionaryExtensions" class="text-break">Class DictionaryExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Provides extensions for <span class="xref">System.Collections.Generic.Dictionary`2</span></p>
+  <div class="markdown level0 summary"><p>Provides extensions for <span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -113,6 +113,58 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Chiaki_DictionaryExtensions_AddMany_" data-uid="Chiaki.DictionaryExtensions.AddMany*"></a>
+  <h4 id="Chiaki_DictionaryExtensions_AddMany__2_System_Collections_Generic_Dictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___" data-uid="Chiaki.DictionaryExtensions.AddMany``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">AddMany&lt;TKey, TValue&gt;(Dictionary&lt;TKey, TValue&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds items from a <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddMany&lt;TKey, TValue&gt;(this Dictionary&lt;TKey, TValue&gt; input, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Chiaki_DictionaryExtensions_ToNameValueCollection_" data-uid="Chiaki.DictionaryExtensions.ToNameValueCollection*"></a>
@@ -180,7 +232,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2020 Steven P.
+            Brought to you by Steven P.
             
           </div>
         </div>

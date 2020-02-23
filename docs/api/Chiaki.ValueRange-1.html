@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ObjectExtensions
+    <title>Class ValueRange&lt;T&gt;
    | Chiaki </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ObjectExtensions
+    <meta name="title" content="Class ValueRange&lt;T&gt;
    | Chiaki ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -68,18 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Chiaki.ObjectExtensions">
+            <article class="content wrap" id="_content" data-uid="Chiaki.ValueRange`1">
   
   
-  <h1 id="Chiaki_ObjectExtensions" data-uid="Chiaki.ObjectExtensions" class="text-break">Class ObjectExtensions
+  <h1 id="Chiaki_ValueRange_1" data-uid="Chiaki.ValueRange`1" class="text-break">Class ValueRange&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Provides extensions for <span class="xref">System.Object</span></p>
+  <div class="markdown level0 summary"><p>Provides validation between a minimum and maximum of a value.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ObjectExtensions</span></div>
+    <div class="level1"><span class="xref">ValueRange&lt;T&gt;</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -101,28 +101,132 @@
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Chiaki.html">Chiaki</a></h6>
   <h6><strong>Assembly</strong>: Chiaki.dll</h6>
-  <h5 id="Chiaki_ObjectExtensions_syntax">Syntax</h5>
+  <h5 id="Chiaki_ValueRange_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ObjectExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public class ValueRange&lt;T&gt;
+    where T : IComparable&lt;T&gt;</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Chiaki_ValueRange_1__ctor_" data-uid="Chiaki.ValueRange`1.#ctor*"></a>
+  <h4 id="Chiaki_ValueRange_1__ctor__0__0_" data-uid="Chiaki.ValueRange`1.#ctor(`0,`0)">ValueRange(T, T)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of a ValueRange.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueRange(T minimum, T maximum)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">minimum</span></td>
+        <td><p>Minimum possible value of the range.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">maximum</span></td>
+        <td><p>Maximum possible value of the range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Chiaki_ValueRange_1_Maximum_" data-uid="Chiaki.ValueRange`1.Maximum*"></a>
+  <h4 id="Chiaki_ValueRange_1_Maximum" data-uid="Chiaki.ValueRange`1.Maximum">Maximum</h4>
+  <div class="markdown level1 summary"><p>Maximum value of the range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Maximum { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Chiaki_ValueRange_1_Minimum_" data-uid="Chiaki.ValueRange`1.Minimum*"></a>
+  <h4 id="Chiaki_ValueRange_1_Minimum" data-uid="Chiaki.ValueRange`1.Minimum">Minimum</h4>
+  <div class="markdown level1 summary"><p>Minimum value of the range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Minimum { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Chiaki_ObjectExtensions_As_" data-uid="Chiaki.ObjectExtensions.As*"></a>
-  <h4 id="Chiaki_ObjectExtensions_As__1_System_Object_" data-uid="Chiaki.ObjectExtensions.As``1(System.Object)">As&lt;T&gt;(Object)</h4>
-  <div class="markdown level1 summary"><p>Casts an object to <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>. This method will throw an exception if the object cannot be cast to <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+  <a id="Chiaki_ValueRange_1_ContainsRange_" data-uid="Chiaki.ValueRange`1.ContainsRange*"></a>
+  <h4 id="Chiaki_ValueRange_1_ContainsRange_Chiaki_ValueRange__0__" data-uid="Chiaki.ValueRange`1.ContainsRange(Chiaki.ValueRange{`0})">ContainsRange(ValueRange&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines if another range is inside the bounds of this range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T As&lt;T&gt;(this object input)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ContainsRange(ValueRange&lt;T&gt; range)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,135 +239,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">input</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Type which the <code data-dev-comment-type="paramref" class="paramref">input</code> should be cast to.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Chiaki_ObjectExtensions_AsOrDefault_" data-uid="Chiaki.ObjectExtensions.AsOrDefault*"></a>
-  <h4 id="Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_" data-uid="Chiaki.ObjectExtensions.AsOrDefault``1(System.Object)">AsOrDefault&lt;T&gt;(Object)</h4>
-  <div class="markdown level1 summary"><p>Tries to cast an object to <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>. This method will return null if it cannot be cast.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T AsOrDefault&lt;T&gt;(this object input)
-    where T : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">input</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Type which the <code data-dev-comment-type="paramref" class="paramref">input</code> should be cast to.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Chiaki_ObjectExtensions_AsOrDefault_" data-uid="Chiaki.ObjectExtensions.AsOrDefault*"></a>
-  <h4 id="Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_System_Func___0__" data-uid="Chiaki.ObjectExtensions.AsOrDefault``1(System.Object,System.Func{``0})">AsOrDefault&lt;T&gt;(Object, Func&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Tries to cast an object to <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>. This method will return a value from the <code data-dev-comment-type="paramref" class="paramref">defaultValueFactory</code> if the object cannot be cast.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T AsOrDefault&lt;T&gt;(this object input, Func&lt;T&gt; defaultValueFactory)
-    where T : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">input</span></td>
-        <td><p>The object to try cast.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
-        <td><span class="parametername">defaultValueFactory</span></td>
-        <td><p>A factory method which will return a default value.</p>
+        <td><a class="xref" href="Chiaki.ValueRange-1.html">ValueRange</a>&lt;T&gt;</td>
+        <td><span class="parametername">range</span></td>
+        <td><p>The child range to test</p>
 </td>
       </tr>
     </tbody>
@@ -278,39 +256,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>The original <code data-dev-comment-type="paramref" class="paramref">input</code> cast to <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, or a value returned by the <code data-dev-comment-type="paramref" class="paramref">defaultValueFactory</code></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Type which the <code data-dev-comment-type="paramref" class="paramref">input</code> should be cast to.</p>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if range is inside, else false</p>
 </td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Chiaki_ObjectExtensions_DeepClone_" data-uid="Chiaki.ObjectExtensions.DeepClone*"></a>
-  <h4 id="Chiaki_ObjectExtensions_DeepClone__1___0_" data-uid="Chiaki.ObjectExtensions.DeepClone``1(``0)">DeepClone&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"><p>Performs a deep clone of a instance of an object.</p>
+  <a id="Chiaki_ValueRange_1_ContainsValue_" data-uid="Chiaki.ValueRange`1.ContainsValue*"></a>
+  <h4 id="Chiaki_ValueRange_1_ContainsValue__0_" data-uid="Chiaki.ValueRange`1.ContainsValue(`0)">ContainsValue(T)</h4>
+  <div class="markdown level1 summary"><p>Determines if the provided value is inside the range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T DeepClone&lt;T&gt;(this T input)
-    where T : ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ContainsValue(T value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -324,8 +285,9 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">input</span></td>
-        <td></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to test</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -339,26 +301,129 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the value is inside Range, else false</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
+  
+  
+  <a id="Chiaki_ValueRange_1_IsInRange_" data-uid="Chiaki.ValueRange`1.IsInRange*"></a>
+  <h4 id="Chiaki_ValueRange_1_IsInRange_Chiaki_ValueRange__0__" data-uid="Chiaki.ValueRange`1.IsInRange(Chiaki.ValueRange{`0})">IsInRange(ValueRange&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines if this Range is inside the bounds of another range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInRange(ValueRange&lt;T&gt; range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><a class="xref" href="Chiaki.ValueRange-1.html">ValueRange</a>&lt;T&gt;</td>
+        <td><span class="parametername">range</span></td>
+        <td><p>The range to test against.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if range is inclusive, otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Chiaki_ValueRange_1_IsValid_" data-uid="Chiaki.ValueRange`1.IsValid*"></a>
+  <h4 id="Chiaki_ValueRange_1_IsValid" data-uid="Chiaki.ValueRange`1.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"><p>Determines if the range is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if range is valid, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Chiaki_ValueRange_1_ToString_" data-uid="Chiaki.ValueRange`1.ToString*"></a>
+  <h4 id="Chiaki_ValueRange_1_ToString" data-uid="Chiaki.ValueRange`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Gets the value range in a human readable format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>String representation of the Range in the format: {Minimum} - {Maximum}</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_AsArray__1___0_">EnumerableExtensions.AsArray&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_AsList__1___0_">EnumerableExtensions.AsList&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_As__1_System_Object_">ObjectExtensions.As&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_">ObjectExtensions.AsOrDefault&lt;T&gt;(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_System_Func___0__">ObjectExtensions.AsOrDefault&lt;T&gt;(Object, Func&lt;T&gt;)</a>
+  </div>
 </article>
           </div>
           

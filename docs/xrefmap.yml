@@ -51,6 +51,51 @@ references:
   commentId: T:Chiaki.DateTimeExtensions
   fullName: Chiaki.DateTimeExtensions
   nameWithType: DateTimeExtensions
+- uid: Chiaki.DateTimeExtensions.GetAge(System.DateTime)
+  name: GetAge(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetAge_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.GetAge(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.GetAge(System.DateTime)
+  nameWithType: DateTimeExtensions.GetAge(DateTime)
+- uid: Chiaki.DateTimeExtensions.GetAge(System.DateTime,System.DateTime)
+  name: GetAge(DateTime, DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetAge_System_DateTime_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.GetAge(System.DateTime,System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.GetAge(System.DateTime, System.DateTime)
+  nameWithType: DateTimeExtensions.GetAge(DateTime, DateTime)
+- uid: Chiaki.DateTimeExtensions.GetAge*
+  name: GetAge
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetAge_
+  commentId: Overload:Chiaki.DateTimeExtensions.GetAge
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.GetAge
+  nameWithType: DateTimeExtensions.GetAge
+- uid: Chiaki.DateTimeExtensions.GetFirstDayOfWeek(System.DateTime)
+  name: GetFirstDayOfWeek(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetFirstDayOfWeek_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.GetFirstDayOfWeek(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.GetFirstDayOfWeek(System.DateTime)
+  nameWithType: DateTimeExtensions.GetFirstDayOfWeek(DateTime)
+- uid: Chiaki.DateTimeExtensions.GetFirstDayOfWeek*
+  name: GetFirstDayOfWeek
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetFirstDayOfWeek_
+  commentId: Overload:Chiaki.DateTimeExtensions.GetFirstDayOfWeek
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.GetFirstDayOfWeek
+  nameWithType: DateTimeExtensions.GetFirstDayOfWeek
+- uid: Chiaki.DateTimeExtensions.GetLastDayOfWeek(System.DateTime)
+  name: GetLastDayOfWeek(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetLastDayOfWeek_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.GetLastDayOfWeek(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.GetLastDayOfWeek(System.DateTime)
+  nameWithType: DateTimeExtensions.GetLastDayOfWeek(DateTime)
+- uid: Chiaki.DateTimeExtensions.GetLastDayOfWeek*
+  name: GetLastDayOfWeek
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetLastDayOfWeek_
+  commentId: Overload:Chiaki.DateTimeExtensions.GetLastDayOfWeek
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.GetLastDayOfWeek
+  nameWithType: DateTimeExtensions.GetLastDayOfWeek
 - uid: Chiaki.DateTimeExtensions.GetStartOfWeek(System.DateTime,System.DayOfWeek)
   name: GetStartOfWeek(DateTime, DayOfWeek)
   href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_GetStartOfWeek_System_DateTime_System_DayOfWeek_
@@ -83,6 +128,22 @@ references:
   commentId: T:Chiaki.DictionaryExtensions
   fullName: Chiaki.DictionaryExtensions
   nameWithType: DictionaryExtensions
+- uid: Chiaki.DictionaryExtensions.AddMany*
+  name: AddMany
+  href: api/Chiaki.DictionaryExtensions.html#Chiaki_DictionaryExtensions_AddMany_
+  commentId: Overload:Chiaki.DictionaryExtensions.AddMany
+  isSpec: "True"
+  fullName: Chiaki.DictionaryExtensions.AddMany
+  nameWithType: DictionaryExtensions.AddMany
+- uid: Chiaki.DictionaryExtensions.AddMany``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  name: AddMany<TKey, TValue>(Dictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)
+  href: api/Chiaki.DictionaryExtensions.html#Chiaki_DictionaryExtensions_AddMany__2_System_Collections_Generic_Dictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___
+  commentId: M:Chiaki.DictionaryExtensions.AddMany``2(System.Collections.Generic.Dictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  name.vb: AddMany(Of TKey, TValue)(Dictionary(Of TKey, TValue), IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName: Chiaki.DictionaryExtensions.AddMany<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>)
+  fullName.vb: Chiaki.DictionaryExtensions.AddMany(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue)))
+  nameWithType: DictionaryExtensions.AddMany<TKey, TValue>(Dictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType.vb: DictionaryExtensions.AddMany(Of TKey, TValue)(Dictionary(Of TKey, TValue), IEnumerable(Of KeyValuePair(Of TKey, TValue)))
 - uid: Chiaki.DictionaryExtensions.ToNameValueCollection(System.Collections.Generic.IDictionary{System.String,System.String})
   name: ToNameValueCollection(IDictionary<String, String>)
   href: api/Chiaki.DictionaryExtensions.html#Chiaki_DictionaryExtensions_ToNameValueCollection_System_Collections_Generic_IDictionary_System_String_System_String__
@@ -499,6 +560,22 @@ references:
   fullName.vb: Chiaki.EnumerableExtensions.RemoveAll(Of T)(System.Collections.Generic.IList(Of T), System.Func(Of T, System.Boolean))
   nameWithType: EnumerableExtensions.RemoveAll<T>(IList<T>, Func<T, Boolean>)
   nameWithType.vb: EnumerableExtensions.RemoveAll(Of T)(IList(Of T), Func(Of T, Boolean))
+- uid: Chiaki.EnumerableExtensions.SkipIf*
+  name: SkipIf
+  href: api/Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_SkipIf_
+  commentId: Overload:Chiaki.EnumerableExtensions.SkipIf
+  isSpec: "True"
+  fullName: Chiaki.EnumerableExtensions.SkipIf
+  nameWithType: EnumerableExtensions.SkipIf
+- uid: Chiaki.EnumerableExtensions.SkipIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Int32)
+  name: SkipIf<TSource>(IEnumerable<TSource>, Boolean, Int32)
+  href: api/Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_SkipIf__1_System_Collections_Generic_IEnumerable___0__System_Boolean_System_Int32_
+  commentId: M:Chiaki.EnumerableExtensions.SkipIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Int32)
+  name.vb: SkipIf(Of TSource)(IEnumerable(Of TSource), Boolean, Int32)
+  fullName: Chiaki.EnumerableExtensions.SkipIf<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Boolean, System.Int32)
+  fullName.vb: Chiaki.EnumerableExtensions.SkipIf(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Boolean, System.Int32)
+  nameWithType: EnumerableExtensions.SkipIf<TSource>(IEnumerable<TSource>, Boolean, Int32)
+  nameWithType.vb: EnumerableExtensions.SkipIf(Of TSource)(IEnumerable(Of TSource), Boolean, Int32)
 - uid: Chiaki.EnumerableExtensions.WhereIf*
   name: WhereIf
   href: api/Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_WhereIf_
@@ -524,6 +601,22 @@ references:
   fullName.vb: Chiaki.EnumerableExtensions.WhereIf(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Boolean, System.Func(Of TSource, System.Int32, System.Boolean))
   nameWithType: EnumerableExtensions.WhereIf<TSource>(IEnumerable<TSource>, Boolean, Func<TSource, Int32, Boolean>)
   nameWithType.vb: EnumerableExtensions.WhereIf(Of TSource)(IEnumerable(Of TSource), Boolean, Func(Of TSource, Int32, Boolean))
+- uid: Chiaki.EnumerableExtensions.WhereNotNull*
+  name: WhereNotNull
+  href: api/Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_WhereNotNull_
+  commentId: Overload:Chiaki.EnumerableExtensions.WhereNotNull
+  isSpec: "True"
+  fullName: Chiaki.EnumerableExtensions.WhereNotNull
+  nameWithType: EnumerableExtensions.WhereNotNull
+- uid: Chiaki.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  name: WhereNotNull<T>(IEnumerable<T>)
+  href: api/Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_WhereNotNull__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Chiaki.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: WhereNotNull(Of T)(IEnumerable(Of T))
+  fullName: Chiaki.EnumerableExtensions.WhereNotNull<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Chiaki.EnumerableExtensions.WhereNotNull(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtensions.WhereNotNull<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtensions.WhereNotNull(Of T)(IEnumerable(Of T))
 - uid: Chiaki.IOnComplete`1
   name: IOnComplete<T>
   href: api/Chiaki.IOnComplete-1.html
@@ -556,6 +649,47 @@ references:
   commentId: T:Chiaki.ObjectExtensions
   fullName: Chiaki.ObjectExtensions
   nameWithType: ObjectExtensions
+- uid: Chiaki.ObjectExtensions.As*
+  name: As
+  href: api/Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_As_
+  commentId: Overload:Chiaki.ObjectExtensions.As
+  isSpec: "True"
+  fullName: Chiaki.ObjectExtensions.As
+  nameWithType: ObjectExtensions.As
+- uid: Chiaki.ObjectExtensions.As``1(System.Object)
+  name: As<T>(Object)
+  href: api/Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_As__1_System_Object_
+  commentId: M:Chiaki.ObjectExtensions.As``1(System.Object)
+  name.vb: As(Of T)(Object)
+  fullName: Chiaki.ObjectExtensions.As<T>(System.Object)
+  fullName.vb: Chiaki.ObjectExtensions.As(Of T)(System.Object)
+  nameWithType: ObjectExtensions.As<T>(Object)
+  nameWithType.vb: ObjectExtensions.As(Of T)(Object)
+- uid: Chiaki.ObjectExtensions.AsOrDefault*
+  name: AsOrDefault
+  href: api/Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_AsOrDefault_
+  commentId: Overload:Chiaki.ObjectExtensions.AsOrDefault
+  isSpec: "True"
+  fullName: Chiaki.ObjectExtensions.AsOrDefault
+  nameWithType: ObjectExtensions.AsOrDefault
+- uid: Chiaki.ObjectExtensions.AsOrDefault``1(System.Object)
+  name: AsOrDefault<T>(Object)
+  href: api/Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_
+  commentId: M:Chiaki.ObjectExtensions.AsOrDefault``1(System.Object)
+  name.vb: AsOrDefault(Of T)(Object)
+  fullName: Chiaki.ObjectExtensions.AsOrDefault<T>(System.Object)
+  fullName.vb: Chiaki.ObjectExtensions.AsOrDefault(Of T)(System.Object)
+  nameWithType: ObjectExtensions.AsOrDefault<T>(Object)
+  nameWithType.vb: ObjectExtensions.AsOrDefault(Of T)(Object)
+- uid: Chiaki.ObjectExtensions.AsOrDefault``1(System.Object,System.Func{``0})
+  name: AsOrDefault<T>(Object, Func<T>)
+  href: api/Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_System_Func___0__
+  commentId: M:Chiaki.ObjectExtensions.AsOrDefault``1(System.Object,System.Func{``0})
+  name.vb: AsOrDefault(Of T)(Object, Func(Of T))
+  fullName: Chiaki.ObjectExtensions.AsOrDefault<T>(System.Object, System.Func<T>)
+  fullName.vb: Chiaki.ObjectExtensions.AsOrDefault(Of T)(System.Object, System.Func(Of T))
+  nameWithType: ObjectExtensions.AsOrDefault<T>(Object, Func<T>)
+  nameWithType.vb: ObjectExtensions.AsOrDefault(Of T)(Object, Func(Of T))
 - uid: Chiaki.ObjectExtensions.DeepClone*
   name: DeepClone
   href: api/Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_DeepClone_
@@ -902,19 +1036,6 @@ references:
   isSpec: "True"
   fullName: Chiaki.StringExtensions.FromHexadecimal
   nameWithType: StringExtensions.FromHexadecimal
-- uid: Chiaki.StringExtensions.GenerateRandomString(System.String,System.Int32)
-  name: GenerateRandomString(String, Int32)
-  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_GenerateRandomString_System_String_System_Int32_
-  commentId: M:Chiaki.StringExtensions.GenerateRandomString(System.String,System.Int32)
-  fullName: Chiaki.StringExtensions.GenerateRandomString(System.String, System.Int32)
-  nameWithType: StringExtensions.GenerateRandomString(String, Int32)
-- uid: Chiaki.StringExtensions.GenerateRandomString*
-  name: GenerateRandomString
-  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_GenerateRandomString_
-  commentId: Overload:Chiaki.StringExtensions.GenerateRandomString
-  isSpec: "True"
-  fullName: Chiaki.StringExtensions.GenerateRandomString
-  nameWithType: StringExtensions.GenerateRandomString
 - uid: Chiaki.StringExtensions.GetBytes(System.String)
   name: GetBytes(String)
   href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_GetBytes_System_String_
@@ -1067,6 +1188,19 @@ references:
   isSpec: "True"
   fullName: Chiaki.StringExtensions.RemoveWhitespace
   nameWithType: StringExtensions.RemoveWhitespace
+- uid: Chiaki.StringExtensions.Replace(System.String,System.String,System.String,System.StringComparison)
+  name: Replace(String, String, String, StringComparison)
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_Replace_System_String_System_String_System_String_System_StringComparison_
+  commentId: M:Chiaki.StringExtensions.Replace(System.String,System.String,System.String,System.StringComparison)
+  fullName: Chiaki.StringExtensions.Replace(System.String, System.String, System.String, System.StringComparison)
+  nameWithType: StringExtensions.Replace(String, String, String, StringComparison)
+- uid: Chiaki.StringExtensions.Replace*
+  name: Replace
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_Replace_
+  commentId: Overload:Chiaki.StringExtensions.Replace
+  isSpec: "True"
+  fullName: Chiaki.StringExtensions.Replace
+  nameWithType: StringExtensions.Replace
 - uid: Chiaki.StringExtensions.ReplaceFirst(System.String,System.String,System.String)
   name: ReplaceFirst(String, String, String)
   href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ReplaceFirst_System_String_System_String_System_String_
@@ -1119,6 +1253,25 @@ references:
   isSpec: "True"
   fullName: Chiaki.StringExtensions.ToSecureString
   nameWithType: StringExtensions.ToSecureString
+- uid: Chiaki.StringExtensions.ToTitleCase(System.String)
+  name: ToTitleCase(String)
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ToTitleCase_System_String_
+  commentId: M:Chiaki.StringExtensions.ToTitleCase(System.String)
+  fullName: Chiaki.StringExtensions.ToTitleCase(System.String)
+  nameWithType: StringExtensions.ToTitleCase(String)
+- uid: Chiaki.StringExtensions.ToTitleCase(System.String,System.Globalization.CultureInfo)
+  name: ToTitleCase(String, CultureInfo)
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ToTitleCase_System_String_System_Globalization_CultureInfo_
+  commentId: M:Chiaki.StringExtensions.ToTitleCase(System.String,System.Globalization.CultureInfo)
+  fullName: Chiaki.StringExtensions.ToTitleCase(System.String, System.Globalization.CultureInfo)
+  nameWithType: StringExtensions.ToTitleCase(String, CultureInfo)
+- uid: Chiaki.StringExtensions.ToTitleCase*
+  name: ToTitleCase
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ToTitleCase_
+  commentId: Overload:Chiaki.StringExtensions.ToTitleCase
+  isSpec: "True"
+  fullName: Chiaki.StringExtensions.ToTitleCase
+  nameWithType: StringExtensions.ToTitleCase
 - uid: Chiaki.StringExtensions.TrimEnd(System.String,System.String)
   name: TrimEnd(String, String)
   href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_TrimEnd_System_String_System_String_
@@ -1176,6 +1329,153 @@ references:
   commentId: F:Chiaki.StringMaskStyle.AlphaNumericOnly
   fullName: Chiaki.StringMaskStyle.AlphaNumericOnly
   nameWithType: StringMaskStyle.AlphaNumericOnly
+- uid: Chiaki.ValueRange`1
+  name: ValueRange<T>
+  href: api/Chiaki.ValueRange-1.html
+  commentId: T:Chiaki.ValueRange`1
+  name.vb: ValueRange(Of T)
+  fullName: Chiaki.ValueRange<T>
+  fullName.vb: Chiaki.ValueRange(Of T)
+  nameWithType: ValueRange<T>
+  nameWithType.vb: ValueRange(Of T)
+- uid: Chiaki.ValueRange`1.#ctor(`0,`0)
+  name: ValueRange(T, T)
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1__ctor__0__0_
+  commentId: M:Chiaki.ValueRange`1.#ctor(`0,`0)
+  fullName: Chiaki.ValueRange<T>.ValueRange(T, T)
+  fullName.vb: Chiaki.ValueRange(Of T).ValueRange(T, T)
+  nameWithType: ValueRange<T>.ValueRange(T, T)
+  nameWithType.vb: ValueRange(Of T).ValueRange(T, T)
+- uid: Chiaki.ValueRange`1.#ctor*
+  name: ValueRange
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1__ctor_
+  commentId: Overload:Chiaki.ValueRange`1.#ctor
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.ValueRange
+  fullName.vb: Chiaki.ValueRange(Of T).ValueRange
+  nameWithType: ValueRange<T>.ValueRange
+  nameWithType.vb: ValueRange(Of T).ValueRange
+- uid: Chiaki.ValueRange`1.ContainsRange(Chiaki.ValueRange{`0})
+  name: ContainsRange(ValueRange<T>)
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_ContainsRange_Chiaki_ValueRange__0__
+  commentId: M:Chiaki.ValueRange`1.ContainsRange(Chiaki.ValueRange{`0})
+  name.vb: ContainsRange(ValueRange(Of T))
+  fullName: Chiaki.ValueRange<T>.ContainsRange(Chiaki.ValueRange<T>)
+  fullName.vb: Chiaki.ValueRange(Of T).ContainsRange(Chiaki.ValueRange(Of T))
+  nameWithType: ValueRange<T>.ContainsRange(ValueRange<T>)
+  nameWithType.vb: ValueRange(Of T).ContainsRange(ValueRange(Of T))
+- uid: Chiaki.ValueRange`1.ContainsRange*
+  name: ContainsRange
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_ContainsRange_
+  commentId: Overload:Chiaki.ValueRange`1.ContainsRange
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.ContainsRange
+  fullName.vb: Chiaki.ValueRange(Of T).ContainsRange
+  nameWithType: ValueRange<T>.ContainsRange
+  nameWithType.vb: ValueRange(Of T).ContainsRange
+- uid: Chiaki.ValueRange`1.ContainsValue(`0)
+  name: ContainsValue(T)
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_ContainsValue__0_
+  commentId: M:Chiaki.ValueRange`1.ContainsValue(`0)
+  fullName: Chiaki.ValueRange<T>.ContainsValue(T)
+  fullName.vb: Chiaki.ValueRange(Of T).ContainsValue(T)
+  nameWithType: ValueRange<T>.ContainsValue(T)
+  nameWithType.vb: ValueRange(Of T).ContainsValue(T)
+- uid: Chiaki.ValueRange`1.ContainsValue*
+  name: ContainsValue
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_ContainsValue_
+  commentId: Overload:Chiaki.ValueRange`1.ContainsValue
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.ContainsValue
+  fullName.vb: Chiaki.ValueRange(Of T).ContainsValue
+  nameWithType: ValueRange<T>.ContainsValue
+  nameWithType.vb: ValueRange(Of T).ContainsValue
+- uid: Chiaki.ValueRange`1.IsInRange(Chiaki.ValueRange{`0})
+  name: IsInRange(ValueRange<T>)
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_IsInRange_Chiaki_ValueRange__0__
+  commentId: M:Chiaki.ValueRange`1.IsInRange(Chiaki.ValueRange{`0})
+  name.vb: IsInRange(ValueRange(Of T))
+  fullName: Chiaki.ValueRange<T>.IsInRange(Chiaki.ValueRange<T>)
+  fullName.vb: Chiaki.ValueRange(Of T).IsInRange(Chiaki.ValueRange(Of T))
+  nameWithType: ValueRange<T>.IsInRange(ValueRange<T>)
+  nameWithType.vb: ValueRange(Of T).IsInRange(ValueRange(Of T))
+- uid: Chiaki.ValueRange`1.IsInRange*
+  name: IsInRange
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_IsInRange_
+  commentId: Overload:Chiaki.ValueRange`1.IsInRange
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.IsInRange
+  fullName.vb: Chiaki.ValueRange(Of T).IsInRange
+  nameWithType: ValueRange<T>.IsInRange
+  nameWithType.vb: ValueRange(Of T).IsInRange
+- uid: Chiaki.ValueRange`1.IsValid
+  name: IsValid()
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_IsValid
+  commentId: M:Chiaki.ValueRange`1.IsValid
+  fullName: Chiaki.ValueRange<T>.IsValid()
+  fullName.vb: Chiaki.ValueRange(Of T).IsValid()
+  nameWithType: ValueRange<T>.IsValid()
+  nameWithType.vb: ValueRange(Of T).IsValid()
+- uid: Chiaki.ValueRange`1.IsValid*
+  name: IsValid
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_IsValid_
+  commentId: Overload:Chiaki.ValueRange`1.IsValid
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.IsValid
+  fullName.vb: Chiaki.ValueRange(Of T).IsValid
+  nameWithType: ValueRange<T>.IsValid
+  nameWithType.vb: ValueRange(Of T).IsValid
+- uid: Chiaki.ValueRange`1.Maximum
+  name: Maximum
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_Maximum
+  commentId: P:Chiaki.ValueRange`1.Maximum
+  fullName: Chiaki.ValueRange<T>.Maximum
+  fullName.vb: Chiaki.ValueRange(Of T).Maximum
+  nameWithType: ValueRange<T>.Maximum
+  nameWithType.vb: ValueRange(Of T).Maximum
+- uid: Chiaki.ValueRange`1.Maximum*
+  name: Maximum
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_Maximum_
+  commentId: Overload:Chiaki.ValueRange`1.Maximum
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.Maximum
+  fullName.vb: Chiaki.ValueRange(Of T).Maximum
+  nameWithType: ValueRange<T>.Maximum
+  nameWithType.vb: ValueRange(Of T).Maximum
+- uid: Chiaki.ValueRange`1.Minimum
+  name: Minimum
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_Minimum
+  commentId: P:Chiaki.ValueRange`1.Minimum
+  fullName: Chiaki.ValueRange<T>.Minimum
+  fullName.vb: Chiaki.ValueRange(Of T).Minimum
+  nameWithType: ValueRange<T>.Minimum
+  nameWithType.vb: ValueRange(Of T).Minimum
+- uid: Chiaki.ValueRange`1.Minimum*
+  name: Minimum
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_Minimum_
+  commentId: Overload:Chiaki.ValueRange`1.Minimum
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.Minimum
+  fullName.vb: Chiaki.ValueRange(Of T).Minimum
+  nameWithType: ValueRange<T>.Minimum
+  nameWithType.vb: ValueRange(Of T).Minimum
+- uid: Chiaki.ValueRange`1.ToString
+  name: ToString()
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_ToString
+  commentId: M:Chiaki.ValueRange`1.ToString
+  fullName: Chiaki.ValueRange<T>.ToString()
+  fullName.vb: Chiaki.ValueRange(Of T).ToString()
+  nameWithType: ValueRange<T>.ToString()
+  nameWithType.vb: ValueRange(Of T).ToString()
+- uid: Chiaki.ValueRange`1.ToString*
+  name: ToString
+  href: api/Chiaki.ValueRange-1.html#Chiaki_ValueRange_1_ToString_
+  commentId: Overload:Chiaki.ValueRange`1.ToString
+  isSpec: "True"
+  fullName: Chiaki.ValueRange<T>.ToString
+  fullName.vb: Chiaki.ValueRange(Of T).ToString
+  nameWithType: ValueRange<T>.ToString
+  nameWithType.vb: ValueRange(Of T).ToString
 - uid: Chiaki.XmlSerializer
   name: XmlSerializer
   href: api/Chiaki.XmlSerializer.html

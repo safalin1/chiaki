@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.BinarySerializer.html",
-          "hash": "+gA/HJhQa2GHsXfg/gRKEg=="
+          "hash": "pKN84gKZy9rgbHLhKWkaOw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.DateTimeExtensions.html",
-          "hash": "gooLkZ+auhYSYxHgqKQcXQ=="
+          "hash": "4lLZRM+FhPzNDQCQooB6Gw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.DictionaryExtensions.html",
-          "hash": "8Ol8qxgySgxbjRMvUUdbkg=="
+          "hash": "qmMzx9YR0TWbmNo+QiV5gQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.DoubleExtensions.html",
-          "hash": "SFN8mNTrJJSu4N6zW4A01A=="
+          "hash": "47HT5/vBbfZjjQ4PQb0vdA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.Enum-1.html",
-          "hash": "SpYd2daPWqdcPeLFqbsprA=="
+          "hash": "aR8MmE1sZvcCyr5EQXtFdA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.EnumerableExtensions.html",
-          "hash": "sE0aqS0oEwyMB+ivYwZujQ=="
+          "hash": "Ah3ydEGSaA/R3VC//BQWRg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.IOnComplete-1.html",
-          "hash": "Ila704DP9TsD8iey/i4HJQ=="
+          "hash": "t3Auq44oR9YBigdcxn4Dow=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.ObjectExtensions.html",
-          "hash": "S1bNfT4dFnqLwpSXrOVQqQ=="
+          "hash": "x9DwsSTbv6dUwgmN107kag=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.PerformanceTimer.html",
-          "hash": "ddqZPHQYckI6TjQCGTkmGg=="
+          "hash": "5UNj2yEpM4H04QSPE0JisQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.RandomExtensions.html",
-          "hash": "9TpirgGzypM/z/gG6j3Y+w=="
+          "hash": "KfowigcLjlBgFzR2HRg+rg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.Singleton-1.html",
-          "hash": "zAQEOYQ6/uvfXjwE2ahwXQ=="
+          "hash": "VlpXZs6ig6dk/G/3zilKVw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.StreamExtensions.html",
-          "hash": "A2HPBKqlAMl4E8rZWs5A+w=="
+          "hash": "HOTdD70SA5R9my1Sn0BuTg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.StringBuilderExtensions.html",
-          "hash": "saRJBUiEcOXaPy0lt+OVdQ=="
+          "hash": "4DZw6Fu6k1RGA9PLn8CVPA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.StringExtensions.html",
-          "hash": "peMe27DdYlaShL1BGUScwQ=="
+          "hash": "DfW9eBevzbeRuo/3Ijrq7g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -177,10 +177,22 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.StringMaskStyle.html",
-          "hash": "pfNDK3OtO5b6RhS24In3dg=="
+          "hash": "fTuBUPGcrMyxVy2XCknXOA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chiaki.ValueRange-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chiaki.ValueRange-1.html",
+          "hash": "bvP4l7daUB8ho5uRaBPffA=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -189,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.XmlSerializer.html",
-          "hash": "Suf9ssIVotCnD3FJU63OJQ=="
+          "hash": "oxWMm3f2jJPPCL/gcrnodA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -201,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chiaki.html",
-          "hash": "28lVIAbWojhmoxZRZ4q+QQ=="
+          "hash": "RGLBXTRGXGv2A3LCE1dFWw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -213,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "TAcSAwnGC5rEImGO7Ckafw=="
+          "hash": "M3ldr9VT6WfStY1IUx0b5g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -225,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lZKubwAu1GETXosEW4W++A=="
+          "hash": "Eq8I0L9UyBWmbE+lUv3GWQ=="
         }
       },
       "is_incremental": false,
@@ -248,10 +260,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "AsCL8pjmWiKKIdHoqk74fA=="
+          "hash": "ar/ICJ7tdgH43K8YFpMLfA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -270,12 +282,10 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ResourceDocumentProcessor": {
@@ -286,16 +296,16 @@
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
+          "skipped_file_count": 2
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 17,
-          "skipped_file_count": 0
+          "total_file_count": 18,
+          "skipped_file_count": 18
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

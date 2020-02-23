@@ -701,6 +701,74 @@
   </table>
   
   
+  <a id="Chiaki_EnumerableExtensions_SkipIf_" data-uid="Chiaki.EnumerableExtensions.SkipIf*"></a>
+  <h4 id="Chiaki_EnumerableExtensions_SkipIf__1_System_Collections_Generic_IEnumerable___0__System_Boolean_System_Int32_" data-uid="Chiaki.EnumerableExtensions.SkipIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Int32)">SkipIf&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Boolean, Int32)</h4>
+  <div class="markdown level1 summary"><p>Bypasses a specified number of items in a sequence only if <code data-dev-comment-type="paramref" class="paramref">condition</code> is met.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TSource&gt; SkipIf&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, bool condition, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TSource&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TSource&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Chiaki_EnumerableExtensions_WhereIf_" data-uid="Chiaki.EnumerableExtensions.WhereIf*"></a>
   <h4 id="Chiaki_EnumerableExtensions_WhereIf__1_System_Collections_Generic_IEnumerable___0__System_Boolean_System_Func___0_System_Boolean__" data-uid="Chiaki.EnumerableExtensions.WhereIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Func{``0,System.Boolean})">WhereIf&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Boolean, Func&lt;TSource, Boolean&gt;)</h4>
   <div class="markdown level1 summary"><p>Applies a filter on a sequence only if <code data-dev-comment-type="paramref" class="paramref">condition</code> is met.</p>
@@ -835,6 +903,66 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Chiaki_EnumerableExtensions_WhereNotNull_" data-uid="Chiaki.EnumerableExtensions.WhereNotNull*"></a>
+  <h4 id="Chiaki_EnumerableExtensions_WhereNotNull__1_System_Collections_Generic_IEnumerable___0__" data-uid="Chiaki.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})">WhereNotNull&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Filters a sequence to ignore items which are null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; WhereNotNull&lt;T&gt;(this IEnumerable&lt;T&gt; source)
+    where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><p>A filtered sequence, where all items are not null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -859,7 +987,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2020 Steven P.
+            Brought to you by Steven P.
             
           </div>
         </div>
