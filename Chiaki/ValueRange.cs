@@ -23,22 +23,25 @@ namespace Chiaki
         {
             Minimum = minimum;
             Maximum = maximum;
-
-            if (!IsValid())
-            {
-                throw new ArgumentException("Provided minimum and maximum values result in an invalid range.");
-            }
         }
 
-        /// <summary>Presents the Range in readable format.</summary>
-        /// <returns>String representation of the Range</returns>
+        /// <summary>
+        /// Gets the value range in a human readable format.
+        /// </summary>
+        /// <returns>
+        /// String representation of the Range in the format: {Minimum} - {Maximum}
+        /// </returns>
         public override string ToString()
         {
-            return $"{Minimum},{Maximum}";
+            return $"{Minimum} - {Maximum}";
         }
 
-        /// <summary>Determines if the range is valid.</summary>
-        /// <returns>True if range is valid, else false</returns>
+        /// <summary>
+        /// Determines if the range is valid.
+        /// </summary>
+        /// <returns>
+        /// True if range is valid, otherwise false.
+        /// </returns>
         public bool IsValid()
         {
             return Minimum.CompareTo(Maximum) <= 0;
@@ -52,10 +55,12 @@ namespace Chiaki
             return (Minimum.CompareTo(value) <= 0) && (value.CompareTo(Maximum) <= 0);
         }
 
-        /// <summary>Determines if this Range is inside the bounds of another range.</summary>
-        /// <param name="range">The parent range to test on</param>
-        /// <returns>True if range is inclusive, else false</returns>
-        public bool IsInsideRange(ValueRange<T> range)
+        /// <summary>
+        /// Determines if this Range is inside the bounds of another range.
+        /// </summary>
+        /// <param name="range">The range to test against.</param>
+        /// <returns>True if range is inclusive, otherwise false</returns>
+        public bool IsInRange(ValueRange<T> range)
         {
             return IsValid() && range.IsValid() && range.ContainsValue(Minimum) && range.ContainsValue(Maximum);
         }

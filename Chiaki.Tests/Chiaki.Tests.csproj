@@ -61,6 +61,11 @@
     <Compile Include="EnumerableExtensions\SkipIfTests.cs" />
     <Compile Include="EnumerableExtensions\WhereIfTests.cs" />
     <Compile Include="EnumerableExtensions\WhereNotNullTests.cs" />
+    <Compile Include="ValueRange\ContainsRangeTests.cs" />
+    <Compile Include="ValueRange\ContainsValueTests.cs" />
+    <Compile Include="ValueRange\IsInRangeTests.cs" />
+    <Compile Include="ValueRange\IsValidTests.cs" />
+    <Compile Include="ValueRange\ConstructorTests.cs" />
     <Compile Include="Singleton\Tests.cs" />
     <Compile Include="StringBuilderExtensions\AppendFormatIf.cs" />
     <Compile Include="StringBuilderExtensions\AppendIfTests.cs" />
@@ -81,6 +86,7 @@
     <Compile Include="StringExtensions\TrimEndTests.cs" />
     <Compile Include="StringExtensions\TrimStartTests.cs" />
     <Compile Include="StringExtensions\TruncateToTests.cs" />
+    <Compile Include="ValueRange\ToStringTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
