@@ -57,7 +57,7 @@ namespace Chiaki
         /// <param name="input">The object to try cast.</param>
         /// <param name="defaultValueFactory">A factory method which will return a default value.</param>
         /// <typeparam name="T">Type which the <paramref name="input"/> should be cast to.</typeparam>
-        /// <returns>The original <paramref name="input"/> casted to <typeparamref name="T"/>, or a value returned by the <paramref name="defaultValueFactory"/></returns>
+        /// <returns>The original <paramref name="input"/> cast to <typeparamref name="T"/>, or a value returned by the <paramref name="defaultValueFactory"/></returns>
         public static T AsOrDefault<T>(this object input, Func<T> defaultValueFactory)
             where T : class
         {

@@ -61,5 +61,25 @@ namespace Chiaki
 
             return age;
         }
+
+        /// <summary>
+        /// Gets the first day of the week.
+        /// </summary>
+        /// <param name="input">The datetime to get the first day of the week for.</param>
+        /// <returns>A DateTime representing the first day of the week</returns>
+        public static DateTime GetFirstDayOfWeek(this DateTime input)
+        {
+            return new DateTime(input.Year, input.Month, input.Day).AddDays(-(int)input.DayOfWeek);
+        }
+
+        /// <summary>
+        /// Gets the last day of the week.
+        /// </summary>
+        /// <param name="input">The datetime to get the last day of the week for.</param>
+        /// <returns>A DateTime representing the last day of the week</returns>
+        public static DateTime GetLastDayOfWeek(this DateTime input)
+        {
+            return new DateTime(input.Year, input.Month, input.Day).AddDays(6 - (int)input.DayOfWeek);
+        }
     }
 }
