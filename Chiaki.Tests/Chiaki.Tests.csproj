@@ -61,6 +61,8 @@
     <Compile Include="EnumerableExtensions\SkipIfTests.cs" />
     <Compile Include="EnumerableExtensions\WhereIfTests.cs" />
     <Compile Include="EnumerableExtensions\WhereNotNullTests.cs" />
+    <Compile Include="StringExtensions\CenterStringTests.cs" />
+    <Compile Include="StringExtensions\SplitByCamelCaseTests.cs" />
     <Compile Include="ValueRange\ContainsRangeTests.cs" />
     <Compile Include="ValueRange\ContainsValueTests.cs" />
     <Compile Include="ValueRange\IsInRangeTests.cs" />
