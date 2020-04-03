@@ -46,5 +46,19 @@ namespace Chiaki.Tests.StringExtensions
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Scenario4()
+        {
+            // Arrange
+            string input = "";
+            string expected = "";
+
+            // Act
+            string actual = input.ToHexadecimal();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
