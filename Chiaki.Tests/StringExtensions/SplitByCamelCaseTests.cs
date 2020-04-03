@@ -28,7 +28,7 @@ namespace Chiaki.Tests.StringExtensions
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.SplitByCamelCase());
+            Assert.ThrowsException<ArgumentNullException>(() => input.SplitByCamelCase().ToArray());
         }
     }
 }

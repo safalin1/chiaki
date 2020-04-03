@@ -542,9 +542,19 @@ namespace Chiaki
         /// <returns>
         /// The input string modified to use title casing.
         /// </returns>
-        public static string ToTitleCase(this string @this, CultureInfo cultureInfo)
+        public static string ToTitleCase(this string input, CultureInfo cultureInfo)
         {
-            return cultureInfo.TextInfo.ToTitleCase(@this);
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
+            if (cultureInfo == null)
+            {
+                throw new ArgumentNullException(nameof(cultureInfo));
+            }
+
+            return cultureInfo.TextInfo.ToTitleCase(input);
         }
     }
 }

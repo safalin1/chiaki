@@ -63,6 +63,7 @@
     <Compile Include="EnumerableExtensions\WhereNotNullTests.cs" />
     <Compile Include="StringExtensions\CenterStringTests.cs" />
     <Compile Include="StringExtensions\SplitByCamelCaseTests.cs" />
+    <Compile Include="StringExtensions\ToTitleCaseTests.cs" />
     <Compile Include="ValueRange\ContainsRangeTests.cs" />
     <Compile Include="ValueRange\ContainsValueTests.cs" />
     <Compile Include="ValueRange\IsInRangeTests.cs" />
@@ -99,7 +100,6 @@
       <Name>Chiaki</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
