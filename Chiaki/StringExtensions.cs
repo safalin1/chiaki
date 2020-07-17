@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml;
+using System.Xml.Linq;
 
 // ReSharper disable UnusedMember.Global
 
@@ -555,6 +557,41 @@ namespace Chiaki
             }
 
             return cultureInfo.TextInfo.ToTitleCase(input);
+        }
+
+        /// <summary>
+        /// Converts a string into an XML Document instance. 
+        /// </summary>
+        /// <param name="input">The XML string.</param>
+        /// <exception cref="XmlException">Thrown if input string is not in valid XML format.</exception>
+        public static XmlDocument ToXmlDocument(this string input)
+        {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
+            var result = new XmlDocument();
+
+            result.LoadXml(input);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Converts a string into an XML Document instance. 
+        /// </summary>
+        /// <param name="input">The XML string.</param>
+        /// <param name="xmlLoadOptions">Options for loading the XML.</param>
+        /// <exception cref="XmlException">Thrown if input string is not in valid XML format.</exception>
+        public static XDocument ToXDocument(this string input, LoadOptions xmlLoadOptions = LoadOptions.None)
+        {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
+            return XDocument.Parse(input, xmlLoadOptions);
         }
     }
 }

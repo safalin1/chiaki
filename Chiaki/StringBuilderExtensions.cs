@@ -201,5 +201,31 @@ namespace Chiaki
 
             return builder;
         }
+
+        /// <summary>
+        /// AppendLines to a StringBuilder only if <paramref name="condition"/> is met.
+        /// </summary>
+        public static StringBuilder AppendLineIf(this StringBuilder builder, bool condition)
+        {
+            if (condition)
+            {
+                builder.AppendLine();
+            }
+
+            return builder;
+        }
+
+        /// <summary>
+        /// AppendLines <paramref name="value"/> to a StringBuilder only if <paramref name="condition"/> is met.
+        /// </summary>
+        public static StringBuilder AppendLineIf(this StringBuilder builder, bool condition, string value)
+        {
+            if (condition)
+            {
+                builder.AppendLine(value);
+            }
+
+            return builder;
+        }
     }
 }
