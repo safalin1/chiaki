@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>Steven P</Authors>
-    <PackageProjectUrl>https://github.com/stevu236/chiaki</PackageProjectUrl>
+    <PackageProjectUrl>https://chiaki.dev/api/Chiaki.html</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stevu236/chiaki</RepositoryUrl>
     <Description>Adds extension methods and other useful things to make things easier.</Description>
     <Version>0.0.1</Version>
