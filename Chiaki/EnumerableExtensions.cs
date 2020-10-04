@@ -186,21 +186,25 @@ namespace Chiaki
                 throw new ArgumentOutOfRangeException(nameof(size), "Size must be greater than 0.");
             }
 
-            using (var enumerator = source.GetEnumerator())
+            var chunk = new List<T>(size);
+
+            foreach(var x in source) 
             {
-                while (enumerator.MoveNext())
+                chunk.Add(x);
+
+                if (chunk.Count < size) 
                 {
-                    int i = 0;
-
-                    IEnumerable<T> Batch()
-                    {
-                        do yield return enumerator.Current;
-                        while (++i < size && enumerator.MoveNext());
-                    }
-
-                    yield return Batch();
-                    while (++i < size && enumerator.MoveNext()) ;
+                    continue;
                 }
+
+                yield return chunk;
+
+                chunk = new List<T>(size);
+            }
+
+            if (chunk.Any()) 
+            {
+                yield return chunk;
             }
         }
 
