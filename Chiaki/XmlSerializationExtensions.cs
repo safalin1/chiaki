@@ -9,31 +9,31 @@ namespace Chiaki
     /// <summary>
     /// Provides the ability to serialise an object instance to and from XML.
     /// </summary>
-    public static class XmlSerializer
+    public static class XmlSerializationExtensions
     {
         /// <summary>
-        /// Serialise an object instance to an XML string, using the default DataContractSerializer for the type.
+        /// Serialise an object instance to an XML string, using the default DataContractSerializer for the type. Uses UTF8 to convert to string.
         /// </summary>
         /// <returns>String containing the serialized data.</returns>
-        public static string SerializeToXmlString<T>(T obj) => Encoding.UTF8.GetString(Serialize(obj));
+        public static string SerializeToXmlString<T>(this T obj) => Encoding.UTF8.GetString(SerializeToXml(obj));
 
         /// <summary>
-        /// Serialise an object instance to an XML string, allowing for a DataContractSerializer to be specified.
+        /// Serialise an object instance to an XML string, allowing for a DataContractSerializer to be specified. Uses UTF8 to convert to string.
         /// </summary>
         /// <returns>String containing the serialized data.</returns>
-        public static string SerializeToXmlString<T>(T obj, DataContractSerializer serializer) => Encoding.UTF8.GetString(Serialize(obj, serializer));
+        public static string SerializeToXmlString<T>(this T obj, DataContractSerializer serializer) => Encoding.UTF8.GetString(SerializeToXml(obj, serializer));
 
         /// <summary>
         /// Serialise an object instance to XML, using the default DataContractSerializer for the type.
         /// </summary>
         /// <returns>Byte array containing the serialized data.</returns>
-        public static byte[] Serialize<T>(T obj) => Serialize(obj, new DataContractSerializer(typeof(T)));
+        public static byte[] SerializeToXml<T>(this T obj) => SerializeToXml(obj, new DataContractSerializer(typeof(T)));
 
         /// <summary>
         /// Serialise an object instance to XML, allowing for a DataContractSerializer to be specified.
         /// </summary>
         /// <returns>Byte array containing the serialized data.</returns>
-        public static byte[] Serialize<T>(T obj, DataContractSerializer serializer)
+        public static byte[] SerializeToXml<T>(this T obj, DataContractSerializer serializer)
         {
             var stream = new MemoryStream();
 
@@ -49,16 +49,16 @@ namespace Chiaki
         /// Deserializes an object from a byte array containing XML data.
         /// </summary>
         /// <returns>Instance of the deserialized object.</returns>
-        public static T Deserialize<T>(byte[] data) => Deserialize<T>(data, new DataContractSerializer(typeof(T)));
+        public static T DeserializeFromXml<T>(this byte[] data) => DeserializeFromXml<T>(data, new DataContractSerializer(typeof(T)));
 
         /// <summary>
         /// Deserializes an object from a byte array containing XML data, using an existing DataContractSerializer.
         /// </summary>
         /// <returns>Instance of the deserialized object.</returns>
-        public static T Deserialize<T>(byte[] data, DataContractSerializer serializer)
+        public static T DeserializeFromXml<T>(this byte[] data, DataContractSerializer serializer)
         {
             using (var stream = new MemoryStream(data))
-            using (XmlDictionaryReader reader = XmlDictionaryReader.CreateTextReader(stream, XmlDictionaryReaderQuotas.Max))
+            using (var reader = XmlDictionaryReader.CreateTextReader(stream, XmlDictionaryReaderQuotas.Max))
             {
                 return (T)serializer.ReadObject(reader);
             }
