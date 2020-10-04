@@ -1541,7 +1541,7 @@ StringComparison specifies the type of search to use for the specified string.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ToTitleCase(this string this, CultureInfo cultureInfo)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string ToTitleCase(this string input, CultureInfo cultureInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1555,7 +1555,7 @@ StringComparison specifies the type of search to use for the specified string.</
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">this</span></td>
+        <td><span class="parametername">input</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1577,6 +1577,132 @@ StringComparison specifies the type of search to use for the specified string.</
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><p>The input string modified to use title casing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Chiaki_StringExtensions_ToXDocument_" data-uid="Chiaki.StringExtensions.ToXDocument*"></a>
+  <h4 id="Chiaki_StringExtensions_ToXDocument_System_String_System_Xml_Linq_LoadOptions_" data-uid="Chiaki.StringExtensions.ToXDocument(System.String,System.Xml.Linq.LoadOptions)">ToXDocument(String, LoadOptions)</h4>
+  <div class="markdown level1 summary"><p>Converts a string into an XML Document instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XDocument ToXDocument(this string input, LoadOptions xmlLoadOptions = LoadOptions.None)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The XML string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.LoadOptions</span></td>
+        <td><span class="parametername">xmlLoadOptions</span></td>
+        <td><p>Options for loading the XML.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XDocument</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlException</span></td>
+        <td><p>Thrown if input string is not in valid XML format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Chiaki_StringExtensions_ToXmlDocument_" data-uid="Chiaki.StringExtensions.ToXmlDocument*"></a>
+  <h4 id="Chiaki_StringExtensions_ToXmlDocument_System_String_" data-uid="Chiaki.StringExtensions.ToXmlDocument(System.String)">ToXmlDocument(String)</h4>
+  <div class="markdown level1 summary"><p>Converts a string into an XML Document instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XmlDocument ToXmlDocument(this string input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The XML string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlDocument</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlException</span></td>
+        <td><p>Thrown if input string is not in valid XML format.</p>
 </td>
       </tr>
     </tbody>

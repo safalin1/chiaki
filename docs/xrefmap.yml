@@ -7,44 +7,69 @@ references:
   commentId: N:Chiaki
   fullName: Chiaki
   nameWithType: Chiaki
-- uid: Chiaki.BinarySerializer
-  name: BinarySerializer
-  href: api/Chiaki.BinarySerializer.html
-  commentId: T:Chiaki.BinarySerializer
-  fullName: Chiaki.BinarySerializer
-  nameWithType: BinarySerializer
-- uid: Chiaki.BinarySerializer.Deserialize*
-  name: Deserialize
-  href: api/Chiaki.BinarySerializer.html#Chiaki_BinarySerializer_Deserialize_
-  commentId: Overload:Chiaki.BinarySerializer.Deserialize
+- uid: Chiaki.BinarySerializationExtensions
+  name: BinarySerializationExtensions
+  href: api/Chiaki.BinarySerializationExtensions.html
+  commentId: T:Chiaki.BinarySerializationExtensions
+  fullName: Chiaki.BinarySerializationExtensions
+  nameWithType: BinarySerializationExtensions
+- uid: Chiaki.BinarySerializationExtensions.DeserializeFromBinary*
+  name: DeserializeFromBinary
+  href: api/Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_DeserializeFromBinary_
+  commentId: Overload:Chiaki.BinarySerializationExtensions.DeserializeFromBinary
   isSpec: "True"
-  fullName: Chiaki.BinarySerializer.Deserialize
-  nameWithType: BinarySerializer.Deserialize
-- uid: Chiaki.BinarySerializer.Deserialize``1(System.Byte[])
-  name: Deserialize<T>(Byte[])
-  href: api/Chiaki.BinarySerializer.html#Chiaki_BinarySerializer_Deserialize__1_System_Byte___
-  commentId: M:Chiaki.BinarySerializer.Deserialize``1(System.Byte[])
-  name.vb: Deserialize(Of T)(Byte())
-  fullName: Chiaki.BinarySerializer.Deserialize<T>(System.Byte[])
-  fullName.vb: Chiaki.BinarySerializer.Deserialize(Of T)(System.Byte())
-  nameWithType: BinarySerializer.Deserialize<T>(Byte[])
-  nameWithType.vb: BinarySerializer.Deserialize(Of T)(Byte())
-- uid: Chiaki.BinarySerializer.Serialize*
-  name: Serialize
-  href: api/Chiaki.BinarySerializer.html#Chiaki_BinarySerializer_Serialize_
-  commentId: Overload:Chiaki.BinarySerializer.Serialize
+  fullName: Chiaki.BinarySerializationExtensions.DeserializeFromBinary
+  nameWithType: BinarySerializationExtensions.DeserializeFromBinary
+- uid: Chiaki.BinarySerializationExtensions.DeserializeFromBinary``1(System.Byte[])
+  name: DeserializeFromBinary<T>(Byte[])
+  href: api/Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_DeserializeFromBinary__1_System_Byte___
+  commentId: M:Chiaki.BinarySerializationExtensions.DeserializeFromBinary``1(System.Byte[])
+  name.vb: DeserializeFromBinary(Of T)(Byte())
+  fullName: Chiaki.BinarySerializationExtensions.DeserializeFromBinary<T>(System.Byte[])
+  fullName.vb: Chiaki.BinarySerializationExtensions.DeserializeFromBinary(Of T)(System.Byte())
+  nameWithType: BinarySerializationExtensions.DeserializeFromBinary<T>(Byte[])
+  nameWithType.vb: BinarySerializationExtensions.DeserializeFromBinary(Of T)(Byte())
+- uid: Chiaki.BinarySerializationExtensions.DeserializeFromBinary``1(System.IO.Stream)
+  name: DeserializeFromBinary<T>(Stream)
+  href: api/Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_DeserializeFromBinary__1_System_IO_Stream_
+  commentId: M:Chiaki.BinarySerializationExtensions.DeserializeFromBinary``1(System.IO.Stream)
+  name.vb: DeserializeFromBinary(Of T)(Stream)
+  fullName: Chiaki.BinarySerializationExtensions.DeserializeFromBinary<T>(System.IO.Stream)
+  fullName.vb: Chiaki.BinarySerializationExtensions.DeserializeFromBinary(Of T)(System.IO.Stream)
+  nameWithType: BinarySerializationExtensions.DeserializeFromBinary<T>(Stream)
+  nameWithType.vb: BinarySerializationExtensions.DeserializeFromBinary(Of T)(Stream)
+- uid: Chiaki.BinarySerializationExtensions.SerializeToByteArray*
+  name: SerializeToByteArray
+  href: api/Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_SerializeToByteArray_
+  commentId: Overload:Chiaki.BinarySerializationExtensions.SerializeToByteArray
   isSpec: "True"
-  fullName: Chiaki.BinarySerializer.Serialize
-  nameWithType: BinarySerializer.Serialize
-- uid: Chiaki.BinarySerializer.Serialize``1(``0)
-  name: Serialize<T>(T)
-  href: api/Chiaki.BinarySerializer.html#Chiaki_BinarySerializer_Serialize__1___0_
-  commentId: M:Chiaki.BinarySerializer.Serialize``1(``0)
-  name.vb: Serialize(Of T)(T)
-  fullName: Chiaki.BinarySerializer.Serialize<T>(T)
-  fullName.vb: Chiaki.BinarySerializer.Serialize(Of T)(T)
-  nameWithType: BinarySerializer.Serialize<T>(T)
-  nameWithType.vb: BinarySerializer.Serialize(Of T)(T)
+  fullName: Chiaki.BinarySerializationExtensions.SerializeToByteArray
+  nameWithType: BinarySerializationExtensions.SerializeToByteArray
+- uid: Chiaki.BinarySerializationExtensions.SerializeToByteArray``1(``0)
+  name: SerializeToByteArray<T>(T)
+  href: api/Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_SerializeToByteArray__1___0_
+  commentId: M:Chiaki.BinarySerializationExtensions.SerializeToByteArray``1(``0)
+  name.vb: SerializeToByteArray(Of T)(T)
+  fullName: Chiaki.BinarySerializationExtensions.SerializeToByteArray<T>(T)
+  fullName.vb: Chiaki.BinarySerializationExtensions.SerializeToByteArray(Of T)(T)
+  nameWithType: BinarySerializationExtensions.SerializeToByteArray<T>(T)
+  nameWithType.vb: BinarySerializationExtensions.SerializeToByteArray(Of T)(T)
+- uid: Chiaki.BinarySerializationExtensions.SerializeToStream*
+  name: SerializeToStream
+  href: api/Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_SerializeToStream_
+  commentId: Overload:Chiaki.BinarySerializationExtensions.SerializeToStream
+  isSpec: "True"
+  fullName: Chiaki.BinarySerializationExtensions.SerializeToStream
+  nameWithType: BinarySerializationExtensions.SerializeToStream
+- uid: Chiaki.BinarySerializationExtensions.SerializeToStream``1(``0)
+  name: SerializeToStream<T>(T)
+  href: api/Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_SerializeToStream__1___0_
+  commentId: M:Chiaki.BinarySerializationExtensions.SerializeToStream``1(``0)
+  name.vb: SerializeToStream(Of T)(T)
+  fullName: Chiaki.BinarySerializationExtensions.SerializeToStream<T>(T)
+  fullName.vb: Chiaki.BinarySerializationExtensions.SerializeToStream(Of T)(T)
+  nameWithType: BinarySerializationExtensions.SerializeToStream<T>(T)
+  nameWithType.vb: BinarySerializationExtensions.SerializeToStream(Of T)(T)
 - uid: Chiaki.DateTimeExtensions
   name: DateTimeExtensions
   href: api/Chiaki.DateTimeExtensions.html
@@ -109,6 +134,123 @@ references:
   isSpec: "True"
   fullName: Chiaki.DateTimeExtensions.GetStartOfWeek
   nameWithType: DateTimeExtensions.GetStartOfWeek
+- uid: Chiaki.DateTimeExtensions.IsAfternoon(System.DateTime)
+  name: IsAfternoon(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsAfternoon_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsAfternoon(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsAfternoon(System.DateTime)
+  nameWithType: DateTimeExtensions.IsAfternoon(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsAfternoon*
+  name: IsAfternoon
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsAfternoon_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsAfternoon
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsAfternoon
+  nameWithType: DateTimeExtensions.IsAfternoon
+- uid: Chiaki.DateTimeExtensions.IsFuture(System.DateTime)
+  name: IsFuture(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsFuture_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsFuture(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsFuture(System.DateTime)
+  nameWithType: DateTimeExtensions.IsFuture(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsFuture*
+  name: IsFuture
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsFuture_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsFuture
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsFuture
+  nameWithType: DateTimeExtensions.IsFuture
+- uid: Chiaki.DateTimeExtensions.IsFutureUtc(System.DateTime)
+  name: IsFutureUtc(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsFutureUtc_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsFutureUtc(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsFutureUtc(System.DateTime)
+  nameWithType: DateTimeExtensions.IsFutureUtc(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsFutureUtc*
+  name: IsFutureUtc
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsFutureUtc_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsFutureUtc
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsFutureUtc
+  nameWithType: DateTimeExtensions.IsFutureUtc
+- uid: Chiaki.DateTimeExtensions.IsMorning(System.DateTime)
+  name: IsMorning(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsMorning_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsMorning(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsMorning(System.DateTime)
+  nameWithType: DateTimeExtensions.IsMorning(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsMorning*
+  name: IsMorning
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsMorning_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsMorning
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsMorning
+  nameWithType: DateTimeExtensions.IsMorning
+- uid: Chiaki.DateTimeExtensions.IsPast(System.DateTime)
+  name: IsPast(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsPast_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsPast(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsPast(System.DateTime)
+  nameWithType: DateTimeExtensions.IsPast(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsPast*
+  name: IsPast
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsPast_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsPast
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsPast
+  nameWithType: DateTimeExtensions.IsPast
+- uid: Chiaki.DateTimeExtensions.IsPastUtc(System.DateTime)
+  name: IsPastUtc(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsPastUtc_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsPastUtc(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsPastUtc(System.DateTime)
+  nameWithType: DateTimeExtensions.IsPastUtc(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsPastUtc*
+  name: IsPastUtc
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsPastUtc_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsPastUtc
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsPastUtc
+  nameWithType: DateTimeExtensions.IsPastUtc
+- uid: Chiaki.DateTimeExtensions.IsToday(System.DateTime)
+  name: IsToday(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsToday_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsToday(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsToday(System.DateTime)
+  nameWithType: DateTimeExtensions.IsToday(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsToday*
+  name: IsToday
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsToday_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsToday
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsToday
+  nameWithType: DateTimeExtensions.IsToday
+- uid: Chiaki.DateTimeExtensions.IsWeekend(System.DateTime)
+  name: IsWeekend(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsWeekend_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.IsWeekend(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.IsWeekend(System.DateTime)
+  nameWithType: DateTimeExtensions.IsWeekend(DateTime)
+- uid: Chiaki.DateTimeExtensions.IsWeekend*
+  name: IsWeekend
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_IsWeekend_
+  commentId: Overload:Chiaki.DateTimeExtensions.IsWeekend
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.IsWeekend
+  nameWithType: DateTimeExtensions.IsWeekend
+- uid: Chiaki.DateTimeExtensions.Tomorrow(System.DateTime)
+  name: Tomorrow(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_Tomorrow_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.Tomorrow(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.Tomorrow(System.DateTime)
+  nameWithType: DateTimeExtensions.Tomorrow(DateTime)
+- uid: Chiaki.DateTimeExtensions.Tomorrow*
+  name: Tomorrow
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_Tomorrow_
+  commentId: Overload:Chiaki.DateTimeExtensions.Tomorrow
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.Tomorrow
+  nameWithType: DateTimeExtensions.Tomorrow
 - uid: Chiaki.DateTimeExtensions.ToUnixTimestamp(System.DateTime)
   name: ToUnixTimestamp(DateTime)
   href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_ToUnixTimestamp_System_DateTime_
@@ -122,6 +264,19 @@ references:
   isSpec: "True"
   fullName: Chiaki.DateTimeExtensions.ToUnixTimestamp
   nameWithType: DateTimeExtensions.ToUnixTimestamp
+- uid: Chiaki.DateTimeExtensions.Yesterday(System.DateTime)
+  name: Yesterday(DateTime)
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_Yesterday_System_DateTime_
+  commentId: M:Chiaki.DateTimeExtensions.Yesterday(System.DateTime)
+  fullName: Chiaki.DateTimeExtensions.Yesterday(System.DateTime)
+  nameWithType: DateTimeExtensions.Yesterday(DateTime)
+- uid: Chiaki.DateTimeExtensions.Yesterday*
+  name: Yesterday
+  href: api/Chiaki.DateTimeExtensions.html#Chiaki_DateTimeExtensions_Yesterday_
+  commentId: Overload:Chiaki.DateTimeExtensions.Yesterday
+  isSpec: "True"
+  fullName: Chiaki.DateTimeExtensions.Yesterday
+  nameWithType: DateTimeExtensions.Yesterday
 - uid: Chiaki.DictionaryExtensions
   name: DictionaryExtensions
   href: api/Chiaki.DictionaryExtensions.html
@@ -617,6 +772,25 @@ references:
   fullName.vb: Chiaki.EnumerableExtensions.WhereNotNull(Of T)(System.Collections.Generic.IEnumerable(Of T))
   nameWithType: EnumerableExtensions.WhereNotNull<T>(IEnumerable<T>)
   nameWithType.vb: EnumerableExtensions.WhereNotNull(Of T)(IEnumerable(Of T))
+- uid: Chiaki.FileInfoExtensions
+  name: FileInfoExtensions
+  href: api/Chiaki.FileInfoExtensions.html
+  commentId: T:Chiaki.FileInfoExtensions
+  fullName: Chiaki.FileInfoExtensions
+  nameWithType: FileInfoExtensions
+- uid: Chiaki.FileInfoExtensions.Rename(System.IO.FileInfo,System.String)
+  name: Rename(FileInfo, String)
+  href: api/Chiaki.FileInfoExtensions.html#Chiaki_FileInfoExtensions_Rename_System_IO_FileInfo_System_String_
+  commentId: M:Chiaki.FileInfoExtensions.Rename(System.IO.FileInfo,System.String)
+  fullName: Chiaki.FileInfoExtensions.Rename(System.IO.FileInfo, System.String)
+  nameWithType: FileInfoExtensions.Rename(FileInfo, String)
+- uid: Chiaki.FileInfoExtensions.Rename*
+  name: Rename
+  href: api/Chiaki.FileInfoExtensions.html#Chiaki_FileInfoExtensions_Rename_
+  commentId: Overload:Chiaki.FileInfoExtensions.Rename
+  isSpec: "True"
+  fullName: Chiaki.FileInfoExtensions.Rename
+  nameWithType: FileInfoExtensions.Rename
 - uid: Chiaki.IOnComplete`1
   name: IOnComplete<T>
   href: api/Chiaki.IOnComplete-1.html
@@ -950,6 +1124,25 @@ references:
   isSpec: "True"
   fullName: Chiaki.StringBuilderExtensions.AppendIf
   nameWithType: StringBuilderExtensions.AppendIf
+- uid: Chiaki.StringBuilderExtensions.AppendLineIf(System.Text.StringBuilder,System.Boolean)
+  name: AppendLineIf(StringBuilder, Boolean)
+  href: api/Chiaki.StringBuilderExtensions.html#Chiaki_StringBuilderExtensions_AppendLineIf_System_Text_StringBuilder_System_Boolean_
+  commentId: M:Chiaki.StringBuilderExtensions.AppendLineIf(System.Text.StringBuilder,System.Boolean)
+  fullName: Chiaki.StringBuilderExtensions.AppendLineIf(System.Text.StringBuilder, System.Boolean)
+  nameWithType: StringBuilderExtensions.AppendLineIf(StringBuilder, Boolean)
+- uid: Chiaki.StringBuilderExtensions.AppendLineIf(System.Text.StringBuilder,System.Boolean,System.String)
+  name: AppendLineIf(StringBuilder, Boolean, String)
+  href: api/Chiaki.StringBuilderExtensions.html#Chiaki_StringBuilderExtensions_AppendLineIf_System_Text_StringBuilder_System_Boolean_System_String_
+  commentId: M:Chiaki.StringBuilderExtensions.AppendLineIf(System.Text.StringBuilder,System.Boolean,System.String)
+  fullName: Chiaki.StringBuilderExtensions.AppendLineIf(System.Text.StringBuilder, System.Boolean, System.String)
+  nameWithType: StringBuilderExtensions.AppendLineIf(StringBuilder, Boolean, String)
+- uid: Chiaki.StringBuilderExtensions.AppendLineIf*
+  name: AppendLineIf
+  href: api/Chiaki.StringBuilderExtensions.html#Chiaki_StringBuilderExtensions_AppendLineIf_
+  commentId: Overload:Chiaki.StringBuilderExtensions.AppendLineIf
+  isSpec: "True"
+  fullName: Chiaki.StringBuilderExtensions.AppendLineIf
+  nameWithType: StringBuilderExtensions.AppendLineIf
 - uid: Chiaki.StringExtensions
   name: StringExtensions
   href: api/Chiaki.StringExtensions.html
@@ -1272,6 +1465,32 @@ references:
   isSpec: "True"
   fullName: Chiaki.StringExtensions.ToTitleCase
   nameWithType: StringExtensions.ToTitleCase
+- uid: Chiaki.StringExtensions.ToXDocument(System.String,System.Xml.Linq.LoadOptions)
+  name: ToXDocument(String, LoadOptions)
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ToXDocument_System_String_System_Xml_Linq_LoadOptions_
+  commentId: M:Chiaki.StringExtensions.ToXDocument(System.String,System.Xml.Linq.LoadOptions)
+  fullName: Chiaki.StringExtensions.ToXDocument(System.String, System.Xml.Linq.LoadOptions)
+  nameWithType: StringExtensions.ToXDocument(String, LoadOptions)
+- uid: Chiaki.StringExtensions.ToXDocument*
+  name: ToXDocument
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ToXDocument_
+  commentId: Overload:Chiaki.StringExtensions.ToXDocument
+  isSpec: "True"
+  fullName: Chiaki.StringExtensions.ToXDocument
+  nameWithType: StringExtensions.ToXDocument
+- uid: Chiaki.StringExtensions.ToXmlDocument(System.String)
+  name: ToXmlDocument(String)
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ToXmlDocument_System_String_
+  commentId: M:Chiaki.StringExtensions.ToXmlDocument(System.String)
+  fullName: Chiaki.StringExtensions.ToXmlDocument(System.String)
+  nameWithType: StringExtensions.ToXmlDocument(String)
+- uid: Chiaki.StringExtensions.ToXmlDocument*
+  name: ToXmlDocument
+  href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_ToXmlDocument_
+  commentId: Overload:Chiaki.StringExtensions.ToXmlDocument
+  isSpec: "True"
+  fullName: Chiaki.StringExtensions.ToXmlDocument
+  nameWithType: StringExtensions.ToXmlDocument
 - uid: Chiaki.StringExtensions.TrimEnd(System.String,System.String)
   name: TrimEnd(String, String)
   href: api/Chiaki.StringExtensions.html#Chiaki_StringExtensions_TrimEnd_System_String_System_String_
@@ -1476,84 +1695,84 @@ references:
   fullName.vb: Chiaki.ValueRange(Of T).ToString
   nameWithType: ValueRange<T>.ToString
   nameWithType.vb: ValueRange(Of T).ToString
-- uid: Chiaki.XmlSerializer
-  name: XmlSerializer
-  href: api/Chiaki.XmlSerializer.html
-  commentId: T:Chiaki.XmlSerializer
-  fullName: Chiaki.XmlSerializer
-  nameWithType: XmlSerializer
-- uid: Chiaki.XmlSerializer.Deserialize*
-  name: Deserialize
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_Deserialize_
-  commentId: Overload:Chiaki.XmlSerializer.Deserialize
+- uid: Chiaki.XmlSerializationExtensions
+  name: XmlSerializationExtensions
+  href: api/Chiaki.XmlSerializationExtensions.html
+  commentId: T:Chiaki.XmlSerializationExtensions
+  fullName: Chiaki.XmlSerializationExtensions
+  nameWithType: XmlSerializationExtensions
+- uid: Chiaki.XmlSerializationExtensions.DeserializeFromXml*
+  name: DeserializeFromXml
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_DeserializeFromXml_
+  commentId: Overload:Chiaki.XmlSerializationExtensions.DeserializeFromXml
   isSpec: "True"
-  fullName: Chiaki.XmlSerializer.Deserialize
-  nameWithType: XmlSerializer.Deserialize
-- uid: Chiaki.XmlSerializer.Deserialize``1(System.Byte[])
-  name: Deserialize<T>(Byte[])
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_Deserialize__1_System_Byte___
-  commentId: M:Chiaki.XmlSerializer.Deserialize``1(System.Byte[])
-  name.vb: Deserialize(Of T)(Byte())
-  fullName: Chiaki.XmlSerializer.Deserialize<T>(System.Byte[])
-  fullName.vb: Chiaki.XmlSerializer.Deserialize(Of T)(System.Byte())
-  nameWithType: XmlSerializer.Deserialize<T>(Byte[])
-  nameWithType.vb: XmlSerializer.Deserialize(Of T)(Byte())
-- uid: Chiaki.XmlSerializer.Deserialize``1(System.Byte[],System.Runtime.Serialization.DataContractSerializer)
-  name: Deserialize<T>(Byte[], DataContractSerializer)
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_Deserialize__1_System_Byte___System_Runtime_Serialization_DataContractSerializer_
-  commentId: M:Chiaki.XmlSerializer.Deserialize``1(System.Byte[],System.Runtime.Serialization.DataContractSerializer)
-  name.vb: Deserialize(Of T)(Byte(), DataContractSerializer)
-  fullName: Chiaki.XmlSerializer.Deserialize<T>(System.Byte[], System.Runtime.Serialization.DataContractSerializer)
-  fullName.vb: Chiaki.XmlSerializer.Deserialize(Of T)(System.Byte(), System.Runtime.Serialization.DataContractSerializer)
-  nameWithType: XmlSerializer.Deserialize<T>(Byte[], DataContractSerializer)
-  nameWithType.vb: XmlSerializer.Deserialize(Of T)(Byte(), DataContractSerializer)
-- uid: Chiaki.XmlSerializer.Serialize*
-  name: Serialize
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_Serialize_
-  commentId: Overload:Chiaki.XmlSerializer.Serialize
+  fullName: Chiaki.XmlSerializationExtensions.DeserializeFromXml
+  nameWithType: XmlSerializationExtensions.DeserializeFromXml
+- uid: Chiaki.XmlSerializationExtensions.DeserializeFromXml``1(System.Byte[])
+  name: DeserializeFromXml<T>(Byte[])
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_DeserializeFromXml__1_System_Byte___
+  commentId: M:Chiaki.XmlSerializationExtensions.DeserializeFromXml``1(System.Byte[])
+  name.vb: DeserializeFromXml(Of T)(Byte())
+  fullName: Chiaki.XmlSerializationExtensions.DeserializeFromXml<T>(System.Byte[])
+  fullName.vb: Chiaki.XmlSerializationExtensions.DeserializeFromXml(Of T)(System.Byte())
+  nameWithType: XmlSerializationExtensions.DeserializeFromXml<T>(Byte[])
+  nameWithType.vb: XmlSerializationExtensions.DeserializeFromXml(Of T)(Byte())
+- uid: Chiaki.XmlSerializationExtensions.DeserializeFromXml``1(System.Byte[],System.Runtime.Serialization.DataContractSerializer)
+  name: DeserializeFromXml<T>(Byte[], DataContractSerializer)
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_DeserializeFromXml__1_System_Byte___System_Runtime_Serialization_DataContractSerializer_
+  commentId: M:Chiaki.XmlSerializationExtensions.DeserializeFromXml``1(System.Byte[],System.Runtime.Serialization.DataContractSerializer)
+  name.vb: DeserializeFromXml(Of T)(Byte(), DataContractSerializer)
+  fullName: Chiaki.XmlSerializationExtensions.DeserializeFromXml<T>(System.Byte[], System.Runtime.Serialization.DataContractSerializer)
+  fullName.vb: Chiaki.XmlSerializationExtensions.DeserializeFromXml(Of T)(System.Byte(), System.Runtime.Serialization.DataContractSerializer)
+  nameWithType: XmlSerializationExtensions.DeserializeFromXml<T>(Byte[], DataContractSerializer)
+  nameWithType.vb: XmlSerializationExtensions.DeserializeFromXml(Of T)(Byte(), DataContractSerializer)
+- uid: Chiaki.XmlSerializationExtensions.SerializeToXml*
+  name: SerializeToXml
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXml_
+  commentId: Overload:Chiaki.XmlSerializationExtensions.SerializeToXml
   isSpec: "True"
-  fullName: Chiaki.XmlSerializer.Serialize
-  nameWithType: XmlSerializer.Serialize
-- uid: Chiaki.XmlSerializer.Serialize``1(``0)
-  name: Serialize<T>(T)
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_Serialize__1___0_
-  commentId: M:Chiaki.XmlSerializer.Serialize``1(``0)
-  name.vb: Serialize(Of T)(T)
-  fullName: Chiaki.XmlSerializer.Serialize<T>(T)
-  fullName.vb: Chiaki.XmlSerializer.Serialize(Of T)(T)
-  nameWithType: XmlSerializer.Serialize<T>(T)
-  nameWithType.vb: XmlSerializer.Serialize(Of T)(T)
-- uid: Chiaki.XmlSerializer.Serialize``1(``0,System.Runtime.Serialization.DataContractSerializer)
-  name: Serialize<T>(T, DataContractSerializer)
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_Serialize__1___0_System_Runtime_Serialization_DataContractSerializer_
-  commentId: M:Chiaki.XmlSerializer.Serialize``1(``0,System.Runtime.Serialization.DataContractSerializer)
-  name.vb: Serialize(Of T)(T, DataContractSerializer)
-  fullName: Chiaki.XmlSerializer.Serialize<T>(T, System.Runtime.Serialization.DataContractSerializer)
-  fullName.vb: Chiaki.XmlSerializer.Serialize(Of T)(T, System.Runtime.Serialization.DataContractSerializer)
-  nameWithType: XmlSerializer.Serialize<T>(T, DataContractSerializer)
-  nameWithType.vb: XmlSerializer.Serialize(Of T)(T, DataContractSerializer)
-- uid: Chiaki.XmlSerializer.SerializeToXmlString*
+  fullName: Chiaki.XmlSerializationExtensions.SerializeToXml
+  nameWithType: XmlSerializationExtensions.SerializeToXml
+- uid: Chiaki.XmlSerializationExtensions.SerializeToXml``1(``0)
+  name: SerializeToXml<T>(T)
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXml__1___0_
+  commentId: M:Chiaki.XmlSerializationExtensions.SerializeToXml``1(``0)
+  name.vb: SerializeToXml(Of T)(T)
+  fullName: Chiaki.XmlSerializationExtensions.SerializeToXml<T>(T)
+  fullName.vb: Chiaki.XmlSerializationExtensions.SerializeToXml(Of T)(T)
+  nameWithType: XmlSerializationExtensions.SerializeToXml<T>(T)
+  nameWithType.vb: XmlSerializationExtensions.SerializeToXml(Of T)(T)
+- uid: Chiaki.XmlSerializationExtensions.SerializeToXml``1(``0,System.Runtime.Serialization.DataContractSerializer)
+  name: SerializeToXml<T>(T, DataContractSerializer)
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXml__1___0_System_Runtime_Serialization_DataContractSerializer_
+  commentId: M:Chiaki.XmlSerializationExtensions.SerializeToXml``1(``0,System.Runtime.Serialization.DataContractSerializer)
+  name.vb: SerializeToXml(Of T)(T, DataContractSerializer)
+  fullName: Chiaki.XmlSerializationExtensions.SerializeToXml<T>(T, System.Runtime.Serialization.DataContractSerializer)
+  fullName.vb: Chiaki.XmlSerializationExtensions.SerializeToXml(Of T)(T, System.Runtime.Serialization.DataContractSerializer)
+  nameWithType: XmlSerializationExtensions.SerializeToXml<T>(T, DataContractSerializer)
+  nameWithType.vb: XmlSerializationExtensions.SerializeToXml(Of T)(T, DataContractSerializer)
+- uid: Chiaki.XmlSerializationExtensions.SerializeToXmlString*
   name: SerializeToXmlString
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_SerializeToXmlString_
-  commentId: Overload:Chiaki.XmlSerializer.SerializeToXmlString
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXmlString_
+  commentId: Overload:Chiaki.XmlSerializationExtensions.SerializeToXmlString
   isSpec: "True"
-  fullName: Chiaki.XmlSerializer.SerializeToXmlString
-  nameWithType: XmlSerializer.SerializeToXmlString
-- uid: Chiaki.XmlSerializer.SerializeToXmlString``1(``0)
+  fullName: Chiaki.XmlSerializationExtensions.SerializeToXmlString
+  nameWithType: XmlSerializationExtensions.SerializeToXmlString
+- uid: Chiaki.XmlSerializationExtensions.SerializeToXmlString``1(``0)
   name: SerializeToXmlString<T>(T)
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_SerializeToXmlString__1___0_
-  commentId: M:Chiaki.XmlSerializer.SerializeToXmlString``1(``0)
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXmlString__1___0_
+  commentId: M:Chiaki.XmlSerializationExtensions.SerializeToXmlString``1(``0)
   name.vb: SerializeToXmlString(Of T)(T)
-  fullName: Chiaki.XmlSerializer.SerializeToXmlString<T>(T)
-  fullName.vb: Chiaki.XmlSerializer.SerializeToXmlString(Of T)(T)
-  nameWithType: XmlSerializer.SerializeToXmlString<T>(T)
-  nameWithType.vb: XmlSerializer.SerializeToXmlString(Of T)(T)
-- uid: Chiaki.XmlSerializer.SerializeToXmlString``1(``0,System.Runtime.Serialization.DataContractSerializer)
+  fullName: Chiaki.XmlSerializationExtensions.SerializeToXmlString<T>(T)
+  fullName.vb: Chiaki.XmlSerializationExtensions.SerializeToXmlString(Of T)(T)
+  nameWithType: XmlSerializationExtensions.SerializeToXmlString<T>(T)
+  nameWithType.vb: XmlSerializationExtensions.SerializeToXmlString(Of T)(T)
+- uid: Chiaki.XmlSerializationExtensions.SerializeToXmlString``1(``0,System.Runtime.Serialization.DataContractSerializer)
   name: SerializeToXmlString<T>(T, DataContractSerializer)
-  href: api/Chiaki.XmlSerializer.html#Chiaki_XmlSerializer_SerializeToXmlString__1___0_System_Runtime_Serialization_DataContractSerializer_
-  commentId: M:Chiaki.XmlSerializer.SerializeToXmlString``1(``0,System.Runtime.Serialization.DataContractSerializer)
+  href: api/Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXmlString__1___0_System_Runtime_Serialization_DataContractSerializer_
+  commentId: M:Chiaki.XmlSerializationExtensions.SerializeToXmlString``1(``0,System.Runtime.Serialization.DataContractSerializer)
   name.vb: SerializeToXmlString(Of T)(T, DataContractSerializer)
-  fullName: Chiaki.XmlSerializer.SerializeToXmlString<T>(T, System.Runtime.Serialization.DataContractSerializer)
-  fullName.vb: Chiaki.XmlSerializer.SerializeToXmlString(Of T)(T, System.Runtime.Serialization.DataContractSerializer)
-  nameWithType: XmlSerializer.SerializeToXmlString<T>(T, DataContractSerializer)
-  nameWithType.vb: XmlSerializer.SerializeToXmlString(Of T)(T, DataContractSerializer)
+  fullName: Chiaki.XmlSerializationExtensions.SerializeToXmlString<T>(T, System.Runtime.Serialization.DataContractSerializer)
+  fullName.vb: Chiaki.XmlSerializationExtensions.SerializeToXmlString(Of T)(T, System.Runtime.Serialization.DataContractSerializer)
+  nameWithType: XmlSerializationExtensions.SerializeToXmlString<T>(T, DataContractSerializer)
+  nameWithType.vb: XmlSerializationExtensions.SerializeToXmlString(Of T)(T, DataContractSerializer)

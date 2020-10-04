@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum StringMaskStyle
+    <title>Class FileInfoExtensions
    | Chiaki </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum StringMaskStyle
+    <meta name="title" content="Class FileInfoExtensions
    | Chiaki ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -68,77 +68,102 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Chiaki.StringMaskStyle">
+            <article class="content wrap" id="_content" data-uid="Chiaki.FileInfoExtensions">
   
   
-  <h1 id="Chiaki_StringMaskStyle" data-uid="Chiaki.StringMaskStyle" class="text-break">Enum StringMaskStyle
+  <h1 id="Chiaki_FileInfoExtensions" data-uid="Chiaki.FileInfoExtensions" class="text-break">Class FileInfoExtensions
   </h1>
-  <div class="markdown level0 summary"><p>An enumeration of the types of masking styles for the Mask() extension method
-of the string class.</p>
+  <div class="markdown level0 summary"><p>Provides extensions for the <span class="xref">System.IO.FileInfo</span> class.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FileInfoExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Chiaki.html">Chiaki</a></h6>
   <h6><strong>Assembly</strong>: Chiaki.dll</h6>
-  <h5 id="Chiaki_StringMaskStyle_syntax">Syntax</h5>
+  <h5 id="Chiaki_FileInfoExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum StringMaskStyle</code></pre>
+    <pre><code class="lang-csharp hljs">public static class FileInfoExtensions</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Chiaki_FileInfoExtensions_Rename_" data-uid="Chiaki.FileInfoExtensions.Rename*"></a>
+  <h4 id="Chiaki_FileInfoExtensions_Rename_System_IO_FileInfo_System_String_" data-uid="Chiaki.FileInfoExtensions.Rename(System.IO.FileInfo,System.String)">Rename(FileInfo, String)</h4>
+  <div class="markdown level1 summary"><p>Attempts to rename a file on the filesystem.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Rename(this FileInfo fileInfo, string newName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
-    <thead>
+    </thead>
     <tbody>
       <tr>
-        <td id="Chiaki_StringMaskStyle_All">All</td>
-        <td><p>Masks all characters within the masking region, regardless of type.</p>
+        <td><span class="xref">System.IO.FileInfo</span></td>
+        <td><span class="parametername">fileInfo</span></td>
+        <td><p>The file which should be renamed.</p>
 </td>
       </tr>
       <tr>
-        <td id="Chiaki_StringMaskStyle_AlphaNumericOnly">AlphaNumericOnly</td>
-        <td><p>Masks only alphabetic and numeric characters within the masking region.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newName</span></td>
+        <td><p>The new name (including file extension) of the file.</p>
 </td>
       </tr>
     </tbody>
-  </thead></thead></table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_SerializeToStream__1___0_">BinarySerializationExtensions.SerializeToStream&lt;StringMaskStyle&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.BinarySerializationExtensions.html#Chiaki_BinarySerializationExtensions_SerializeToByteArray__1___0_">BinarySerializationExtensions.SerializeToByteArray&lt;StringMaskStyle&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_AsArray__1___0_">EnumerableExtensions.AsArray&lt;StringMaskStyle&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.EnumerableExtensions.html#Chiaki_EnumerableExtensions_AsList__1___0_">EnumerableExtensions.AsList&lt;StringMaskStyle&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_As__1_System_Object_">ObjectExtensions.As&lt;T&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_">ObjectExtensions.AsOrDefault&lt;T&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.ObjectExtensions.html#Chiaki_ObjectExtensions_AsOrDefault__1_System_Object_System_Func___0__">ObjectExtensions.AsOrDefault&lt;T&gt;(Func&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXmlString__1___0_">XmlSerializationExtensions.SerializeToXmlString&lt;StringMaskStyle&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXmlString__1___0_System_Runtime_Serialization_DataContractSerializer_">XmlSerializationExtensions.SerializeToXmlString&lt;StringMaskStyle&gt;(DataContractSerializer)</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXml__1___0_">XmlSerializationExtensions.SerializeToXml&lt;StringMaskStyle&gt;()</a>
-  </div>
-  <div>
-      <a class="xref" href="Chiaki.XmlSerializationExtensions.html#Chiaki_XmlSerializationExtensions_SerializeToXml__1___0_System_Runtime_Serialization_DataContractSerializer_">XmlSerializationExtensions.SerializeToXml&lt;StringMaskStyle&gt;(DataContractSerializer)</a>
-  </div>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>If <code data-dev-comment-type="paramref" class="paramref">fileInfo</code> or <code data-dev-comment-type="paramref" class="paramref">newName</code> are null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
