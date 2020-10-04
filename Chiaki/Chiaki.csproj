@@ -4,13 +4,13 @@
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>Steven P</Authors>
-    <PackageProjectUrl>https://chiaki.dev/api/Chiaki.html</PackageProjectUrl>
+    <PackageProjectUrl>https://chiaki.dev/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stevu236/chiaki</RepositoryUrl>
     <Description>Adds extension methods and other useful things to make things easier.</Description>
     <Version>0.0.1</Version>
     <Copyright>Copyright 2020 (C) Steven P.</Copyright>
     <PackageTags>chiaki utility extension methods string double datetime ienumerable</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/stevu236/chiaki/master/logo.png</PackageIconUrl>
+    <PackageIconUrl>https://chiaki.dev/images/logo.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
