@@ -76,7 +76,10 @@ namespace Chiaki
         {
             T parsed;
             if (!_sensitiveNames.TryGetValue(value, out parsed))
+            {
                 throw new ArgumentException("Value is not one of the named constants defined for the enumeration", nameof(value));
+            }
+
             return parsed;
         }
 
@@ -86,11 +89,16 @@ namespace Chiaki
         public static T Parse(string value, bool ignoreCase)
         {
             if (!ignoreCase)
+            {
                 return Parse(value);
+            }
 
             T parsed;
             if (!_insensitiveNames.TryGetValue(value.ToUpperInvariant(), out parsed))
+            {
                 throw new ArgumentException("Value is not one of the named constants defined for the enumeration", nameof(value));
+            }
+
             return parsed;
         }
 
@@ -107,6 +115,12 @@ namespace Chiaki
         /// </summary>
         public static bool TryParse(string value, bool ignoreCase, out T returnValue)
         {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                returnValue = default;
+                return false;
+            }
+
             return ignoreCase
                 ? _insensitiveNames.TryGetValue(value.ToUpperInvariant(), out returnValue)
                 : TryParse(value, out returnValue);
@@ -118,11 +132,15 @@ namespace Chiaki
         public static T? ParseOrNull(string value)
         {
             if (string.IsNullOrEmpty(value))
+            {
                 return null;
+            }
 
             T foundValue;
             if (_sensitiveNames.TryGetValue(value, out foundValue))
+            {
                 return foundValue;
+            }
 
             return null;
         }
@@ -133,14 +151,20 @@ namespace Chiaki
         public static T? ParseOrNull(string value, bool ignoreCase)
         {
             if (!ignoreCase)
+            {
                 return ParseOrNull(value);
+            }
 
             if (string.IsNullOrEmpty(value))
+            {
                 return null;
+            }
 
             T foundValue;
             if (_insensitiveNames.TryGetValue(value.ToUpperInvariant(), out foundValue))
+            {
                 return foundValue;
+            }
 
             return null;
         }
@@ -152,7 +176,9 @@ namespace Chiaki
         {
             T foundValue;
             if (_values.TryGetValue(value, out foundValue))
+            {
                 return foundValue;
+            }
 
             return null;
         }

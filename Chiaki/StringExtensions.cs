@@ -597,7 +597,7 @@ namespace Chiaki
         /// <summary>
         /// Tries to parse the input string as an <see cref="Int16"/> / <see cref="short" />.
         /// </summary>
-        public static int? TryParseInt16(string input)
+        public static int? TryParseInt16(this string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -612,7 +612,7 @@ namespace Chiaki
         /// <summary>
         /// Tries to parse the input string as an <see cref="Int32"/> / <see cref="int" />.
         /// </summary>
-        public static int? TryParseInt32(string input)
+        public static int? TryParseInt32(this string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -627,7 +627,7 @@ namespace Chiaki
         /// <summary>
         /// Tries to parse the input string as an <see cref="Int64"/> / <see cref="long" />.
         /// </summary>
-        public static long? TryParseInt64(string input)
+        public static long? TryParseInt64(this string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -642,7 +642,7 @@ namespace Chiaki
         /// <summary>
         /// Tries to parse the input string as an <see cref="DateTime"/>.
         /// </summary>
-        public static DateTime? TryParseDateTime(string input)
+        public static DateTime? TryParseDateTime(this string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -657,7 +657,7 @@ namespace Chiaki
         /// <summary>
         /// Tries to parse the input string as an <see cref="DateTimeOffset"/>.
         /// </summary>
-        public static DateTimeOffset? TryParseDateTimeOffset(string input)
+        public static DateTimeOffset? TryParseDateTimeOffset(this string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -673,7 +673,7 @@ namespace Chiaki
         /// <summary>
         /// Tries to parse the input string as an <see cref="DateTimeOffset"/>.
         /// </summary>
-        public static TimeSpan? TryParseTimeSpan(string input)
+        public static TimeSpan? TryParseTimeSpan(this string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -683,6 +683,28 @@ namespace Chiaki
             return TimeSpan.TryParse(input, out TimeSpan buffer)
                 ? buffer
                 : (TimeSpan?)null;
+        }
+
+        /// <summary>
+        /// Tries to parse an Enum from the string. 
+        /// </summary>
+        public static bool TryParseEnum<T>(this string input, out T enumValue, bool ignoreCase = false) where T : struct
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                enumValue = default;
+                return false;
+            }
+
+            return Enum<T>.TryParse(input, ignoreCase, out enumValue);
+        }
+
+        /// <summary>
+        /// Creates a URI from this string. 
+        /// </summary>
+        public static Uri ToUri(this string input, UriKind kind)
+        {
+            return new Uri(input, kind);
         }
     }
 }
