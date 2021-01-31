@@ -593,5 +593,96 @@ namespace Chiaki
 
             return XDocument.Parse(input, xmlLoadOptions);
         }
+
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="Int16"/> / <see cref="short" />.
+        /// </summary>
+        public static int? TryParseInt16(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return short.TryParse(input, out short buffer)
+                ? buffer
+                : (short?)null;
+        }
+
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="Int32"/> / <see cref="int" />.
+        /// </summary>
+        public static int? TryParseInt32(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return int.TryParse(input, out int buffer)
+                ? buffer
+                : (int?)null;
+        }
+
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="Int64"/> / <see cref="long" />.
+        /// </summary>
+        public static long? TryParseInt64(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return long.TryParse(input, out long buffer)
+                ? buffer
+                : (long?)null;
+        }
+
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="DateTime"/>.
+        /// </summary>
+        public static DateTime? TryParseDateTime(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return DateTime.TryParse(input, out DateTime buffer)
+                ? buffer
+                : (DateTime?)null;
+        }
+
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="DateTimeOffset"/>.
+        /// </summary>
+        public static DateTimeOffset? TryParseDateTimeOffset(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return DateTimeOffset.TryParse(input, out DateTimeOffset buffer)
+                ? buffer
+                : (DateTimeOffset?)null;
+        }
+
+        
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="DateTimeOffset"/>.
+        /// </summary>
+        public static TimeSpan? TryParseTimeSpan(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return TimeSpan.TryParse(input, out TimeSpan buffer)
+                ? buffer
+                : (TimeSpan?)null;
+        }
     }
 }
