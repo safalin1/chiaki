@@ -595,7 +595,22 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Tries to parse the input string as an <see cref="Int16"/> / <see cref="short" />.
+        /// Tries to parse the input string as an <see cref="short" />.
+        /// </summary>
+        public static bool? TryParseBoolean(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return bool.TryParse(input, out bool buffer)
+                ? buffer
+                : (bool?)null;
+        }
+
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="short" />.
         /// </summary>
         public static int? TryParseInt16(this string input)
         {
@@ -610,7 +625,7 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Tries to parse the input string as an <see cref="Int32"/> / <see cref="int" />.
+        /// Tries to parse the input string as an <see cref="int" />.
         /// </summary>
         public static int? TryParseInt32(this string input)
         {
@@ -625,7 +640,7 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Tries to parse the input string as an <see cref="Int64"/> / <see cref="long" />.
+        /// Tries to parse the input string as an <see cref="long" />.
         /// </summary>
         public static long? TryParseInt64(this string input)
         {
@@ -669,7 +684,36 @@ namespace Chiaki
                 : (DateTimeOffset?)null;
         }
 
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="double"/>.
+        /// </summary>
+        public static double? TryParseDouble(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return double.TryParse(input, out double buffer)
+                ? buffer
+                : (double?)null;
+        }
         
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="decimal"/>.
+        /// </summary>
+        public static decimal? TryParseDecimal(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return decimal.TryParse(input, out decimal buffer)
+                ? buffer
+                : (decimal?)null;
+        }
+
         /// <summary>
         /// Tries to parse the input string as an <see cref="DateTimeOffset"/>.
         /// </summary>
@@ -697,6 +741,36 @@ namespace Chiaki
             }
 
             return Enum<T>.TryParse(input, ignoreCase, out enumValue);
+        }
+
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="Guid"/>.
+        /// </summary>
+        public static Guid? TryParseGuid(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return Guid.TryParse(input, out Guid buffer)
+                ? buffer
+                : (Guid?)null;
+        }
+        
+        /// <summary>
+        /// Tries to parse the input string as an <see cref="float"/>.
+        /// </summary>
+        public static float? TryParseSingle(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return null;
+            }
+
+            return float.TryParse(input, out float buffer)
+                ? buffer
+                : (float?)null;
         }
 
         /// <summary>
