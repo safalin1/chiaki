@@ -70,5 +70,35 @@ namespace Chiaki
 
             return result;
         }
+
+        /// <summary>
+        /// Tries to parse this object instance as a <see cref="bool" />.
+        /// </summary>
+        public static bool? TryParseBoolean(this object input)
+        {
+            if (input is bool b)
+            {
+                return b;
+            }
+
+            var test = input as string;
+
+            return test.TryParseBoolean();
+        }
+
+        /// <summary>
+        /// Tries to parse this object instance as a <see cref="Guid" />.
+        /// </summary>
+        public static Guid? TryParseGuid(this object input)
+        {
+            if (input is Guid b)
+            {
+                return b;
+            }
+
+            var test = input as string;
+
+            return test.TryParseGuid();
+        }
     }
 }

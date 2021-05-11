@@ -595,7 +595,7 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Tries to parse the input string as an <see cref="short" />.
+        /// Tries to parse the input string as a <see cref="bool" />.
         /// </summary>
         public static bool? TryParseBoolean(this string input)
         {
@@ -612,7 +612,7 @@ namespace Chiaki
         /// <summary>
         /// Tries to parse the input string as an <see cref="short" />.
         /// </summary>
-        public static int? TryParseInt16(this string input)
+        public static short? TryParseInt16(this string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
