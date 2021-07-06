@@ -6,7 +6,7 @@ namespace Chiaki.Tests.StringExtensions
     public class CenterStringTests
     {
         [Fact]
-        public void Scenario1()
+        public void BasicTest()
         {
             // Arrange
             string input = "test";
@@ -18,6 +18,21 @@ namespace Chiaki.Tests.StringExtensions
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void ShortStringTest()
+        {
+            // Arrange
+            string input = "t";
+            string expected = "t";
+
+            // Act
+            string actual = input.CenterString(1);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
 
         [Fact]
         public void ThrowsArgumentNullException_WhenInputNull()

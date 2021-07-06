@@ -45,5 +45,19 @@ namespace Chiaki.Tests.StringExtensions
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void NullReturnsNull()
+        {
+            // Arrange
+            string input = null;
+
+            // Act
+            // ReSharper disable once ExpressionIsAlwaysNull
+            string actual = input.TruncateTo(10);
+
+            // Assert
+            Assert.Null(actual);
+        }
     }
 }
