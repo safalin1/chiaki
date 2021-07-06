@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.ObjectExtensions
 {
-    [TestClass]
     public class TryParseGuidTests
     {
-        [TestMethod]
+        [Fact]
         public void GuidTypeDirectCastValue()
         {
             // Arrange
@@ -16,11 +15,11 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseGuid();
 
             // Assert
-            Assert.IsTrue(parsed.HasValue);
-            Assert.AreEqual(parsed.Value, Guid.Parse("E36922E6-CD0A-42F4-9BEA-2947A07447DE"));
+            Assert.True(parsed.HasValue);
+            Assert.Equal(parsed.Value, Guid.Parse("E36922E6-CD0A-42F4-9BEA-2947A07447DE"));
         }
 
-        [TestMethod]
+        [Fact]
         public void StringTypeParseValid()
         {
             // Arrange
@@ -30,11 +29,11 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseGuid();
 
             // Assert
-            Assert.IsTrue(parsed.HasValue);
-            Assert.AreEqual(parsed.Value, Guid.Parse("E36922E6-CD0A-42F4-9BEA-2947A07447DE"));
+            Assert.True(parsed.HasValue);
+            Assert.Equal(parsed.Value, Guid.Parse("E36922E6-CD0A-42F4-9BEA-2947A07447DE"));
         }
         
-        [TestMethod]
+        [Fact]
         public void StringTypeParseInvalid()
         {
             // Arrange
@@ -44,11 +43,11 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseGuid();
 
             // Assert
-            Assert.IsFalse(parsed.HasValue);
+            Assert.False(parsed.HasValue);
         }
 
         
-        [TestMethod]
+        [Fact]
         public void StringTypeParseNull()
         {
             // Arrange
@@ -59,7 +58,7 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseGuid();
 
             // Assert
-            Assert.IsFalse(parsed.HasValue);
+            Assert.False(parsed.HasValue);
         }
     }
 }

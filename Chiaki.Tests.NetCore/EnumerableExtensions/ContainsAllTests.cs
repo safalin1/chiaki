@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class ContainsAllTests
     {
-        [TestMethod]
+        [Fact]
         public void ReturnsTrueIfEnumerableContainsMatchingItem()
         {
             // Arrange
@@ -17,10 +16,10 @@ namespace Chiaki.Tests.EnumerableExtensions
             var result = a.ContainsAll(b);
 
             // Assert
-            Assert.IsTrue(result);
+            Assert.True(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void ReturnsFalseIfEnumerableContainsNoMatchingItem()
         {
             // Arrange
@@ -31,10 +30,10 @@ namespace Chiaki.Tests.EnumerableExtensions
             var result = a.ContainsAll(b);
 
             // Assert
-            Assert.IsFalse(result);
+            Assert.False(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenSourceIsNull()
         {
             // Arrange
@@ -42,10 +41,10 @@ namespace Chiaki.Tests.EnumerableExtensions
             var b = new[] { 6, 5, 4 };
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAll(b));
+            Assert.Throws<ArgumentNullException>(() => a.ContainsAll(b));
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenOtherIsNull()
         {
             // Arrange
@@ -53,7 +52,7 @@ namespace Chiaki.Tests.EnumerableExtensions
             int[] b = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAll(b));
+            Assert.Throws<ArgumentNullException>(() => a.ContainsAll(b));
         }
     }
 }

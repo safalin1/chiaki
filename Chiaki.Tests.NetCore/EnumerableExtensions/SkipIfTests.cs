@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class SkipIfTests
     {
-        [TestMethod]
+        [Fact]
         public void ConditionFalseReturnsAsIs()
         {
             // Arrange
@@ -29,11 +28,11 @@ namespace Chiaki.Tests.EnumerableExtensions
                 .First();
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.AreEqual(expected, actual);
+            Assert.NotNull(actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ConditionTrueReturnsWithFilter()
         {
             // Arrange
@@ -55,18 +54,18 @@ namespace Chiaki.Tests.EnumerableExtensions
                 .First();
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.AreEqual(expected, actual);
+            Assert.NotNull(actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenNull()
         {
             // Arrange
             string[] input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.SkipIf(true, 1));
+            Assert.Throws<ArgumentNullException>(() => input.SkipIf(true, 1));
         }
     }
 }

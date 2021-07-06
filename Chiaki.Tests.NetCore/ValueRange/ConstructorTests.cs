@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.ValueRange
 {
-    [TestClass]
     public class ConstructorTests
     {
-        [TestMethod]
+        [Fact]
         public void CreatesInstanceWithMinAndMax()
         {
             // Arrange
@@ -16,8 +15,8 @@ namespace Chiaki.Tests.ValueRange
             var instance = new ValueRange<int>(min, max);
 
             // Assert
-            Assert.AreEqual(expected: 0, actual: instance.Minimum);
-            Assert.AreEqual(expected: 10, actual: instance.Maximum);
+            Assert.Equal(expected: 0, actual: instance.Minimum);
+            Assert.Equal(expected: 10, actual: instance.Maximum);
         }
     }
 }

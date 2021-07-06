@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.Singleton
 {
-    [TestClass]
     public class Tests
     {
-        [TestMethod]
+        [Fact]
         public void InstanceIsNotNull()
         {
             // Arrange
@@ -14,10 +13,10 @@ namespace Chiaki.Tests.Singleton
             var instance = TestingClass.Instance;
 
             // Assert
-            Assert.IsNotNull(instance);
+            Assert.NotNull(instance);
         }
 
-        [TestMethod]
+        [Fact]
         public void InstanceIsSameOnEachGet()
         {
             // Arrange
@@ -27,7 +26,7 @@ namespace Chiaki.Tests.Singleton
             var actual = TestingClass.Instance;
 
             // Assert
-            Assert.AreSame(expected, actual);
+            Assert.Same(expected, actual);
         }
 
         private class TestingClass : Singleton<TestingClass>

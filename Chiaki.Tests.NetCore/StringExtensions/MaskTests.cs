@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class MaskTests
     {
-        [TestMethod]
+        [Fact]
         public void CompleteMask()
         {
             // Arrange
@@ -17,10 +16,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.Mask(mask);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ExposedMask()
         {
             // Arrange
@@ -32,10 +31,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.Mask(mask, 4);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ExposedMaskWithCustomMaskChar()
         {
             // Arrange
@@ -47,10 +46,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.Mask(mask, 2);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ExposedMaskWithCustomMaskCharAlphaNumericOnly()
         {
             // Arrange
@@ -62,7 +61,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.Mask(mask, 2, StringMaskStyle.AlphaNumericOnly);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

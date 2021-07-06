@@ -1,12 +1,11 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class AsArrayTests
     {
-        [TestMethod]
+        [Fact]
         public void AsArray_CreatesSingleItemArray()
         {
             // Arrange
@@ -16,9 +15,9 @@ namespace Chiaki.Tests.EnumerableExtensions
             var array = item.AsArray();
 
             // Assert
-            Assert.IsNotNull(array);
-            Assert.IsTrue(array.Length == 1);
-            Assert.AreSame(item, array.First());
+            Assert.NotNull(array);
+            Assert.True(array.Length == 1);
+            Assert.Same(item, array.First());
         }
     }
 }

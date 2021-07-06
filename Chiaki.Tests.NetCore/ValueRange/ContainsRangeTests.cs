@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.ValueRange
 {
-    [TestClass]
     public class ContainsRangeTests
     {
-        [TestMethod]
+        [Fact]
         public void ReturnsTrueWhenRangeInboundsOfOtherRange()
         {
             // Arrange
@@ -16,10 +15,10 @@ namespace Chiaki.Tests.ValueRange
             var actual = a.ContainsRange(b);
 
             // Assert
-            Assert.IsTrue(actual);
+            Assert.True(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ReturnsFalseWhenRangeOutboundsOfOtherRange()
         {
             // Arrange
@@ -30,7 +29,7 @@ namespace Chiaki.Tests.ValueRange
             var actual = a.ContainsRange(b);
 
             // Assert
-            Assert.IsFalse(actual);
+            Assert.False(actual);
         }
     }
 }

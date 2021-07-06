@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class ReplaceFirstTests
     {
-        [TestMethod]
+        [Fact]
         public void MatchesFirstInStringAndReplaces()
         {
             // Arrange
@@ -17,10 +16,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.ReplaceFirst("unchanged", "replacement");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void MatchesOnlyFirstInStringAndReplaces()
         {
             // Arrange
@@ -31,10 +30,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.ReplaceFirst("unchanged", "replacement");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void MatchesNoneAndStaysUnchanged()
         {
             // Arrange
@@ -45,17 +44,17 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.ReplaceFirst("replacement", "unchanged");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void OnNullThrowsException()
         {
             // Arrange
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.ReplaceFirst("replacement", "unchanged"));
+            Assert.Throws<ArgumentNullException>(() => input.ReplaceFirst("replacement", "unchanged"));
         }
     }
 }

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class SplitByCamelCaseTests
     {
-        [TestMethod]
+        [Fact]
         public void Scenario1()
         {
             // Arrange
@@ -18,17 +17,17 @@ namespace Chiaki.Tests.StringExtensions
             var actual = input.SplitByCamelCase().ToArray();
 
             // Assert
-            CollectionAssert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsException_WhenInputNull()
         {
             // Arrange
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.SplitByCamelCase().ToArray());
+            Assert.Throws<ArgumentNullException>(() => input.SplitByCamelCase().ToArray());
         }
     }
 }

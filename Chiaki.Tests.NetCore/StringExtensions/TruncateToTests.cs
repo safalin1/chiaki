@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class TruncateToTests
     {
-        [TestMethod]
+        [Fact]
         public void MaxLength0ReturnsAsIs()
         {
             // Arrange
@@ -16,10 +15,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.TruncateTo(maxLength: 0);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void MaxLength20NoSuffixChange()
         {
             // Arrange
@@ -30,10 +29,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.TruncateTo(maxLength: 20);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void MaxLength40WithSuffixChange()
         {
             // Arrange
@@ -44,7 +43,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.TruncateTo(maxLength: 40, suffix: "??");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

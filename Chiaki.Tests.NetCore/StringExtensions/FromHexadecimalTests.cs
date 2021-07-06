@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class FromHexadecimalTests
     {
-        [TestMethod]
+        [Fact]
         public void Scenario1()
         {
             // Arrange
@@ -17,10 +16,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.FromHexadecimal();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void Scenario2()
         {
             // Arrange
@@ -31,10 +30,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.FromHexadecimal();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void Scenario3()
         {
             // Arrange
@@ -45,17 +44,17 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.FromHexadecimal();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenNull()
         {
             // Arrange
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.FromHexadecimal());
+            Assert.Throws<ArgumentNullException>(() => input.FromHexadecimal());
         }
     }
 }

@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class RemoveNewLinesTests
     {
-        [TestMethod]
+        [Fact]
         public void WithStringTest()
         {
             // Arrange
@@ -16,10 +15,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.RemoveNewLines();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void WithNullStringTest()
         {
             // Arrange
@@ -29,7 +28,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.RemoveNewLines();
 
             // Assert
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
     }
 }

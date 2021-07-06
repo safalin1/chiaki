@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class FormattedTests
     {
-        [TestMethod]
+        [Fact]
         public void Scenario1()
         {
             // Arrange
@@ -16,10 +15,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.Formatted("method");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void Scenario2()
         {
             // Arrange
@@ -30,7 +29,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.Formatted("method", "multiple", "arguments");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

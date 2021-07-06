@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class ContainsAnyTests
     {
-        [TestMethod]
+        [Fact]
         public void ReturnsTrueIfEnumerableContainsMatchingItem()
         {
             // Arrange
@@ -18,10 +17,10 @@ namespace Chiaki.Tests.EnumerableExtensions
             var result = a.ContainsAny(b);
 
             // Assert
-            Assert.IsTrue(result);
+            Assert.True(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void ReturnsFalseIfEnumerableContainsNoMatchingItem()
         {
             // Arrange
@@ -32,11 +31,10 @@ namespace Chiaki.Tests.EnumerableExtensions
             var result = a.ContainsAny(b);
 
             // Assert
-            Assert.IsFalse(result);
+            Assert.False(result);
         }
 
-
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenSourceIsNull()
         {
             // Arrange
@@ -44,10 +42,10 @@ namespace Chiaki.Tests.EnumerableExtensions
             var b = new[] { 6, 5, 4 };
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAny(b));
+            Assert.Throws<ArgumentNullException>(() => a.ContainsAny(b));
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenOtherIsNull()
         {
             // Arrange
@@ -55,27 +53,27 @@ namespace Chiaki.Tests.EnumerableExtensions
             int[] b = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => a.ContainsAny(b));
+            Assert.Throws<ArgumentNullException>(() => a.ContainsAny(b));
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowExceptionWhenSourceNull()
         {
             // Arrange
             IList<int> input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.ContainsAny(new[] { 1 }));
+            Assert.Throws<ArgumentNullException>(() => input.ContainsAny(new[] { 1 }));
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowExceptionWhenOtherNull()
         {
             // Arrange
             IEnumerable<int> input = new[] { 1 };
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.ContainsAny(null));
+            Assert.Throws<ArgumentNullException>(() => input.ContainsAny(null));
         }
     }
 }

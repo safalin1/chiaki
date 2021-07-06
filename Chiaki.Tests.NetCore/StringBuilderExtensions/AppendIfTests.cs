@@ -1,12 +1,11 @@
 ﻿using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringBuilderExtensions
 {
-    [TestClass]
     public class AppendIfTests
     {
-        [TestMethod]
+        [Fact]
         public void StringOverload_ConditionTrue()
         {
             // Arrange
@@ -19,10 +18,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void StringOverload_ConditionFalse()
         {
             // Arrange
@@ -35,10 +34,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void IntOverload_ConditionTrue()
         {
             // Arrange
@@ -51,10 +50,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void IntOverload_ConditionFalse()
         {
             // Arrange
@@ -67,10 +66,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void BoolOverload_ConditionTrue()
         {
             // Arrange
@@ -83,10 +82,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void BoolOverload_ConditionFalse()
         {
             // Arrange
@@ -99,10 +98,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void CharOverload_ConditionTrue()
         {
             // Arrange
@@ -115,10 +114,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void CharOverload_ConditionFalse()
         {
             // Arrange
@@ -131,10 +130,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void SByteOverload_ConditionTrue()
         {
             // Arrange
@@ -147,10 +146,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void SByteOverload_ConditionFalse()
         {
             // Arrange
@@ -163,10 +162,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ByteOverload_ConditionTrue()
         {
             // Arrange
@@ -179,10 +178,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ByteOverload_ConditionFalse()
         {
             // Arrange
@@ -195,10 +194,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ShortOverload_ConditionTrue()
         {
             // Arrange
@@ -211,10 +210,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ShortOverload_ConditionFalse()
         {
             // Arrange
@@ -227,10 +226,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void LongOverload_ConditionTrue()
         {
             // Arrange
@@ -243,10 +242,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void LongOverload_ConditionFalse()
         {
             // Arrange
@@ -259,10 +258,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void FloatOverload_ConditionTrue()
         {
             // Arrange
@@ -275,10 +274,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void FloatOverload_ConditionFalse()
         {
             // Arrange
@@ -291,10 +290,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void DoubleOverload_ConditionTrue()
         {
             // Arrange
@@ -307,10 +306,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void DoubleOverload_ConditionFalse()
         {
             // Arrange
@@ -323,10 +322,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void DecimalOverload_ConditionTrue()
         {
             // Arrange
@@ -339,10 +338,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void DecimalOverload_ConditionFalse()
         {
             // Arrange
@@ -355,7 +354,7 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

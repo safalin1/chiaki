@@ -1,19 +1,18 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class IsLengthAtLeastTests
     {
-        [TestMethod]
+        [Fact]
         public void MinLengthAsNegative()
         {
             // Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => "".IsLengthAtLeast(-1));
+            Assert.Throws<ArgumentOutOfRangeException>(() => "".IsLengthAtLeast(-1));
         }
 
-        [TestMethod]
+        [Fact]
         public void NullReturnsFalse()
         {
             // Arrange
@@ -23,10 +22,10 @@ namespace Chiaki.Tests.StringExtensions
             bool actual = input.IsLengthAtLeast(10);
 
             // Assert
-            Assert.IsFalse(actual);
+            Assert.False(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void EmptyReturnsFalse()
         {
             // Arrange
@@ -36,10 +35,10 @@ namespace Chiaki.Tests.StringExtensions
             bool actual = input.IsLengthAtLeast(10);
 
             // Assert
-            Assert.IsFalse(actual);
+            Assert.False(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void String5LengthReturnsTrue()
         {
             // Arrange
@@ -49,10 +48,10 @@ namespace Chiaki.Tests.StringExtensions
             bool actual = input.IsLengthAtLeast(5);
 
             // Assert
-            Assert.IsTrue(actual);
+            Assert.True(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void String10LengthReturnsTrue()
         {
             // Arrange
@@ -62,7 +61,7 @@ namespace Chiaki.Tests.StringExtensions
             bool actual = input.IsLengthAtLeast(5);
 
             // Assert
-            Assert.IsTrue(actual);
+            Assert.True(actual);
         }
     }
 }

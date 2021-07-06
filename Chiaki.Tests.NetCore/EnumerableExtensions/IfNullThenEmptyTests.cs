@@ -1,12 +1,11 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class IfNullThenEmptyTests
     {
-        [TestMethod]
+        [Fact]
         public void IfNullReturnsEmptyEnumerable()
         {
             // Arrange
@@ -16,11 +15,11 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.IfNullThenEmpty();
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsFalse(actual.Any());
+            Assert.NotNull(actual);
+            Assert.False(actual.Any());
         }
 
-        [TestMethod]
+        [Fact]
         public void IfNotNullReturnsEnumerable()
         {
             // Arrange
@@ -34,8 +33,8 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.IfNullThenEmpty();
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsTrue(actual.Count() == 2);
+            Assert.NotNull(actual);
+            Assert.True(actual.Count() == 2);
         }
     }
 }

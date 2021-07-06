@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class ConvertNewLinesToHtmlTagsTests
     {
-        [TestMethod]
+        [Fact]
         public void ReplacesNewLinesWithBrTags()
         {
             // Arrange
@@ -16,10 +15,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.ConvertNewLinesToHtmlTags();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void NullThenReturnsNull()
         {
             // Arrange
@@ -29,10 +28,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.ConvertNewLinesToHtmlTags();
 
             // Assert
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void EmptyThenReturnsEmpty()
         {
             // Arrange
@@ -42,7 +41,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.ConvertNewLinesToHtmlTags();
 
             // Assert
-            Assert.AreEqual(expected: string.Empty, actual: actual);
+            Assert.Equal(expected: string.Empty, actual: actual);
         }
     }
 }

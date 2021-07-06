@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.ValueRange
 {
-    [TestClass]
     public class IsValidTests
     {
-        [TestMethod]
+        [Fact]
         public void ReturnsTrueWhenRangeValid()
         {
             // Arrange
@@ -17,10 +16,10 @@ namespace Chiaki.Tests.ValueRange
             var actual = instance.IsValid();
 
             // Assert
-            Assert.IsTrue(actual);
+            Assert.True(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ReturnsFalseWhenRangeInvalid()
         {
             // Arrange
@@ -32,7 +31,7 @@ namespace Chiaki.Tests.ValueRange
             var actual = instance.IsValid();
 
             // Assert
-            Assert.IsFalse(actual);
+            Assert.False(actual);
         }
     }
 }

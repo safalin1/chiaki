@@ -1,12 +1,11 @@
 ﻿using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringBuilderExtensions
 {
-    [TestClass]
     public class AppendLineIf
     {
-        [TestMethod]
+        [Fact]
         public void SingleArgument_ConditionTrue()
         {
             // Arrange
@@ -19,10 +18,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void SingleArgument_ConditionFalse()
         {
             // Arrange
@@ -35,10 +34,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void NoArguments_ConditionTrue()
         {
             // Arrange
@@ -51,10 +50,10 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void NoArguments_ConditionFalse()
         {
             // Arrange
@@ -67,7 +66,7 @@ namespace Chiaki.Tests.StringBuilderExtensions
             var actual = builder.ToString();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

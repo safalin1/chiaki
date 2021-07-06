@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class IsNumericTests
     {
-        [TestMethod]
+        [Fact]
         public void WithNumberReturnsTrue()
         {
             // Arrange
@@ -15,10 +14,10 @@ namespace Chiaki.Tests.StringExtensions
             bool actual = input.IsNumeric();
 
             // Assert
-            Assert.IsTrue(actual);
+            Assert.True(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void WithStringReturnsFalse()
         {
             // Arrange
@@ -28,7 +27,7 @@ namespace Chiaki.Tests.StringExtensions
             bool actual = input.IsNumeric();
 
             // Assert
-            Assert.IsFalse(actual);
+            Assert.False(actual);
         }
     }
 }

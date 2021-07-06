@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.DateTimeExtensions
 {
-    [TestClass]
     public class ToUnixTimestampTests
     {
-        [TestMethod]
+        [Fact]
         public void Scenario1()
         {
             // Arrange
@@ -18,10 +17,10 @@ namespace Chiaki.Tests.DateTimeExtensions
             // Assert
             double expected = 1290643200;
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void Scenario2()
         {
             // Arrange
@@ -33,7 +32,7 @@ namespace Chiaki.Tests.DateTimeExtensions
             // Assert
             double expected = 801878400;
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

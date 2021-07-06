@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Globalization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class ToTitleCaseTests
     {
-        [TestMethod]
+        [Fact]
         public void Scenario1()
         {
             // Arrange
@@ -18,37 +17,37 @@ namespace Chiaki.Tests.StringExtensions
             var actual = input.ToTitleCase();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsException_WhenStringIsNull_NoCultureSpecified()
         {
             // Arrange
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.ToTitleCase());
+            Assert.Throws<ArgumentNullException>(() => input.ToTitleCase());
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsException_WhenStringIsNull_CultureSpecified()
         {
             // Arrange
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.ToTitleCase(CultureInfo.CurrentCulture));
+            Assert.Throws<ArgumentNullException>(() => input.ToTitleCase(CultureInfo.CurrentCulture));
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsException_WhenCultureIsNull()
         {
             // Arrange
             string input = "test";
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.ToTitleCase(null));
+            Assert.Throws<ArgumentNullException>(() => input.ToTitleCase(null));
         }
     }
 }

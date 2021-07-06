@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.ObjectExtensions
 {
-    [TestClass]
     public class TryParseBooleanTests
     {
-        [TestMethod]
+        [Fact]
         public void BoolTypeDirectCastValueFalse()
         {
             // Arrange
@@ -15,11 +14,11 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseBoolean();
 
             // Assert
-            Assert.IsTrue(parsed.HasValue);
-            Assert.IsFalse(parsed.Value);
+            Assert.True(parsed.HasValue);
+            Assert.False(parsed.Value);
         }
 
-        [TestMethod]
+        [Fact]
         public void BoolTypeDirectCastTrue()
         {
             // Arrange
@@ -29,11 +28,11 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseBoolean();
 
             // Assert
-            Assert.IsTrue(parsed.HasValue);
-            Assert.IsTrue(parsed.Value);
+            Assert.True(parsed.HasValue);
+            Assert.True(parsed.Value);
         }
         
-        [TestMethod]
+        [Fact]
         public void StringTypeParseTrue()
         {
             // Arrange
@@ -43,11 +42,11 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseBoolean();
 
             // Assert
-            Assert.IsTrue(parsed.HasValue);
-            Assert.IsTrue(parsed.Value);
+            Assert.True(parsed.HasValue);
+            Assert.True(parsed.Value);
         }
         
-        [TestMethod]
+        [Fact]
         public void StringTypeParseFalse()
         {
             // Arrange
@@ -57,11 +56,11 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseBoolean();
 
             // Assert
-            Assert.IsTrue(parsed.HasValue);
-            Assert.IsFalse(parsed.Value);
+            Assert.True(parsed.HasValue);
+            Assert.False(parsed.Value);
         }
 
-        [TestMethod]
+        [Fact]
         public void StringTypeParseNull()
         {
             // Arrange
@@ -72,11 +71,10 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseBoolean();
 
             // Assert
-            Assert.IsFalse(parsed.HasValue);
+            Assert.False(parsed.HasValue);
         }
 
-        
-        [TestMethod]
+        [Fact]
         public void StringTypeParseGuidFail()
         {
             // Arrange
@@ -87,7 +85,7 @@ namespace Chiaki.Tests.ObjectExtensions
             var parsed = item.TryParseBoolean();
 
             // Assert
-            Assert.IsFalse(parsed.HasValue);
+            Assert.False(parsed.HasValue);
         }
     }
 }

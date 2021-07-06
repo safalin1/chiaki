@@ -1,12 +1,11 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class DistinctByTests
     {
-        [TestMethod]
+        [Fact]
         public void Scenario1()
         {
             // Arrange
@@ -50,8 +49,8 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.DistinctBy(x => x).ToArray();
 
             // Assert
-            Assert.IsNotNull(input);
-            CollectionAssert.AreEqual(expected, actual);
+            Assert.NotNull(input);
+            Assert.Equal(expected, actual);
         }
     }
 }

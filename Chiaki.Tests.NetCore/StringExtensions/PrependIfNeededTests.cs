@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class PrependIfNeededTests
     {
-        [TestMethod]
+        [Fact]
         public void IfNullReturnsNullString()
         {
             // Arrange
@@ -15,10 +14,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.PrependIfNeeded("...");
 
             // Assert
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void NoPrependIfInputStartsWithSpecifiedString()
         {
             // Arrange
@@ -29,10 +28,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.PrependIfNeeded("...");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void PrependsIfInputDoesNotStartsWithSpecifiedString()
         {
             // Arrange
@@ -43,10 +42,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.PrependIfNeeded("...");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void IfNullReturnsNullChar()
         {
             // Arrange
@@ -56,10 +55,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.PrependIfNeeded('.');
 
             // Assert
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void NoPrependIfInputStartsWithSpecifiedChar()
         {
             // Arrange
@@ -70,10 +69,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.PrependIfNeeded('#');
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void PrependsIfInputDoesNotStartsWithSpecifiedChar()
         {
             // Arrange
@@ -84,7 +83,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.PrependIfNeeded('#');
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

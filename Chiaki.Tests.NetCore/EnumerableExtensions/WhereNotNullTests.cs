@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class WhereNotNullTests
     {
-        [TestMethod]
+        [Fact]
         public void WithNulls_ExcludesNulls()
         {
             // Arrange
@@ -34,12 +33,12 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.WhereNotNull().ToArray();
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsTrue(actual.Count() == 4);
-            CollectionAssert.AreEquivalent(expected, actual);
+            Assert.NotNull(actual);
+            Assert.True(actual.Count() == 4);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void WithoutNulls_NoChange()
         {
             // Arrange
@@ -63,12 +62,12 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.WhereNotNull().ToArray();
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsTrue(actual.Count() == 4);
-            CollectionAssert.AreEquivalent(expected, actual);
+            Assert.NotNull(actual);
+            Assert.True(actual.Count() == 4);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void WithAllNulls_EmptyResult()
         {
             // Arrange
@@ -94,19 +93,19 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.WhereNotNull().ToArray();
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsFalse(actual.Any());
-            CollectionAssert.AreEquivalent(expected, actual);
+            Assert.NotNull(actual);
+            Assert.False(actual.Any());
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenNull()
         {
             // Arrange
             string[] input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.WhereNotNull());
+            Assert.Throws<ArgumentNullException>(() => input.WhereNotNull());
         }
     }
 }

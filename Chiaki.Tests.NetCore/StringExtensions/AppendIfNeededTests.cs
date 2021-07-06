@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class AppendIfNeededTests
     {
-        [TestMethod]
+        [Fact]
         public void IfNullReturnsNullString()
         {
             // Arrange
@@ -15,10 +14,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.AppendIfNeeded("...");
 
             // Assert
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void NoAppendIfInputEndsWithSpecifiedString()
         {
             // Arrange
@@ -29,10 +28,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.AppendIfNeeded("...");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void AppendsIfInputDoesNotEndWithSpecifiedString()
         {
             // Arrange
@@ -43,10 +42,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.AppendIfNeeded("...");
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void IfNullReturnsNullChar()
         {
             // Arrange
@@ -56,10 +55,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.AppendIfNeeded('.');
 
             // Assert
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void NoAppendIfInputEndsWithSpecifiedChar()
         {
             // Arrange
@@ -70,10 +69,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.AppendIfNeeded('#');
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void AppendsIfInputDoesNotEndWithSpecifiedChar()
         {
             // Arrange
@@ -84,7 +83,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.AppendIfNeeded('#');
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }

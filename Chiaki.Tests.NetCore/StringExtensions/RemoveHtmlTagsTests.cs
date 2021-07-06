@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class RemoveHtmlTagsTests
     {
-        [TestMethod]
+        [Fact]
         public void RemovesParagraphTags()
         {
             // Arrange
@@ -16,10 +15,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.RemoveHtmlTags();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void OnNullReturnsNull()
         {
             // Arrange
@@ -28,7 +27,7 @@ namespace Chiaki.Tests.StringExtensions
             // Assert
             string actual = input.RemoveHtmlTags();
 
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
     }
 }

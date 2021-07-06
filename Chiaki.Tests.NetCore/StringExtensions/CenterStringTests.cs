@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class CenterStringTests
     {
-        [TestMethod]
+        [Fact]
         public void Scenario1()
         {
             // Arrange
@@ -17,17 +16,17 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.CenterString(10);
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsArgumentNullException_WhenInputNull()
         {
             // Arrange
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.CenterString(10));
+            Assert.Throws<ArgumentNullException>(() => input.CenterString(10));
         }
     }
 }

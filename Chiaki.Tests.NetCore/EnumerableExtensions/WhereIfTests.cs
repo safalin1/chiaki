@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class WhereIfTests
     {
-        [TestMethod]
+        [Fact]
         public void ConditionFalseReturnsAsIs()
         {
             // Arrange
@@ -22,11 +21,11 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.WhereIf(condition: false, predicate: x => x.Length == 0);
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsTrue(actual.Count() == 3);
+            Assert.NotNull(actual);
+            Assert.True(actual.Count() == 3);
         }
 
-        [TestMethod]
+        [Fact]
         public void ConditionTrueReturnsWithFilter_NoElementIndex()
         {
             // Arrange
@@ -41,12 +40,12 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.WhereIf(condition: true, predicate: x => x.Length == 0);
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsTrue(actual.Count() == 1);
-            Assert.IsTrue(actual.First() == string.Empty);
+            Assert.NotNull(actual);
+            Assert.True(actual.Count() == 1);
+            Assert.True(actual.First() == string.Empty);
         }
 
-        [TestMethod]
+        [Fact]
         public void ConditionTrueReturnsWithFilter_WithElementIndex()
         {
             // Arrange
@@ -61,29 +60,29 @@ namespace Chiaki.Tests.EnumerableExtensions
             var actual = input.WhereIf(condition: true, predicate: (x, idx) => x.Length == 0);
 
             // Assert
-            Assert.IsNotNull(actual);
-            Assert.IsTrue(actual.Count() == 1);
-            Assert.IsTrue(actual.First() == string.Empty);
+            Assert.NotNull(actual);
+            Assert.True(actual.Count() == 1);
+            Assert.True(actual.First() == string.Empty);
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenNull_NoElementIndex()
         {
             // Arrange
             string[] input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.WhereIf(true, x => x.Any()));
+            Assert.Throws<ArgumentNullException>(() => input.WhereIf(true, x => x.Any()));
         }
 
-        [TestMethod]
+        [Fact]
         public void ThrowsExceptionWhenNull_WithElementIndex()
         {
             // Arrange
             string[] input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.WhereIf(true, (x, idx) => x.Any()));
+            Assert.Throws<ArgumentNullException>(() => input.WhereIf(true, (x, idx) => x.Any()));
         }
     }
 }

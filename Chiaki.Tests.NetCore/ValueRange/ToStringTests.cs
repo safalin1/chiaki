@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.ValueRange
 {
-    [TestClass]
     public class ToStringTests
     {
-        [TestMethod]
+        [Fact]
         public void ReturnsRangeInHumanReadableFormat()
         {
             // Arrange
@@ -17,7 +16,7 @@ namespace Chiaki.Tests.ValueRange
             var actual = instance.ToString();
 
             // Assert
-            Assert.AreEqual(expected: "0 - 10", actual: actual);
+            Assert.Equal(expected: "0 - 10", actual: actual);
         }
     }
 }

@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class TrimEndTests
     {
-        [TestMethod]
+        [Fact]
         public void IfInputNullThenReturnsNull()
         {
             // Arrange
@@ -15,10 +14,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.TrimEnd("#");
 
             // Assert
-            Assert.IsNull(actual);
+            Assert.Null(actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void IfValueNullThenReturnsNoChange()
         {
             // Arrange
@@ -28,10 +27,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.TrimEnd((string)null);
 
             // Assert
-            Assert.AreEqual(input, actual);
+            Assert.Equal(input, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void IfInputDoesNotEndWithValueReturnsNoChange()
         {
             // Arrange
@@ -41,10 +40,10 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.TrimEnd("remove");
 
             // Assert
-            Assert.AreEqual(input, actual);
+            Assert.Equal(input, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void IfInputEndsWithValueReturnsChange()
         {
             // Arrange
@@ -54,7 +53,7 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.TrimEnd("remove");
 
             // Assert
-            Assert.AreEqual("test_", actual);
+            Assert.Equal("test_", actual);
         }
     }
 }

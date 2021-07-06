@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.StringExtensions
 {
-    [TestClass]
     public class RemoveWhitespaceTests
     {
-        [TestMethod]
+        [Fact]
         public void SpacesAreRemoved()
         {
             // Arrange
@@ -17,17 +16,17 @@ namespace Chiaki.Tests.StringExtensions
             string actual = input.RemoveWhitespace();
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
-        [TestMethod]
+        [Fact]
         public void OnNullThrowsException()
         {
             // Arrange
             string input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.RemoveWhitespace());
+            Assert.Throws<ArgumentNullException>(() => input.RemoveWhitespace());
         }
     }
 }

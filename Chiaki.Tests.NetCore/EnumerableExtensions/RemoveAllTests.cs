@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Chiaki.Tests.EnumerableExtensions
 {
-    [TestClass]
     public class RemoveAllTests
     {
-        [TestMethod]
+        [Fact]
         public void ThrowExceptionWhenNull()
         {
             // Arrange
             IList<int> input = null;
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => input.RemoveAll(x => x > 0));
+            Assert.Throws<ArgumentNullException>(() => input.RemoveAll(x => x > 0));
         }
 
-        [TestMethod]
+        [Fact]
         public void RemovesOnlyItemsMatchingPredicate_List()
         {
             // Arrange
@@ -37,12 +36,11 @@ namespace Chiaki.Tests.EnumerableExtensions
             input.RemoveAll(x => x > 10);
 
             // Assert
-            Assert.IsTrue(input.Count == 3);
-            CollectionAssert.AllItemsAreNotNull(input.ToList());
-            CollectionAssert.AreEqual(new[] { 1, 3, 6 }, input.ToList());
+            Assert.True(input.Count == 3);
+            Assert.Equal(new[] { 1, 3, 6 }, input.ToList());
         }
 
-        [TestMethod]
+        [Fact]
         public void RemovesOnlyItemsMatchingPredicate_Collection()
         {
             // Arrange
@@ -60,9 +58,8 @@ namespace Chiaki.Tests.EnumerableExtensions
             input.RemoveAll(x => x > 10);
 
             // Assert
-            Assert.IsTrue(input.Count == 3);
-            CollectionAssert.AllItemsAreNotNull(input);
-            CollectionAssert.AreEqual(new[] { 1, 3, 6 }, input);
+            Assert.True(input.Count == 3);
+            Assert.Equal(new[] { 1, 3, 6 }, input);
         }
     }
 }

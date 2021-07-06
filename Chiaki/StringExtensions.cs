@@ -417,7 +417,7 @@ namespace Chiaki
         /// <summary>
         /// Gets all characters of the string using UTF8 encoding and encodes them into a byte array.
         /// </summary>
-        public static byte[] GetBytes(this string input)
+        public static byte[] GetUtf8Bytes(this string input)
         {
             return Encoding.UTF8.GetBytes(input);
         }
