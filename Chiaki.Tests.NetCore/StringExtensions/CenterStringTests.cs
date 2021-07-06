@@ -20,11 +20,11 @@ namespace Chiaki.Tests.StringExtensions
         }
 
         [Fact]
-        public void ShortStringTest()
+        public void EmptyStringTest()
         {
             // Arrange
-            string input = "t";
-            string expected = "t";
+            string input = "";
+            string expected = "";
 
             // Act
             string actual = input.CenterString(1);
