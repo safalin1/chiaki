@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45;netstandard2.1;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net45;netstandard2.1;netcoreapp3.1;net5.0;</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>Steven P</Authors>
     <PackageProjectUrl>https://chiaki.dev/</PackageProjectUrl>
@@ -10,11 +10,19 @@
     <Version>0.0.1</Version>
     <Copyright>Copyright 2021 (C) Steven P.</Copyright>
     <PackageTags>chiaki utility extension methods string double datetime ienumerable</PackageTags>
-    <PackageIconUrl>https://chiaki.dev/images/logo.png</PackageIconUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageIcon>logo_nuget.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="api\" />
     <Folder Include="images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\logo_nuget.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>
