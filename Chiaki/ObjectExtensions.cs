@@ -10,6 +10,7 @@ namespace Chiaki
     /// </summary>
     public static class ObjectExtensions
     {
+        #if !NET5_0_OR_GREATER
         /// <summary>
         /// Performs a deep clone of a instance of an object.
         /// </summary>
@@ -29,6 +30,7 @@ namespace Chiaki
                 return (T)formatter.Deserialize(stream);
             }
         }
+        #endif
 
         /// <summary>
         /// Casts an object to <typeparamref name="T"/>. This method will throw an exception if the object cannot be cast to <typeparamref name="T"/>.
@@ -91,9 +93,9 @@ namespace Chiaki
         /// </summary>
         public static Guid? TryParseGuid(this object input)
         {
-            if (input is Guid b)
+            if (input is Guid guid)
             {
-                return b;
+                return guid;
             }
 
             var test = input as string;
