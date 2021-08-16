@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chiaki", "Chiaki\Chiaki.csproj", "{A499D924-8DFA-458D-8085-F530A95868F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiaki.Tests.NetCore", "Chiaki.Tests.NetCore\Chiaki.Tests.NetCore.csproj", "{EAB09DB9-B0D9-42B6-B3EB-91178714D4A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiaki.Tests", "Chiaki.Tests\Chiaki.Tests.csproj", "{EAB09DB9-B0D9-42B6-B3EB-91178714D4A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
