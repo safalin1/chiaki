@@ -52,7 +52,7 @@ namespace Chiaki
         /// <returns>True if the value is inside Range, else false</returns>
         public bool ContainsValue(T value)
         {
-            return (Minimum.CompareTo(value) <= 0) && (value.CompareTo(Maximum) <= 0);
+            return Minimum.CompareTo(value) <= 0 && (value.CompareTo(Maximum) <= 0);
         }
 
         /// <summary>

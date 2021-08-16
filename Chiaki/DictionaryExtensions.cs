@@ -24,10 +24,8 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// Adds items from a <see cref="IEnumerable{T}"/> 
+        /// Adds items from a <see cref="IEnumerable{T}"/> to the <see cref="Dictionary{TKey,TValue}"/>.
         /// </summary>
-        /// <typeparam name="TKey"></typeparam>
-        /// <typeparam name="TValue"></typeparam>
         public static void AddMany<TKey, TValue>(this Dictionary<TKey, TValue> input, IEnumerable<KeyValuePair<TKey, TValue>> items)
         {
             foreach (KeyValuePair<TKey, TValue> item in items)
