@@ -86,7 +86,7 @@ namespace Chiaki
         }
 
         /// <summary>
-        /// If the IEnumerable is null, an empty instance of the IEnumerable will be returned. Otherwise, the existing instance will be returned.
+        /// If <paramref name="input"/> is null, an empty instance of <see cref="IEnumerable{T}"/> will be returned. Otherwise, the existing instance will be returned.
         /// </summary>
         public static IEnumerable<T> IfNullThenEmpty<T>(this IEnumerable<T> input)
         {
@@ -188,7 +188,7 @@ namespace Chiaki
 
             var chunk = new List<T>(size);
 
-            foreach(var x in source) 
+            foreach (var x in source) 
             {
                 chunk.Add(x);
 
