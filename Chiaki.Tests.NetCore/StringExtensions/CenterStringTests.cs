@@ -27,7 +27,7 @@ namespace Chiaki.Tests.StringExtensions
             string expected = "";
 
             // Act
-            string actual = input.CenterString(1);
+            string actual = input.CenterString(0);
 
             // Assert
             Assert.Equal(expected, actual);
