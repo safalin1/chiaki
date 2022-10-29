@@ -15,6 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="logo_nuget.png" />
+    <None Remove="logo_nuget.png" />
+    <Content Include="logo_nuget.png" />
   </ItemGroup>
 </Project>
