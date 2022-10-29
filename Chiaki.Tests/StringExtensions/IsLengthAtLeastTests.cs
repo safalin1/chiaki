@@ -1,67 +1,66 @@
 ﻿using System;
 using Xunit;
 
-namespace Chiaki.Tests.StringExtensions
+namespace Chiaki.Tests.StringExtensions;
+
+public class IsLengthAtLeastTests
 {
-    public class IsLengthAtLeastTests
+    [Fact]
+    public void MinLengthAsNegative()
     {
-        [Fact]
-        public void MinLengthAsNegative()
-        {
-            // Assert
-            Assert.Throws<ArgumentOutOfRangeException>(() => "".IsLengthAtLeast(-1));
-        }
+        // Assert
+        Assert.Throws<ArgumentOutOfRangeException>(() => "".IsLengthAtLeast(-1));
+    }
 
-        [Fact]
-        public void NullReturnsFalse()
-        {
-            // Arrange
-            string input = null;
+    [Fact]
+    public void NullReturnsFalse()
+    {
+        // Arrange
+        string input = null;
 
-            // Act
-            bool actual = input.IsLengthAtLeast(10);
+        // Act
+        bool actual = input.IsLengthAtLeast(10);
 
-            // Assert
-            Assert.False(actual);
-        }
+        // Assert
+        Assert.False(actual);
+    }
 
-        [Fact]
-        public void EmptyReturnsFalse()
-        {
-            // Arrange
-            string input = string.Empty;
+    [Fact]
+    public void EmptyReturnsFalse()
+    {
+        // Arrange
+        string input = string.Empty;
 
-            // Act
-            bool actual = input.IsLengthAtLeast(10);
+        // Act
+        bool actual = input.IsLengthAtLeast(10);
 
-            // Assert
-            Assert.False(actual);
-        }
+        // Assert
+        Assert.False(actual);
+    }
 
-        [Fact]
-        public void String5LengthReturnsTrue()
-        {
-            // Arrange
-            string input = "AAAAA";
+    [Fact]
+    public void String5LengthReturnsTrue()
+    {
+        // Arrange
+        string input = "AAAAA";
 
-            // Act
-            bool actual = input.IsLengthAtLeast(5);
+        // Act
+        bool actual = input.IsLengthAtLeast(5);
 
-            // Assert
-            Assert.True(actual);
-        }
+        // Assert
+        Assert.True(actual);
+    }
 
-        [Fact]
-        public void String10LengthReturnsTrue()
-        {
-            // Arrange
-            string input = "AAAAAAAAAA";
+    [Fact]
+    public void String10LengthReturnsTrue()
+    {
+        // Arrange
+        string input = "AAAAAAAAAA";
 
-            // Act
-            bool actual = input.IsLengthAtLeast(5);
+        // Act
+        bool actual = input.IsLengthAtLeast(5);
 
-            // Assert
-            Assert.True(actual);
-        }
+        // Assert
+        Assert.True(actual);
     }
 }

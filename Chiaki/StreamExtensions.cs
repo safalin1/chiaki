@@ -2,31 +2,30 @@
 
 // ReSharper disable UnusedMember.Global
 
-namespace Chiaki
+namespace Chiaki;
+
+/// <summary>
+/// Provides extensions for <see cref="Stream"/>
+/// </summary>
+public static class StreamExtensions
 {
     /// <summary>
-    /// Provides extensions for <see cref="Stream"/>
+    /// Reads the entire contents of a Stream into a byte array.
     /// </summary>
-    public static class StreamExtensions
+    public static byte[] ReadToByteArray(this Stream input)
     {
-        /// <summary>
-        /// Reads the entire contents of a Stream into a byte array.
-        /// </summary>
-        public static byte[] ReadToByteArray(this Stream input)
+        var buffer = new byte[16 * 1024];
+
+        using (var ms = new MemoryStream())
         {
-            var buffer = new byte[16 * 1024];
+            int read;
 
-            using (var ms = new MemoryStream())
+            while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
             {
-                int read;
-
-                while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
-                {
-                    ms.Write(buffer, 0, read);
-                }
-
-                return ms.ToArray();
+                ms.Write(buffer, 0, read);
             }
+
+            return ms.ToArray();
         }
     }
 }

@@ -1,33 +1,32 @@
 ﻿using Xunit;
 
-namespace Chiaki.Tests.StringExtensions
+namespace Chiaki.Tests.StringExtensions;
+
+public class RemoveHtmlTagsTests
 {
-    public class RemoveHtmlTagsTests
+    [Fact]
+    public void RemovesParagraphTags()
     {
-        [Fact]
-        public void RemovesParagraphTags()
-        {
-            // Arrange
-            const string expected = "this is my content";
-            string input = "<p>this is my content</p>";
+        // Arrange
+        const string expected = "this is my content";
+        string input = "<p>this is my content</p>";
 
-            // Act
-            string actual = input.RemoveHtmlTags();
+        // Act
+        string actual = input.RemoveHtmlTags();
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void OnNullReturnsNull()
-        {
-            // Arrange
-            string input = null;
+    [Fact]
+    public void OnNullReturnsNull()
+    {
+        // Arrange
+        string input = null;
 
-            // Assert
-            string actual = input.RemoveHtmlTags();
+        // Assert
+        string actual = input.RemoveHtmlTags();
 
-            Assert.Null(actual);
-        }
+        Assert.Null(actual);
     }
 }

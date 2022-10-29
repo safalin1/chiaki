@@ -1,63 +1,62 @@
 ﻿using Xunit;
 
-namespace Chiaki.Tests.StringExtensions
+namespace Chiaki.Tests.StringExtensions;
+
+public class TruncateToTests
 {
-    public class TruncateToTests
+    [Fact]
+    public void MaxLength0ReturnsAsIs()
     {
-        [Fact]
-        public void MaxLength0ReturnsAsIs()
-        {
-            // Arrange
-            string input = "This is a string";
-            string expected = "This is a string";
+        // Arrange
+        string input = "This is a string";
+        string expected = "This is a string";
 
-            // Act
-            string actual = input.TruncateTo(maxLength: 0);
+        // Act
+        string actual = input.TruncateTo(maxLength: 0);
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void MaxLength20NoSuffixChange()
-        {
-            // Arrange
-            string input = "This is a really long string";
-            string expected = "This is a really...";
+    [Fact]
+    public void MaxLength20NoSuffixChange()
+    {
+        // Arrange
+        string input = "This is a really long string";
+        string expected = "This is a really...";
 
-            // Act
-            string actual = input.TruncateTo(maxLength: 20);
+        // Act
+        string actual = input.TruncateTo(maxLength: 20);
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void MaxLength40WithSuffixChange()
-        {
-            // Arrange
-            string input = "This is a really long string with lots of characters in it";
-            string expected = "This is a really long string with lots??";
+    [Fact]
+    public void MaxLength40WithSuffixChange()
+    {
+        // Arrange
+        string input = "This is a really long string with lots of characters in it";
+        string expected = "This is a really long string with lots??";
 
-            // Act
-            string actual = input.TruncateTo(maxLength: 40, suffix: "??");
+        // Act
+        string actual = input.TruncateTo(maxLength: 40, suffix: "??");
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void NullReturnsNull()
-        {
-            // Arrange
-            string input = null;
+    [Fact]
+    public void NullReturnsNull()
+    {
+        // Arrange
+        string input = null;
 
-            // Act
-            // ReSharper disable once ExpressionIsAlwaysNull
-            string actual = input.TruncateTo(10);
+        // Act
+        // ReSharper disable once ExpressionIsAlwaysNull
+        string actual = input.TruncateTo(10);
 
-            // Assert
-            Assert.Null(actual);
-        }
+        // Assert
+        Assert.Null(actual);
     }
 }

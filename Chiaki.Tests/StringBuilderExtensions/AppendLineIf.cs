@@ -1,72 +1,71 @@
 ﻿using System.Text;
 using Xunit;
 
-namespace Chiaki.Tests.StringBuilderExtensions
+namespace Chiaki.Tests.StringBuilderExtensions;
+
+public class AppendLineIf
 {
-    public class AppendLineIf
+    [Fact]
+    public void SingleArgument_ConditionTrue()
     {
-        [Fact]
-        public void SingleArgument_ConditionTrue()
-        {
-            // Arrange
-            var builder = new StringBuilder();
-            var expected = "my string\r\n";
+        // Arrange
+        var builder = new StringBuilder();
+        var expected = "my string\r\n";
 
-            // Act
-            builder.AppendLineIf(condition: 1 + 1 == 2, "my string");
+        // Act
+        builder.AppendLineIf(condition: 1 + 1 == 2, "my string");
 
-            var actual = builder.ToString();
+        var actual = builder.ToString();
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void SingleArgument_ConditionFalse()
-        {
-            // Arrange
-            var builder = new StringBuilder();
-            var expected = "";
+    [Fact]
+    public void SingleArgument_ConditionFalse()
+    {
+        // Arrange
+        var builder = new StringBuilder();
+        var expected = "";
 
-            // Act
-            builder.AppendLineIf(condition: 1 + 1 == 1, "my string");
+        // Act
+        builder.AppendLineIf(condition: 1 + 1 == 1, "my string");
 
-            var actual = builder.ToString();
+        var actual = builder.ToString();
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void NoArguments_ConditionTrue()
-        {
-            // Arrange
-            var builder = new StringBuilder("test");
-            var expected = "test\r\n";
+    [Fact]
+    public void NoArguments_ConditionTrue()
+    {
+        // Arrange
+        var builder = new StringBuilder("test");
+        var expected = "test\r\n";
 
-            // Act
-            builder.AppendLineIf(condition: 1 + 1 == 2);
+        // Act
+        builder.AppendLineIf(condition: 1 + 1 == 2);
 
-            var actual = builder.ToString();
+        var actual = builder.ToString();
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void NoArguments_ConditionFalse()
-        {
-            // Arrange
-            var builder = new StringBuilder("test");
-            var expected = "test";
+    [Fact]
+    public void NoArguments_ConditionFalse()
+    {
+        // Arrange
+        var builder = new StringBuilder("test");
+        var expected = "test";
 
-            // Act
-            builder.AppendLineIf(condition: 1 + 1 == 1);
+        // Act
+        builder.AppendLineIf(condition: 1 + 1 == 1);
 
-            var actual = builder.ToString();
+        var actual = builder.ToString();
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
     }
 }

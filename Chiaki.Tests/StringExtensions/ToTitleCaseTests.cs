@@ -2,52 +2,51 @@
 using System.Globalization;
 using Xunit;
 
-namespace Chiaki.Tests.StringExtensions
+namespace Chiaki.Tests.StringExtensions;
+
+public class ToTitleCaseTests
 {
-    public class ToTitleCaseTests
+    [Fact]
+    public void Scenario1()
     {
-        [Fact]
-        public void Scenario1()
-        {
-            // Arrange
-            string input = "this is a test";
-            var expected = "This Is A Test";
+        // Arrange
+        string input = "this is a test";
+        const string expected = "This Is A Test";
 
-            // Act
-            var actual = input.ToTitleCase();
+        // Act
+        var actual = input.ToTitleCase();
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void ThrowsException_WhenStringIsNull_NoCultureSpecified()
-        {
-            // Arrange
-            string input = null;
+    [Fact]
+    public void ThrowsException_WhenStringIsNull_NoCultureSpecified()
+    {
+        // Arrange
+        string input = null;
 
-            // Assert
-            Assert.Throws<ArgumentNullException>(() => input.ToTitleCase());
-        }
+        // Assert
+        Assert.Throws<ArgumentNullException>(() => input.ToTitleCase());
+    }
 
-        [Fact]
-        public void ThrowsException_WhenStringIsNull_CultureSpecified()
-        {
-            // Arrange
-            string input = null;
+    [Fact]
+    public void ThrowsException_WhenStringIsNull_CultureSpecified()
+    {
+        // Arrange
+        string input = null;
 
-            // Assert
-            Assert.Throws<ArgumentNullException>(() => input.ToTitleCase(CultureInfo.CurrentCulture));
-        }
+        // Assert
+        Assert.Throws<ArgumentNullException>(() => input.ToTitleCase(CultureInfo.CurrentCulture));
+    }
 
-        [Fact]
-        public void ThrowsException_WhenCultureIsNull()
-        {
-            // Arrange
-            string input = "test";
+    [Fact]
+    public void ThrowsException_WhenCultureIsNull()
+    {
+        // Arrange
+        string input = "test";
 
-            // Assert
-            Assert.Throws<ArgumentNullException>(() => input.ToTitleCase(null));
-        }
+        // Assert
+        Assert.Throws<ArgumentNullException>(() => input.ToTitleCase(null));
     }
 }

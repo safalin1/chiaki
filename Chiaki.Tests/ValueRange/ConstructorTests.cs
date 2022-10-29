@@ -1,22 +1,21 @@
 ﻿using Xunit;
 
-namespace Chiaki.Tests.ValueRange
+namespace Chiaki.Tests.ValueRange;
+
+public class ConstructorTests
 {
-    public class ConstructorTests
+    [Fact]
+    public void CreatesInstanceWithMinAndMax()
     {
-        [Fact]
-        public void CreatesInstanceWithMinAndMax()
-        {
-            // Arrange
-            int min = 0;
-            int max = 10;
+        // Arrange
+        int min = 0;
+        int max = 10;
 
-            // Act
-            var instance = new ValueRange<int>(min, max);
+        // Act
+        var instance = new ValueRange<int>(min, max);
 
-            // Assert
-            Assert.Equal(expected: 0, actual: instance.Minimum);
-            Assert.Equal(expected: 10, actual: instance.Maximum);
-        }
+        // Assert
+        Assert.Equal(expected: 0, actual: instance.Minimum);
+        Assert.Equal(expected: 10, actual: instance.Maximum);
     }
 }

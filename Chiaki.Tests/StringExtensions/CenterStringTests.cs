@@ -1,47 +1,46 @@
 ﻿using System;
 using Xunit;
 
-namespace Chiaki.Tests.StringExtensions
+namespace Chiaki.Tests.StringExtensions;
+
+public class CenterStringTests
 {
-    public class CenterStringTests
+    [Fact]
+    public void BasicTest()
     {
-        [Fact]
-        public void BasicTest()
-        {
-            // Arrange
-            string input = "test";
-            string expected = "   test   ";
+        // Arrange
+        string input = "test";
+        string expected = "   test   ";
 
-            // Act
-            string actual = input.CenterString(10);
+        // Act
+        string actual = input.CenterString(10);
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void EmptyStringTest()
-        {
-            // Arrange
-            string input = "";
-            string expected = "";
+    [Fact]
+    public void EmptyStringTest()
+    {
+        // Arrange
+        string input = "";
+        string expected = "";
 
-            // Act
-            string actual = input.CenterString(0);
+        // Act
+        string actual = input.CenterString(0);
 
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 
 
-        [Fact]
-        public void ThrowsArgumentNullException_WhenInputNull()
-        {
-            // Arrange
-            string input = null;
+    [Fact]
+    public void ThrowsArgumentNullException_WhenInputNull()
+    {
+        // Arrange
+        string input = null;
 
-            // Assert
-            Assert.Throws<ArgumentNullException>(() => input.CenterString(10));
-        }
+        // Assert
+        Assert.Throws<ArgumentNullException>(() => input.CenterString(10));
     }
 }

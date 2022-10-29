@@ -1,37 +1,36 @@
 ﻿using Xunit;
 
-namespace Chiaki.Tests.ValueRange
+namespace Chiaki.Tests.ValueRange;
+
+public class ContainsValueTests
 {
-    public class ContainsValueTests
+    [Fact]
+    public void ReturnsTrueWhenValueInRange()
     {
-        [Fact]
-        public void ReturnsTrueWhenValueInRange()
-        {
-            // Arrange
-            int min = 0;
-            int max = 10;
+        // Arrange
+        int min = 0;
+        int max = 10;
 
-            // Act
-            var instance = new ValueRange<int>(min, max);
-            var actual = instance.ContainsValue(5);
+        // Act
+        var instance = new ValueRange<int>(min, max);
+        var actual = instance.ContainsValue(5);
 
-            // Assert
-            Assert.True(actual);
-        }
+        // Assert
+        Assert.True(actual);
+    }
 
-        [Fact]
-        public void ReturnsFalseWhenValueOutOfBounds()
-        {
-            // Arrange
-            int min = 10;
-            int max = 0;
+    [Fact]
+    public void ReturnsFalseWhenValueOutOfBounds()
+    {
+        // Arrange
+        int min = 10;
+        int max = 0;
 
-            // Act
-            var instance = new ValueRange<int>(min, max);
-            var actual = instance.ContainsValue(20);
+        // Act
+        var instance = new ValueRange<int>(min, max);
+        var actual = instance.ContainsValue(20);
 
-            // Assert
-            Assert.False(actual);
-        }
+        // Assert
+        Assert.False(actual);
     }
 }
