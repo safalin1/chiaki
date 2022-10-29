@@ -13,9 +13,4 @@
     <PackageIcon>logo_nuget.png</PackageIcon>
     <LangVersion>10.0</LangVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <None Include="..\logo_nuget.png">
-      <Pack>True</Pack>
-    </None>
-  </ItemGroup>
 </Project>
