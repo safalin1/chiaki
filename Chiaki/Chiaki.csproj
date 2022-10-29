@@ -13,4 +13,8 @@
     <PackageIcon>logo_nuget.png</PackageIcon>
     <LangVersion>10.0</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="logo_nuget.png" />
+  </ItemGroup>
 </Project>
